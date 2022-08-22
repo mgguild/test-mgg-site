@@ -1,5 +1,6 @@
 {
   "name": "MGG-Website",
+  "homepage": "https://www.metagg.com/test-mgg-site/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
