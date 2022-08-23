@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/test-mgg-site/static/js/main.7339b54e.js",
+    "main.js": "/test-mgg-site/static/js/main.8ab577ad.js",
     "static/js/455.3f7a9cc6.chunk.js": "/test-mgg-site/static/js/455.3f7a9cc6.chunk.js",
     "static/js/260.f7a8fbdb.chunk.js": "/test-mgg-site/static/js/260.f7a8fbdb.chunk.js",
     "static/js/135.75df0b97.chunk.js": "/test-mgg-site/static/js/135.75df0b97.chunk.js",
@@ -9,12 +9,12 @@
     "static/js/619.fe95b00a.chunk.js": "/test-mgg-site/static/js/619.fe95b00a.chunk.js",
     "static/css/747.d2931d57.chunk.css": "/test-mgg-site/static/css/747.d2931d57.chunk.css",
     "static/js/747.8ba2f40b.chunk.js": "/test-mgg-site/static/js/747.8ba2f40b.chunk.js",
-    "static/js/502.3ba75202.chunk.js": "/test-mgg-site/static/js/502.3ba75202.chunk.js",
+    "static/js/200.7914a715.chunk.js": "/test-mgg-site/static/js/200.7914a715.chunk.js",
     "static/js/563.c2e4d565.chunk.js": "/test-mgg-site/static/js/563.c2e4d565.chunk.js",
     "static/js/787.60fff1db.chunk.js": "/test-mgg-site/static/js/787.60fff1db.chunk.js",
     "static/js/798.199e2378.chunk.js": "/test-mgg-site/static/js/798.199e2378.chunk.js",
-    "static/js/481.a4e2775c.chunk.js": "/test-mgg-site/static/js/481.a4e2775c.chunk.js",
-    "static/js/163.24522676.chunk.js": "/test-mgg-site/static/js/163.24522676.chunk.js",
+    "static/js/481.1f889f6d.chunk.js": "/test-mgg-site/static/js/481.1f889f6d.chunk.js",
+    "static/js/163.85443b37.chunk.js": "/test-mgg-site/static/js/163.85443b37.chunk.js",
     "static/js/521.dab52544.chunk.js": "/test-mgg-site/static/js/521.dab52544.chunk.js",
     "static/media/NFT.gif": "/test-mgg-site/static/media/NFT.aaeeaa3f963721d1145b.gif",
     "static/media/MetaGaming-Guild-White-Paper-02082022.pdf": "/test-mgg-site/static/media/MetaGaming-Guild-White-Paper-02082022.4d508e1d3bb8623f9301.pdf",
@@ -136,7 +136,7 @@
     "static/media/Infinity_Force.png": "/test-mgg-site/static/media/Infinity_Force.719ebb28e1aa8898872b.png",
     "static/media/SupraOracles-White-Red-Horz.svg": "/test-mgg-site/static/media/SupraOracles-White-Red-Horz.30acc385d6133492f1afb135ca0b23c5.svg",
     "index.html": "/test-mgg-site/index.html",
-    "main.7339b54e.js.map": "/test-mgg-site/static/js/main.7339b54e.js.map",
+    "main.8ab577ad.js.map": "/test-mgg-site/static/js/main.8ab577ad.js.map",
     "455.3f7a9cc6.chunk.js.map": "/test-mgg-site/static/js/455.3f7a9cc6.chunk.js.map",
     "260.f7a8fbdb.chunk.js.map": "/test-mgg-site/static/js/260.f7a8fbdb.chunk.js.map",
     "135.75df0b97.chunk.js.map": "/test-mgg-site/static/js/135.75df0b97.chunk.js.map",
@@ -145,14 +145,14 @@
     "619.fe95b00a.chunk.js.map": "/test-mgg-site/static/js/619.fe95b00a.chunk.js.map",
     "747.d2931d57.chunk.css.map": "/test-mgg-site/static/css/747.d2931d57.chunk.css.map",
     "747.8ba2f40b.chunk.js.map": "/test-mgg-site/static/js/747.8ba2f40b.chunk.js.map",
-    "502.3ba75202.chunk.js.map": "/test-mgg-site/static/js/502.3ba75202.chunk.js.map",
+    "200.7914a715.chunk.js.map": "/test-mgg-site/static/js/200.7914a715.chunk.js.map",
     "787.60fff1db.chunk.js.map": "/test-mgg-site/static/js/787.60fff1db.chunk.js.map",
     "798.199e2378.chunk.js.map": "/test-mgg-site/static/js/798.199e2378.chunk.js.map",
-    "481.a4e2775c.chunk.js.map": "/test-mgg-site/static/js/481.a4e2775c.chunk.js.map",
-    "163.24522676.chunk.js.map": "/test-mgg-site/static/js/163.24522676.chunk.js.map",
+    "481.1f889f6d.chunk.js.map": "/test-mgg-site/static/js/481.1f889f6d.chunk.js.map",
+    "163.85443b37.chunk.js.map": "/test-mgg-site/static/js/163.85443b37.chunk.js.map",
     "521.dab52544.chunk.js.map": "/test-mgg-site/static/js/521.dab52544.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7339b54e.js"
+    "static/js/main.8ab577ad.js"
   ]
 }
