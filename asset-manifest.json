@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/test-mgg-site/static/js/main.8c0260ea.js",
+    "main.js": "/test-mgg-site/static/js/main.362ab532.js",
     "static/js/455.a04cf42b.chunk.js": "/test-mgg-site/static/js/455.a04cf42b.chunk.js",
     "static/js/260.bf1dd350.chunk.js": "/test-mgg-site/static/js/260.bf1dd350.chunk.js",
     "static/js/74.6ce946bc.chunk.js": "/test-mgg-site/static/js/74.6ce946bc.chunk.js",
-    "static/js/378.05bdef1f.chunk.js": "/test-mgg-site/static/js/378.05bdef1f.chunk.js",
+    "static/js/378.02624da8.chunk.js": "/test-mgg-site/static/js/378.02624da8.chunk.js",
     "static/js/24.688d54fd.chunk.js": "/test-mgg-site/static/js/24.688d54fd.chunk.js",
     "static/js/619.fe95b00a.chunk.js": "/test-mgg-site/static/js/619.fe95b00a.chunk.js",
     "static/css/747.d2931d57.chunk.css": "/test-mgg-site/static/css/747.d2931d57.chunk.css",
@@ -151,11 +151,11 @@
     "static/media/Infinity_Force.png": "/test-mgg-site/static/media/Infinity_Force.719ebb28e1aa8898872b.png",
     "static/media/SupraOracles-White-Red-Horz.svg": "/test-mgg-site/static/media/SupraOracles-White-Red-Horz.30acc385d6133492f1afb135ca0b23c5.svg",
     "index.html": "/test-mgg-site/index.html",
-    "main.8c0260ea.js.map": "/test-mgg-site/static/js/main.8c0260ea.js.map",
+    "main.362ab532.js.map": "/test-mgg-site/static/js/main.362ab532.js.map",
     "455.a04cf42b.chunk.js.map": "/test-mgg-site/static/js/455.a04cf42b.chunk.js.map",
     "260.bf1dd350.chunk.js.map": "/test-mgg-site/static/js/260.bf1dd350.chunk.js.map",
     "74.6ce946bc.chunk.js.map": "/test-mgg-site/static/js/74.6ce946bc.chunk.js.map",
-    "378.05bdef1f.chunk.js.map": "/test-mgg-site/static/js/378.05bdef1f.chunk.js.map",
+    "378.02624da8.chunk.js.map": "/test-mgg-site/static/js/378.02624da8.chunk.js.map",
     "24.688d54fd.chunk.js.map": "/test-mgg-site/static/js/24.688d54fd.chunk.js.map",
     "619.fe95b00a.chunk.js.map": "/test-mgg-site/static/js/619.fe95b00a.chunk.js.map",
     "747.d2931d57.chunk.css.map": "/test-mgg-site/static/css/747.d2931d57.chunk.css.map",
@@ -168,6 +168,6 @@
     "521.dab52544.chunk.js.map": "/test-mgg-site/static/js/521.dab52544.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.8c0260ea.js"
+    "static/js/main.362ab532.js"
   ]
 }
