@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/test-mgg-site/static/js/main.cc07f78d.js",
+    "main.js": "/test-mgg-site/static/js/main.f12faa5e.js",
     "static/js/455.a04cf42b.chunk.js": "/test-mgg-site/static/js/455.a04cf42b.chunk.js",
     "static/js/260.bf1dd350.chunk.js": "/test-mgg-site/static/js/260.bf1dd350.chunk.js",
     "static/js/74.3a851f35.chunk.js": "/test-mgg-site/static/js/74.3a851f35.chunk.js",
     "static/js/378.4f3b2a0d.chunk.js": "/test-mgg-site/static/js/378.4f3b2a0d.chunk.js",
     "static/js/24.688d54fd.chunk.js": "/test-mgg-site/static/js/24.688d54fd.chunk.js",
-    "static/js/619.fe95b00a.chunk.js": "/test-mgg-site/static/js/619.fe95b00a.chunk.js",
+    "static/js/913.df377fdd.chunk.js": "/test-mgg-site/static/js/913.df377fdd.chunk.js",
     "static/css/747.d2931d57.chunk.css": "/test-mgg-site/static/css/747.d2931d57.chunk.css",
     "static/js/747.8ba2f40b.chunk.js": "/test-mgg-site/static/js/747.8ba2f40b.chunk.js",
     "static/js/413.6abea6d2.chunk.js": "/test-mgg-site/static/js/413.6abea6d2.chunk.js",
@@ -130,6 +130,7 @@
     "static/media/basketballverse.png": "/test-mgg-site/static/media/basketballverse.e57d67d6d7aff96b144f.png",
     "static/media/metagods.png": "/test-mgg-site/static/media/metagods.87e7d67a5a7531ca28a0.png",
     "static/media/Vault.png": "/test-mgg-site/static/media/Vault.5c4ffc20d64496810ae0.png",
+    "static/media/Arcus.png": "/test-mgg-site/static/media/Arcus.89f67a2ca1b9b2829915.png",
     "static/media/Gold_fever.png": "/test-mgg-site/static/media/Gold_fever.64d59ee8406e64ddcbe2.png",
     "static/media/Labs.png": "/test-mgg-site/static/media/Labs.a94fb17091a08ac85642.png",
     "static/media/ghaf.png": "/test-mgg-site/static/media/ghaf.5fce1cda23157eb3b05f.png",
@@ -151,13 +152,13 @@
     "static/media/Infinity_Force.png": "/test-mgg-site/static/media/Infinity_Force.719ebb28e1aa8898872b.png",
     "static/media/SupraOracles-White-Red-Horz.svg": "/test-mgg-site/static/media/SupraOracles-White-Red-Horz.30acc385d6133492f1afb135ca0b23c5.svg",
     "index.html": "/test-mgg-site/index.html",
-    "main.cc07f78d.js.map": "/test-mgg-site/static/js/main.cc07f78d.js.map",
+    "main.f12faa5e.js.map": "/test-mgg-site/static/js/main.f12faa5e.js.map",
     "455.a04cf42b.chunk.js.map": "/test-mgg-site/static/js/455.a04cf42b.chunk.js.map",
     "260.bf1dd350.chunk.js.map": "/test-mgg-site/static/js/260.bf1dd350.chunk.js.map",
     "74.3a851f35.chunk.js.map": "/test-mgg-site/static/js/74.3a851f35.chunk.js.map",
     "378.4f3b2a0d.chunk.js.map": "/test-mgg-site/static/js/378.4f3b2a0d.chunk.js.map",
     "24.688d54fd.chunk.js.map": "/test-mgg-site/static/js/24.688d54fd.chunk.js.map",
-    "619.fe95b00a.chunk.js.map": "/test-mgg-site/static/js/619.fe95b00a.chunk.js.map",
+    "913.df377fdd.chunk.js.map": "/test-mgg-site/static/js/913.df377fdd.chunk.js.map",
     "747.d2931d57.chunk.css.map": "/test-mgg-site/static/css/747.d2931d57.chunk.css.map",
     "747.8ba2f40b.chunk.js.map": "/test-mgg-site/static/js/747.8ba2f40b.chunk.js.map",
     "413.6abea6d2.chunk.js.map": "/test-mgg-site/static/js/413.6abea6d2.chunk.js.map",
@@ -168,6 +169,6 @@
     "521.dab52544.chunk.js.map": "/test-mgg-site/static/js/521.dab52544.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cc07f78d.js"
+    "static/js/main.f12faa5e.js"
   ]
 }
