@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/test-mgg-site/static/js/main.34d9d22f.js",
-    "static/js/455.a04cf42b.chunk.js": "/test-mgg-site/static/js/455.a04cf42b.chunk.js",
+    "main.js": "/test-mgg-site/static/js/main.cfe181e2.js",
+    "static/js/455.c5cf2e23.chunk.js": "/test-mgg-site/static/js/455.c5cf2e23.chunk.js",
     "static/js/260.bf1dd350.chunk.js": "/test-mgg-site/static/js/260.bf1dd350.chunk.js",
     "static/js/74.3a851f35.chunk.js": "/test-mgg-site/static/js/74.3a851f35.chunk.js",
     "static/js/378.4f3b2a0d.chunk.js": "/test-mgg-site/static/js/378.4f3b2a0d.chunk.js",
@@ -155,8 +155,8 @@
     "static/media/Infinity_Force.png": "/test-mgg-site/static/media/Infinity_Force.719ebb28e1aa8898872b.png",
     "static/media/SupraOracles-White-Red-Horz.svg": "/test-mgg-site/static/media/SupraOracles-White-Red-Horz.30acc385d6133492f1afb135ca0b23c5.svg",
     "index.html": "/test-mgg-site/index.html",
-    "main.34d9d22f.js.map": "/test-mgg-site/static/js/main.34d9d22f.js.map",
-    "455.a04cf42b.chunk.js.map": "/test-mgg-site/static/js/455.a04cf42b.chunk.js.map",
+    "main.cfe181e2.js.map": "/test-mgg-site/static/js/main.cfe181e2.js.map",
+    "455.c5cf2e23.chunk.js.map": "/test-mgg-site/static/js/455.c5cf2e23.chunk.js.map",
     "260.bf1dd350.chunk.js.map": "/test-mgg-site/static/js/260.bf1dd350.chunk.js.map",
     "74.3a851f35.chunk.js.map": "/test-mgg-site/static/js/74.3a851f35.chunk.js.map",
     "378.4f3b2a0d.chunk.js.map": "/test-mgg-site/static/js/378.4f3b2a0d.chunk.js.map",
@@ -172,6 +172,6 @@
     "521.dab52544.chunk.js.map": "/test-mgg-site/static/js/521.dab52544.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.34d9d22f.js"
+    "static/js/main.cfe181e2.js"
   ]
 }
