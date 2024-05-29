@@ -74,22 +74,22 @@ export const Teams:TeamsConfig = {
     },
     {
       name: 'Ador Cruz',
-      title: 'MGG  Trainer'  
+      title: 'MGG  Trainer'
     }
   ],
   'TECHNOLOGY & DEVELOPMENT': [
-    {
-      name: 'Lyrafe Ariola',
-      title: 'UI/UX Designer'
-    },
+    // {
+    //   name: 'Lyrafe Ariola',
+    //   title: 'UI/UX Designer'
+    // },
     {
       name: 'Diana Gee Delas Alas',
       title: 'Full Stack Developer'
     },
-    {
-      name: 'Koji Adriano Jr',
-      title: 'Full Stack Developer'
-    },
+    // {
+    //   name: 'Koji Adriano Jr',
+    //   title: 'Full Stack Developer'
+    // },
     {
       name: 'Ralph Balanta',
       title: 'Front-end Developer'
@@ -98,10 +98,10 @@ export const Teams:TeamsConfig = {
       name: 'Aldrick Bonaobra',
       title: 'Senior Blockchain Developer'
     },
-    {
-      name: 'Medard Mandane',
-      title: 'Lead Back-end Developer'
-    },
+    // {
+    //   name: 'Medard Mandane',
+    //   title: 'Lead Back-end Developer'
+    // },
     {
       name: 'Mike Reñevo',
       title: 'Lead Game Developer'
@@ -112,7 +112,7 @@ export const Teams:TeamsConfig = {
     },
     {
       name: 'John Anthony Balbin',
-      title: 'Lead QA Specialist'
+      title: 'Software Engineer'
     },
     {
       name: 'Emman Adornado',
