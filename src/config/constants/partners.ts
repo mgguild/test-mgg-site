@@ -82,6 +82,7 @@ import Metacene from '../../assets/logo/Partners/Metacenepng.png'
 import CryptoUnicorns from '../../assets/logo/Partners/CryptoUnicorns.png'
 import Ecosmo from '../../assets/logo/Partners/Ecsomo.png'
 import Reanima from '../../assets/logo/Partners/Reanima.png'
+import WildForest from '../../assets/logo/Partners/wildForest.png'
 
 const partners: Partners = {
   InvsBckrs:{
@@ -491,6 +492,11 @@ const partners: Partners = {
       name: 'Re:Anima',
       logo: Reanima,
       link: 'https://www.reanima.io/#/home'
+    },
+    WildForset: {
+      name: 'Wild Forest',
+      logo: WildForest,
+      link: 'https://playwildforest.io/'
     }
   }
 }
