@@ -83,6 +83,7 @@ import CryptoUnicorns from '../../assets/logo/Partners/CryptoUnicorns.png'
 import Ecosmo from '../../assets/logo/Partners/Ecsomo.png'
 import Reanima from '../../assets/logo/Partners/Reanima.png'
 import WildForest from '../../assets/logo/Partners/wildForest.png'
+import PlanetAtmos from '../../assets/logo/Partners/planetatmos.png'
 
 const partners: Partners = {
   InvsBckrs:{
@@ -497,6 +498,11 @@ const partners: Partners = {
       name: 'Wild Forest',
       logo: WildForest,
       link: 'https://playwildforest.io/'
+    },
+    PlanetAtmos: {
+      name: 'Planet Atmos',
+      logo:  PlanetAtmos,
+      link: 'https://planetatmos.com'
     }
   }
 }
