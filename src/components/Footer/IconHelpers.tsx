@@ -13,6 +13,11 @@ const StyledLogo = styled.span`
         // width: 30px;
         // height: 30px;
     }
+        @media (max-width: 768px) {
+        & > * {
+            margin: 0 5px;  // Adjust the gap as needed
+        }
+    }
 `
 
 export const SocialIcon:React.FC<{name: string}> = ({ name }) => {
