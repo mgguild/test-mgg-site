@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Text, Heading, Flex } from "@metagg/mgg-uikit";
 import { Grid } from "@mui/material";
-
-import GrowthPNG from "assets/images/Growth.svg";
-import { GrowthContainer, PageTitle } from "./styled";
+import { GlowTitle, GrowthContainer, PageTitle } from "./styled";
 import { Figures } from "../../../config/constants/homepageConfig";
 
 
@@ -17,68 +15,58 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const FigureWrapper = styled.div`
+  padding: 1rem;
+`;
+
 const GridAdapt = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  justify-content: center;
+  flex-wrap: no-wrap;
+  gap: 1rem;
+`;
+
+const FigureGridItem = styled.div`
+  border: 2px solid blue;
+  padding: 1rem;
+  width: 100%; /* Make the width consistent */
+  max-width: 30rem;
+  min-height: 200px; /* Set a minimum height to keep borders equal */
+  border-radius: 15px; /* Curved edges */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
-const FigureWrapper = styled.div`
-  min-width: 0px;
-  width: 100%;
-  display: flex;
-  padding: 24px;
-  align-items: center;
-  flex-wrap: wrap;
-    text-align: center;
-  & > * {
-    ${Text}.subtitle {
-      color: ${({ theme }) => theme.colors.MGG_accent2};
-    }
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.7); /* Stronger glow on hover */
   }
-
 `;
 
 const FigureComponent = () => {
   return (
     <FigureWrapper>
       <GridAdapt>
-        <Grid item xs={12} sm={12} md={6} zeroMinWidth>
-          <Grid style={{justifyContent: 'center'}} container rowSpacing={{xs: 6,  md: 12 }}>
-            {Figures.map((figure) => {
-              return (
-                <Grid
-                  key={figure.subtitle}
-                  item
-                  xs={12}
-                  md={6}
-                  zeroMinWidth
-                  style={{maxWidth: '30rem'}}
-                >
-                  <Heading size="xl">{figure.amount}</Heading>
-                  <Text className="subtitle" fontSize="1.5em">
-                    {figure.subtitle}
-                  </Text>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Grid>
-        <Grid item xs={12} sm={12} md={6}>
-          <img style={{maxWidth: '60%'}} alt="growth-image" src={GrowthPNG} />
-        </Grid>
+        {Figures.map((figure) => (
+          <FigureGridItem key={figure.subtitle}>
+            <Heading size="xl">{figure.amount}</Heading>
+            <Text className="subtitle" fontSize="1.5em">
+              {figure.subtitle}
+            </Text>
+          </FigureGridItem>
+        ))}
       </GridAdapt>
     </FigureWrapper>
   );
 };
 
+
 const Section: React.FC = () => {
   return (
     <GrowthContainer height='50'>
         <div style={{textAlign: 'center'}}>
-          <PageTitle size="xl">MetaGaming Guild Growth Figures</PageTitle>
-          <Text fontSize="1.2em">
+        <GlowTitle><PageTitle size="xl">MetaGaming Guild Growth Figures</PageTitle></GlowTitle>
+          <Text fontSize="1.2em" marginTop={4}>
             Since the project was launched in 2021, MetaGaming Guild has
             maintaned a 50% Month-on-Month growth
           </Text>

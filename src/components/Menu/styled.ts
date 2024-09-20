@@ -17,8 +17,7 @@ export const StyledNav = styled.div<{ showMenu?: boolean; isMobile?: boolean }>`
   align-items: center;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  background-color: transparent;
   z-index: 20;
   transform: translate3d(0, 0, 0);
   padding: ${({ isMobile }) => !isMobile && `0px 50px 0px 50px`};
@@ -34,7 +33,7 @@ export const BodyWrapper = styled.div`
 
 export const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
+  margin-top: 0;
   transition: margin-top 0.2s;
   transform: translate3d(0, 0, 0);
   ${({ theme }) => theme.mediaQueries.nav} {

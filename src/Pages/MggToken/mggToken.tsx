@@ -9,10 +9,10 @@ import useMedia from 'use-media'
 import { BgContainer } from '../../style/Global'
 import {
   Card,
-  HeadingGlow,
   Btn,
   Icons,
   IconHolder,
+  PageTitle,
   Section,
   LogoHighlightLink
 } from './styled'
@@ -24,10 +24,11 @@ import EthLogo from 'assets/logo/ETH.png'
 import BscLogo from 'assets/logo/BSC.png'
 import FantomLogo from 'assets/logo/Fantom.png'
 import GuildRwards from './icons/GuildRewards.png'
-import GameFiVault from './icons/GameFiVault.png'
+import GameFiVault from './icons/Ingame Rewards.png'
 import LiquidityRewards from './icons/LiquidityRewards.png'
 import Launchpad from './icons/Launchpad.png'
-import DAOG from './icons/DAOG.png'
+import DAOG from './icons/DAO Governance.png'
+import { GlowTitle } from 'Pages/Homepage/sections/styled'
 
 
 interface IconProps extends SvgProps {
@@ -57,9 +58,10 @@ const MggToken = () => {
     <>
       <Page>
 
-        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
+        <BgContainer  bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
+        
           <Section>
-            <HeadingGlow size='xxl' color={theme.colors.primary} glow={theme.colors.primary}>$MGG Token</HeadingGlow>
+          <PageTitle >$MGG Token</PageTitle>
             <img src={`${MGGLogo}`} style={{maxWidth: '17rem', margin: '1rem auto'}}></img>
             <div style={{maxWidth: '50rem', margin: '0 auto'}}>
               <Heading size={isMobile ? 'l' : 'lg'} style={{margin: '1rem 0', textAlign: 'justify', textAlignLast: 'center', lineHeight: '2rem'}}>
@@ -72,49 +74,51 @@ const MggToken = () => {
         </BgContainer>
 
 
-        <BgContainer bgImage={GrowthBG} bgColor='#140937' position='center bottom' style={{flexFlow: 'column'}}>
-          <Card>
-            <Flex style={{flexFlow: 'row wrap', columnGap: '2rem', justifyContent: 'space-evenly'}}>
-              <div>
-                <Heading size='xl' color={theme.colors.primary}>$MGG</Heading>
-                <Text>Ticker</Text>
-              </div>
-              <div style={{minWidth: '5rem'}}>
-                <Heading size='xl' color={theme.colors.primary}>1 BILLION</Heading>
-                <Text>Total Supply</Text>
-              </div>
-              <div>
-                <Heading size='xl' color={theme.colors.primary}>288,424,658</Heading>
-                <Text>Circulating Supply</Text>
-              </div>
-            </Flex>
-          </Card>
+        <BgContainer  bgColor='#140937' position='center bottom' style={{flexFlow: 'column'}}>
+        <Flex style={{ flexFlow: 'row wrap', columnGap: '0rem', justifyContent: 'center' }}>
+            <Card style={{ width: '20rem' }}>
+              <Heading size="xl" color={theme.colors.primary}>$MGG</Heading>
+              <Text>Ticker</Text>
+            </Card>
+
+            <Card style={{ width: '20rem' }}>
+              <Heading size="xl" color={theme.colors.primary}>1 BILLION</Heading>
+              <Text>Total Supply</Text>
+            </Card>
+
+            <Card style={{ width: '20rem' }}>
+              <Heading size="xl" color={theme.colors.primary}>288,424,658</Heading>
+              <Text>Circulating Supply</Text>
+            </Card>
+          </Flex>
+
           <div style={{position: 'relative', margin: '0 auto 3rem auto'}}>
-            <Section style={{padding: '4rem 0', rowGap: '3rem'}}>
-              <Heading size='xl' color={theme.colors.primary}>What you can do with $MGG Token</Heading>
-              <Icons>
-                <IconHolder>
+          <Section style={{ padding: '4rem 0', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', rowGap: '3rem' }}>
+            <div style={{ flex: '1' }}>
+              <Heading size='xl' color={theme.colors.primary}>What You Can Do with $MGG Token</Heading>
+              {/* <Btn disabled>Go To Tokenomics Page</Btn> */}
+              </div>
+              <div style={{ flex: '1', textAlign: 'right' }}>
+              <Icons style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <IconHolder style={{ margin: '10px' }}>
                   <Icon Img={GuildRwards} width={120} />
                   <Text>Guild Rewards</Text>
                 </IconHolder>
-                <IconHolder>
+                <IconHolder style={{ margin: '10px' }}>
                   <Icon Img={GameFiVault} width={120} />
-                  <Text>GameFi Vault</Text>
+                  <Text>In-game Rewards</Text>
                 </IconHolder>
-                <IconHolder>
+                <IconHolder style={{ margin: '10px' }}>
                   <Icon Img={LiquidityRewards} width={120} />
                   <Text>Liquidity Rewards</Text>
                 </IconHolder>
-                <IconHolder>
-                  <Icon Img={Launchpad} width={120} />
-                  <Text>IGO/INO Launchpad</Text>
-                </IconHolder>
-                <IconHolder>
+                <IconHolder style={{ margin: '10px' }}>
                   <Icon Img={DAOG} width={120} />
                   <Text>DAO Governance</Text>
                 </IconHolder>
               </Icons>
-              <Btn disabled>Go To Tokenomics Page</Btn>
+            </div>
+            
             </Section>
             <Section style={{padding: '5rem 0 0 0'}}>
               <Heading size='xl' color={theme.colors.primary}>MGG Contract Address</Heading>

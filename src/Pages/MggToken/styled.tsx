@@ -2,20 +2,24 @@ import styled, { ThemeContext, keyframes } from 'styled-components'
 import { Flex, Heading, Button } from '@metagg/mgg-uikit'
 
 export const Card = styled.div`
-  background-color: #0c012c;
   border: #008ffd 0.15rem solid;
   border-radius: 0.5rem;
-  padding: 2rem;
-  -moz-box-shadow: inset 0 0 2rem #000000, 0 0.3rem 0.5rem #008ffd;
-  -webkit-box-shadow: inset 0 0 2rem #000000, 0 0.3rem 0.5rem #008ffd;
-  box-shadow: inset 0 0 2rem #000000, 0 0.3rem 0.5rem #008ffd;
+  padding: 4rem;
   z-index: 3;
   margin: 2rem;
   text-align: center;
 `
 
-export const HeadingGlow = styled(Heading)<{ glow?: string }>`
-  text-shadow: 0 0 0.5rem ${({ glow }) => (glow ??'#00f4fd')};
+export const PageTitle = styled(Heading)`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 3em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+  text-align: center; /* Center text inside PageTitle */
 `
 
 export const Btn = styled(Button)`
@@ -23,6 +27,7 @@ export const Btn = styled(Button)`
   color: black;
   border-radius: 0.3rem;
   margin: 0 auto;
+  padding: 4px;
 `
 
 export const Icons = styled(Flex)`

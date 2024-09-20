@@ -1,6 +1,6 @@
 import React, { SVGAttributes, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import PNG from 'assets/revenue-model/NFT Sales.png'
+import PNG from 'assets/revenue-model/RM_VCI.png'
 import { SvgProps } from 'components/SvgIcon/types'
 import SvgIcon from 'components/SvgIcon/SvgIcon'
 

@@ -9,7 +9,8 @@ import {
   BgPage,
   HeadingGlow,
   RdmapCards,
-  Line,
+  // Line,
+  RTitle,
   Card,
   CardContainer,
   RdmapList,
@@ -27,7 +28,7 @@ const Roadmap = () => {
       <Page>
         <BgPage>
           <div style={{position: 'relative', zIndex: 2}}>
-            <HeadingGlow size='xxl' color='#fdda00' glow="#fdda00">Roadmap</HeadingGlow>
+            <HeadingGlow size='xxl' color='#fdda00' glow="#fdda00">ROADMAP</HeadingGlow>
             <NavOptionContainer
               alignItems="center"
               margin="2.5rem 0px 2rem 0px"
@@ -59,9 +60,10 @@ const Roadmap = () => {
               <RdmapCards>
                 {Object.keys(getYear).map((quarter) => (
                   <CardContainer key={quarter}>
-                    {quarter !== 'Q4' && <Line />}
+                    {/* {quarter !== 'Q4' && <Line />} */}
                     <Card>
-                      <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow>
+                      {/* <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow> */}
+                     <RTitle size='xl' color='#00f4fd'>2024</RTitle>
                       <RdmapList>
                         {getYear[quarter].map((list:any, ind: number) => (<div key={ind}>{list.check ? <CheckList>{list.txt}</CheckList> : <List>{list.txt}</List>}</div>))}
                       </RdmapList>
@@ -73,13 +75,14 @@ const Roadmap = () => {
               <div>
                 {Object.keys(roadmaps).map((year) => (
                   <div style={{margin: '0 0 2rem 0'}} key={year}>
-                    <Heading size='xl'>{year}</Heading>
+                    {/* <Heading size='xl'>{year}</Heading> */}
                     <RdmapCards>
                       {Object.keys(roadmaps[year]).map((quarter) => (
                         <CardContainer key={quarter}>
-                          {quarter !== 'Q4' && <Line />}
+                          {/* {quarter !== 'Q4' && <Line />} */}
                           <Card>
-                            <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow>
+                            {/* <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow> */}
+                            <RTitle size='xl' color='#00f4fd'>2024</RTitle>
                             <RdmapList>
                               {roadmaps[year][quarter].map((list: any, ind: number) => (<div key={ind}>{list.check ? <CheckList>{list.txt}</CheckList> : <List>{list.txt}</List>}</div>))}
                             </RdmapList>

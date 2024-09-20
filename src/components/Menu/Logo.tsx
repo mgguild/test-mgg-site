@@ -30,6 +30,13 @@ interface Props {
     }
   }
 `;
+
+const LogoText = styled.span`
+  color: white; /* White text color */
+  font-size: 24px; /* Adjust font size as needed */
+  margin-left: 8px; /* Space between logo and text */
+`;
+
 const Logo:React.FC<Props> = ({isPushed, togglePush, href, isMobile }) => {
     const innerLogo = <img alt='mgg-logo' src={MGGLogo} width='60px' />
 
@@ -46,6 +53,7 @@ const Logo:React.FC<Props> = ({isPushed, togglePush, href, isMobile }) => {
             <StyledLink to={href} aria-label='MGG Homepage'>
                 {innerLogo}
             </StyledLink>
+            <LogoText>MetaGaming Guild</LogoText>
         </Flex>
     )
 }

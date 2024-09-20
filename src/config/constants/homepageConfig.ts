@@ -2,64 +2,35 @@ import { IEcosystems, IFigures } from "./types";
 
 export const Ecosystems: IEcosystems[] = [
   {
-    name: "MetaGamers",
+    name: "PLAY-TO-EARN",
     subtitle: "Scholarship",
     description:
-      "MGG is the fastest growing scholarship program with 50% month-on-month growth",
+      "MGG empowers gamers by renting out best-in-class NFTs from promising gaming startups through our profit-sharing program.",
     image: "MetaGamers",
   },
   {
-    name: "MetaGaming Pad",
-    subtitle: "INO/IGO Launchpad",
+    name: "STRATEGIC INVESTMENTS",
+    subtitle: "NFTs, Assets, Token Acquisition",
     description:
-      "MGG is the very FIRST gaming guild to become a launchpad for gamers!",
-    image: "MetaGamingPad",
-    link: 'https://app.metagg.com/#/launchpad'
-  },
-  {
-    name: "MetaGameFi Vault",
-    subtitle: "Gaming Assets",
-    description:
-      "MGG acquires the best gaming assets and puts them in a vault where MGG holders can earn through staking",
-    image: "Vault",
-    link: 'https://app.metagg.com/#/gamefi'
-  },
-  {
-    name: "MetaGaming Yield",
-    subtitle: "Yield Farming",
-    description:
-      "MGG offers the FIRST form of automated NFT yield to guild members",
-    image: "Yield",
-  },
-  {
-    name: "MetaGaming Labs",
-    subtitle: "Incubator",
-    description:
-      "MGG is a project incubator that supports promising GameFi startups to excel in the global gaming arena",
+      "Backed by industry-leadinf partners, MGG carefully selects and acquires NFTs, tokens, and gaming assets to drive sustainable growth and deliver value to our community.",
     image: "Labs",
   },
   {
-    name: "MetaGaming DAO",
-    subtitle: "DAO Community",
-    description: "MGG holders get to vote on the direction of the guild",
+    name: "BLOCKCHAIN VALIDATION",
+    subtitle: "Node Operations",
+    description:
+      "MGG particiaptes in the security and scability of some blockchain networks through active node operations, contributing to decentralized infrastructure and generating additional revenue for our guild members.",
     image: "Dao",
+    // link: '/mgg-NFTs',
+    // status: "msw.gg",
   },
   {
-    name: "MetaSaga Warriors",
-    subtitle: "NFT Game",
+    name: "GAME DEVELOPMENT",
+    subtitle: "NFT Games",
     description:
-      "An action-packed roguelike play-and-earn NFT game with highly addictive gameplays & highly individualized NFTs.",
+      "MGG also ventured into game development, creating addictive and player-centric NFT games for our community. Our flagship game, MetaSaga Warriors, is a free-to-play NFT game where you command a team of Diggers to battle enemies in the land of Permafaria. Play now at msw.gg",
+    link: 'https://msw.gg',    
     image: "Warriors",
-    link: 'https://msw.gg',
-    status: "msw.gg",
-  },
-  {
-    name: "MetaGaming NFTs",
-    subtitle: "Data Unit Assets",
-    description:
-      "MGG offers LIMITED EDITION NFTs that holds digital rarity, exclusive privileges and special utilities and more!",
-    link: '/mgg-NFTs',
-    image: "Nft",
   },
 ];
 
@@ -70,21 +41,21 @@ export const Figures:IFigures[] = [
   //   subtitle: 'Monthly Revenue',
   // },
   {
-    amount: '1,500+',
-    subtitle: 'Active Scholars',
+    amount: '80+',
+    subtitle: 'Renowned Gaming Partners'
   },
   {
     amount: '30+',
     subtitle: 'Acquired Early-game Assets'
   },
+  {
+    amount: '1,500+',
+    subtitle: 'Active Scholars',
+  },
   // {
   //   amount: '1,000,000+',
   //   subtitle: 'SLP Farmed per Month'
   // },
-  {
-    amount: '60+',
-    subtitle: 'Renowned Gaming Partners'
-  },
   {
     amount: '5,000+',
     subtitle: 'NFTs in the Treasury'

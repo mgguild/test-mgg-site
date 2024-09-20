@@ -66,7 +66,6 @@ export const BgPage = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.addOnColors.background2};
 
-  background-image: url(${GridGradient});
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -78,7 +77,7 @@ export const BgPage = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: url(${GridGradientFlipped});
+ 
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;

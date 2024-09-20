@@ -10,18 +10,26 @@ import MenuLink from "components/Menu/MenuLink";
 import { Grid } from "@mui/material";
 import useMedia from 'use-media'
 import { Card, CardContainer } from "Pages/Partners/styled";
+import BGGameFinanceDemocratized from "assets/background/BGGameFinanceDemocratized.png";
 
 const SectionContainer = styled.div<{ height?: string }>`
   max-width: 100vw;
   display: flex;
   padding: 15px;
+  background-image: url(${BGGameFinanceDemocratized}); /* Use the imported image */
+  background-size: cover; /* Makes sure the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  ${({ height }) => height && `height: ${height};`}
+  height: 90vh; /* Set a height if it's missing */
+
 `;
 
 const Container = styled.div`
   font-size: 12px;
   min-width: 0px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0px auto;
   padding: 25px;
@@ -29,6 +37,7 @@ const Container = styled.div`
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 16px;
   }
+  
 `;
 const StyledImg = styled.img`
   width: 300px;
@@ -71,7 +80,7 @@ const Section: React.FC = () => {
           justifyContent="flex-start"
         >
           <PageTitle size="xl">Game Finance. Democratized.</PageTitle>
-          <Text fontSize="1.8em">
+          <Text fontSize="1.3em">
             Users Get Real-time Cross-Chain Interoperability
           </Text>
         </Content>
@@ -80,24 +89,24 @@ const Section: React.FC = () => {
           alignItems="center"
           style={{ width: "100%" }}
           flexWrap="wrap"
-          margin="2em 0"
+          margin="0em 0"
         >
           {chains.map((src) => (
             <MenuLink href={src.link} key={src.icon}>
-              <StyledImg src={src.icon} alt="chain-icon" />
+              <StyledImg src={src.icon} alt="chain-icon" style={{ margin: '0 20px' }} />
             </MenuLink>
           ))}
         </Flex>
-        <Content flexDirection="column" margin="1em 0">
-          {/* <PageTitle size="xl">MGG is MORE Than just a GAME!</PageTitle> */}
+        {/* <Content flexDirection="column" margin="1em 0">
+          {/* <PageTitle size="xl">MGG is MORE Than just a GAME!</PageTitle> 
           <Flex alignItems="center" justifyContent="center">
             <img alt="mgg-icon" src={MGGLogo} width={isMobile ? "150px" : "200px"} />
             <PageTitle size="xl">
               MGG is MORE Than just a GAME!
             </PageTitle>
           </Flex>
-        </Content>
-        <Content flexDirection='column'>
+        </Content> */}
+        {/* <Content flexDirection='column'>
           <Grid container margin='1em 0' style={{justifyContent: 'center'}}>
             <Grid item md={3} style={{width: '100%', margin: '1rem'}}>
               <Card>
@@ -136,7 +145,7 @@ const Section: React.FC = () => {
             </Grid>
           </Grid>
 
-          </Content>
+          </Content> 
         <Content flexDirection="column" margin="1em 0">
           <PageTitle size="xl">A Global GameFi Guild</PageTitle>
           <div style={{ textAlign: "center", margin: '1em 0' }}>
@@ -172,8 +181,8 @@ const Section: React.FC = () => {
             well-positioned to go dominate the GameFi industry! What are you
             waiting for? Build strong allies with the tactical gamers at MGG
             today!
-          </Text> */}
-        </Content>
+          </Text> 
+        </Content>*/}
       </Container>
     </SectionContainer>
   );

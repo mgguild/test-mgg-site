@@ -1,7 +1,8 @@
 import { Heading } from "@metagg/mgg-uikit";
 import styled from "styled-components";
 import BackgroundImage from "assets/background/GrowthBG.png";
-import MainBG from "assets/background/MainBG.png";
+import BGLanding from "assets/background/BGLanding.png";
+import LandingLogo from "assets/background/LandingLogo.png";
 // Sections
 
 const SectionContainer = styled.div<{ height?: string }>`
@@ -12,9 +13,9 @@ const SectionContainer = styled.div<{ height?: string }>`
 
 export const HomeContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
-  background-image: url(${MainBG});
+  background-image: url(${LandingLogo});
   background-repeat: no-repeat;
-  background-size: 100% 90%;
+  background-size: 100% 100%;
   background-position: center top;
 `;
 export const EcoContainer = styled(SectionContainer)`
@@ -24,7 +25,7 @@ export const EcoContainer = styled(SectionContainer)`
 
 export const GrowthContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
-  background-image: url(${BackgroundImage});
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -39,6 +40,16 @@ export const ChainContainer = styled(SectionContainer)`
 
 export const PageTitle = styled(Heading)`
   color: ${({ theme }) => theme.colors.primary};
-  margin: 25px 0px;
+  margin: 30px 0px;
   letter-spacing: 1px;
+`;
+
+export const GlowTitle = styled(Heading)`
+  border: 2px solid yellow; /* Yellow border */
+  padding-left: 30px; /* Optional padding inside the border */
+  padding-right: 30px;
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+   margin-bottom: 20px; // Adjust the margin-bottom value as needed 
 `;

@@ -3,13 +3,9 @@ import { Flex, Heading } from '@metagg/mgg-uikit'
 import BGimage from '../../assets/background/BG2.png'
 
 export const Card = styled.div`
-  background-color: #0c012c;
   border: #00f4fd 0.15rem solid;
   border-radius: 0.5rem;
   padding: 2rem;
-  -moz-box-shadow: inset 0 0 2rem #000000;
-  -webkit-box-shadow: inset 0 0 2rem #000000;
-  box-shadow: inset 0 0 2rem #000000, 0 0 0.5rem #00f4fd;
   z-index: 3;
 `
 
@@ -31,11 +27,11 @@ font-weight: 400;
 export const CheckList = styled.li`
   padding: 1rem 0 0 1rem;
   &:before{
-    content: "✔";
-    color: #06ff65;
+    content: "●";
+    color: #Ffff00;
     font-weight: bold;
     display: inline-block;
-    width: 1rem;
+    width: 1.5rem;
     margin-left: -1rem;
   }
 `
@@ -67,7 +63,7 @@ export const BgPage = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: url(${BGimage});
+    background-color: ${({ theme }) => theme.addOnColors.background1};
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -95,23 +91,35 @@ export const RdmapCards = styled(Flex)`
 `
 
 export const HeadingGlow = styled(Heading)<{ glow?: string }>`
-  text-shadow: 0 0 0.5rem ${({ glow }) => (glow ??'#00f4fd')};
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 2.5em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 25px; 
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+   margin-bottom: 20px; // Adjust the margin-bottom value as needed 
 `
 
-export const Line = styled.div`
-  width: 10%;
-  background-color: rgb(253,218,0);
-  z-index: 0;
-  position: absolute;
-  top: 5rem;
-  left: 100%;
-  border: solid #fdda00;
-  box-shadow: 0 0 1rem #fdda00;
+export const RTitle = styled(Heading)`
+  color: ${({ theme }) => theme.colors.primary};
+  margin: 30px 0px;
+  letter-spacing: 1px;
 
-  @media (max-width: 1280px) {
-    width: 0.1rem;
-    left: 50%;
-    top: 100%;
-    height: 15%;
-  }
-`
+// export const Line = styled.div`
+//   width: 10%;
+//   background-color: rgb(253,218,0);
+//   z-index: 0;
+//   position: absolute;
+//   top: 5rem;
+//   left: 100%;
+//   border: solid #fdda00;
+//   box-shadow: 0 0 1rem #fdda00;
+
+//   @media (max-width: 1280px) {
+//     width: 0.1rem;
+//     left: 50%;
+//     top: 100%;
+//     height: 15%;
+//   }
+// `

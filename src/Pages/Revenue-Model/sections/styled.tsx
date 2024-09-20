@@ -4,7 +4,7 @@ import { Flex, Text } from '@metagg/mgg-uikit'
 import { breakpoints } from '../../../theme/Breakpoints';
 
 export const SectionContainer = styled.div<{ height?: string; mobileHeight?: string}>`
-  min-height: ${({ height }) => height ?? "100"}vh;
+  min-height: 65vh;
   display: flex;
   padding: 15px;
   @media screen and (max-width: ${breakpoints.Mobile.tablet}px){
@@ -14,7 +14,6 @@ export const SectionContainer = styled.div<{ height?: string; mobileHeight?: str
 
 export const HeaderContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
-  background-image: url(${MainBG});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
