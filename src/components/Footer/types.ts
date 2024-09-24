@@ -26,7 +26,6 @@ export const names = {
         teams: 'Team',
         roadmap: 'Roadmap',
         token: 'MGG Token',
-        NFT: 'NFTs',
         partners: 'Partners',
         whitePaper: 'White Paper',
         blog: 'Blog',

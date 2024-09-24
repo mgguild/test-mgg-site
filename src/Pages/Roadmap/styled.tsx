@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Flex, Heading } from '@metagg/mgg-uikit'
-import BGimage from '../../assets/background/BG2.png'
+import BGimage from '../../assets/background/BGSupporting@4x.png'
 
 export const Card = styled.div`
   border: #00f4fd 0.15rem solid;
@@ -63,6 +63,7 @@ export const BgPage = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0;
+    background-image: url(${BGimage});
     background-color: ${({ theme }) => theme.addOnColors.background1};
     background-repeat: no-repeat;
     background-position: center;

@@ -23,7 +23,7 @@ export const StyledLaunchButton = styled.button`
 `
 const LaunchButton:React.FC = () => {
     return (
-        <StyledLaunchButton as="a" href="https://app.metagg.com/#/farms">
+        <StyledLaunchButton as="a" href="https://app.metagg.com/#/farms" color='white'>
         Launch App
       </StyledLaunchButton>
     )

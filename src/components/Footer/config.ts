@@ -15,10 +15,6 @@ const Config: Props = {
       name: names.links.revModel,
       href: "/revenue-model",
     },
-    // {
-    //   name: names.links.NFT,
-    //   href: '/mgg-NFTs'
-    // },
     {
       name: names.links.teams,
       href: "/teams",
