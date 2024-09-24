@@ -44,6 +44,12 @@ export const PageTitle = styled(Heading)`
   letter-spacing: 1px;
 `;
 
+export const App = styled(Heading)`
+  color: ${({ theme }) => theme.colors.primary};
+  margin: 30px 0px;
+  letter-spacing: 1px;
+`;
+
 export const GlowTitle = styled(Heading)`
   border: 2px solid yellow; /* Yellow border */
   padding-left: 30px; /* Optional padding inside the border */

@@ -1,6 +1,6 @@
 import React, { SVGAttributes, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import PNG from 'assets/teams/5 T&D Diana.png'
+import PNG from 'assets/teams/Diana Gee Delas Alas.png'
 import { SvgProps } from 'components/SvgIcon/types'
 import SvgIcon from 'components/SvgIcon/SvgIcon'
 

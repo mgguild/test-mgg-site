@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
           wrap="wrap"
           rowSpacing={{ xs: 2 }}
           alignItems="center"
-          justifyContent="center"
+          justifyContent="flex-start"
         >
           {links.map((link) => (
-            <Grid key={link.name} item xs={5} md={6}>
+            <Grid key={link.name} item xs={4} md={5}>
               <Link to={link.href}>
                 <Text>{link.name}</Text>
               </Link>

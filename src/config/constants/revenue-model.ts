@@ -7,7 +7,7 @@ export const RevenueModel:RevenueModelConfig[] = [{
 },
 {
  name: 'BLOCKCHAIN VALIDATION',
- description: 'MGG earns block rewards or transaction fees as it plays a criticakk role in maintaining the security, integrity, and operation of some blockchain networks.',
+ description: 'MGG earns block rewards or transaction fees as it plays a critical role in maintaining the security, integrity, and operation of some blockchain networks.',
  image: 'LaunchpadIcon',
 },
 {

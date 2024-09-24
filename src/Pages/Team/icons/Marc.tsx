@@ -1,6 +1,6 @@
 import React, { SVGAttributes, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import PNG from 'assets/teams/4 O&M Marc.png'
+import PNG from 'assets/teams/Marc Rapi.png'
 import { SvgProps } from 'components/SvgIcon/types'
 import SvgIcon from 'components/SvgIcon/SvgIcon'
 

@@ -20,10 +20,7 @@ export { default as JessImg } from './Jess';
 export { default as AdorCruzImg } from './AdorCruz';
 
 export { default as AldrickBonaobraImg } from "./AldrickBonaobra";
-
-export { default as HarvinCadagImg } from "./HarvinCadag";
-
 export { default as MikeReñevoImg } from "./MikeReveno";
 export { default as SalvadorAmbaJrImg } from "./SalvadorAmba";
-
 export { default as PlaceholderImg } from "./Placeholder";
+export { default as Shanie} from  "./ShaniePolagñe";

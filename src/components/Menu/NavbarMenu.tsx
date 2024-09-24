@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import styled, { ThemeContext } from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MoreHorizontal } from "react-feather";
@@ -16,13 +16,20 @@ const StyledMenuEntry = styled(MenuEntry)`
   padding: 0;
 `;
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.div<{ scrolled: boolean }>`
   display: flex;
   flex-direction: column;
   min-width: 200px;
+  background-color: ${({ scrolled }) => 
+    scrolled ? "rgba(9, 1, 52, 0.8)" : "transparent"}; /* Change color and transparency */
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000; /* Stay above other content */
+  transition: background-color 0.3s ease-in-out;
+
   & > * {
     text-align: left;
   }
+
   & > *:nth-child(4) {
     border-top: 2px solid rgba(133, 133, 133, 0.1);
     border-bottom: 2px solid rgba(133, 133, 133, 0.1);
@@ -67,10 +74,25 @@ const NavbarTitle: React.FC<{ label: string; isActive?: Array<{ label: string; h
 const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <LinkContainer>
-      {links.map((link) => {
-        return (
+    <NavBarContainer scrolled={scrolled}>
+      <LinkContainer>
+        {links.map((link) => (
           link.href && (
             <MenuEntry key={link.label}>
               <MenuLink href={link.href}>
@@ -80,10 +102,10 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
               </MenuLink>
             </MenuEntry>
           )
-        );
-      })}
-    </LinkContainer>
+        ))}
+      </LinkContainer>
+    </NavBarContainer>
   );
 };
 
-export default NavbarMenu
+export default NavbarMenu;

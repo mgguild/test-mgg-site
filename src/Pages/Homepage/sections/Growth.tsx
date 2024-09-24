@@ -37,9 +37,10 @@ const FigureGridItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: box-shadow 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
   &:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.7); /* Stronger glow on hover */
+    background-color: #000058;  // Example background color on hover
+    color: #007bff;             // Example text color on hover
   }
 `;
 

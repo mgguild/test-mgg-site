@@ -97,15 +97,7 @@ const Section: React.FC = () => {
             </MenuLink>
           ))}
         </Flex>
-        {/* <Content flexDirection="column" margin="1em 0">
-          {/* <PageTitle size="xl">MGG is MORE Than just a GAME!</PageTitle> 
-          <Flex alignItems="center" justifyContent="center">
-            <img alt="mgg-icon" src={MGGLogo} width={isMobile ? "150px" : "200px"} />
-            <PageTitle size="xl">
-              MGG is MORE Than just a GAME!
-            </PageTitle>
-          </Flex>
-        </Content> */}
+        
         {/* <Content flexDirection='column'>
           <Grid container margin='1em 0' style={{justifyContent: 'center'}}>
             <Grid item md={3} style={{width: '100%', margin: '1rem'}}>

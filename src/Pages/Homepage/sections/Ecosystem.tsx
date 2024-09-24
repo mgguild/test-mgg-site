@@ -24,6 +24,13 @@ const Container = styled(Flex)`
     padding: 0;
   }
 `;
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  align-items: flex-start; /* Align items to the start */
+`;
+
 const StyledCard = styled.div<{ link?: boolean }>`
   padding: 20px;
   border: 1px solid ${({ theme }) => theme.colors.MGG_accent2};
@@ -149,14 +156,16 @@ const Section: React.FC = () => {
     
     <EcoContainer height="100">
       <Container>
-      <DescriptionContainer flexDirection='column' alignItems='space-around' padding='30px 20px'>
+      <DescriptionContainer flexDirection='column' alignItems='space-around' padding='80px 80px'>
           <PageTitle size='xl'> About MetaGaming Guild </PageTitle>
+               <TextContainer>
                <Text as='p' fontSize='1.2em' >
                         MetaGaming Guild (MGG) is a unified DAO-based ecosystem of gaming guild, strategic investments, and blockchain validation aimed at democratizing game finance.
                     </Text>
                <Text fontSize='1.2em' >
                         Our vision is to become the most community-centric DAO in the GameFi metaverse, with a focus on empowering players, driving innovation, and support the future of GameFi.
                     </Text>
+              </TextContainer>
           </DescriptionContainer>
         <GlowTitle><PageTitle size="xl" >META GAMING GUILD ECOSYSTEMS</PageTitle></GlowTitle>
         <Cards />

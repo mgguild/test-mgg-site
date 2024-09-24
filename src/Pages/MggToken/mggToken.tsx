@@ -40,6 +40,15 @@ export const Icon: React.FC<IconProps> = (props) => {
   return <SvgIcon width={width} Img={Img} />
 }
 
+const HoverCard = styled(Card)`
+  width: 20rem;
+ transition: color 0.3s ease, background-color 0.3s ease;
+  &:hover {
+    background-color: #000058;  // Example background color on hover
+    color: #007bff;             // Example text color on hover
+  }
+`;
+
 const AdaptTxt = styled(Text)`
   font-size: 1rem;
   @media screen and (max-width: 500px) {
@@ -76,49 +85,51 @@ const MggToken = () => {
 
         <BgContainer  bgColor='#140937' position='center bottom' style={{flexFlow: 'column'}}>
         <Flex style={{ flexFlow: 'row wrap', columnGap: '0rem', justifyContent: 'center' }}>
-            <Card style={{ width: '20rem' }}>
-              <Heading size="xl" color={theme.colors.primary}>$MGG</Heading>
-              <Text>Ticker</Text>
-            </Card>
+          <HoverCard>
+            <Heading size="xl" color={theme.colors.primary}>$MGG</Heading>
+            <Text>Ticker</Text>
+          </HoverCard>
 
-            <Card style={{ width: '20rem' }}>
-              <Heading size="xl" color={theme.colors.primary}>1 BILLION</Heading>
-              <Text>Total Supply</Text>
-            </Card>
+          <HoverCard>
+            <Heading size="xl" color={theme.colors.primary}>1 BILLION</Heading>
+            <Text>Total Supply</Text>
+          </HoverCard>
 
-            <Card style={{ width: '20rem' }}>
-              <Heading size="xl" color={theme.colors.primary}>288,424,658</Heading>
-              <Text>Circulating Supply</Text>
-            </Card>
-          </Flex>
+          <HoverCard>
+            <Heading size="xl" color={theme.colors.primary}>288,424,658</Heading>
+            <Text>Circulating Supply</Text>
+          </HoverCard>
+        </Flex>
 
           <div style={{position: 'relative', margin: '0 auto 3rem auto'}}>
-          <Section style={{ padding: '4rem 0', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', rowGap: '3rem' }}>
-            <div style={{ flex: '1' }}>
-              <Heading size='xl' color={theme.colors.primary}>What You Can Do with $MGG Token</Heading>
-              {/* <Btn disabled>Go To Tokenomics Page</Btn> */}
+          <Section style={{ padding: '4rem 0', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ flex: '1' }}>
+                <Heading size='xl' color={theme.colors.primary}>What You Can Do with $MGG Token</Heading>
+                {/* <Btn disabled>Go To Tokenomics Page</Btn> */}
               </div>
               <div style={{ flex: '1', textAlign: 'right' }}>
-              <Icons style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                <IconHolder style={{ margin: '10px' }}>
-                  <Icon Img={GuildRwards} width={120} />
-                  <Text>Guild Rewards</Text>
-                </IconHolder>
-                <IconHolder style={{ margin: '10px' }}>
-                  <Icon Img={GameFiVault} width={120} />
-                  <Text>In-game Rewards</Text>
-                </IconHolder>
-                <IconHolder style={{ margin: '10px' }}>
-                  <Icon Img={LiquidityRewards} width={120} />
-                  <Text>Liquidity Rewards</Text>
-                </IconHolder>
-                <IconHolder style={{ margin: '10px' }}>
-                  <Icon Img={DAOG} width={120} />
-                  <Text>DAO Governance</Text>
-                </IconHolder>
-              </Icons>
-            </div>
-            
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', justifyItems: 'center', alignItems: 'end'  }}>
+                  <div style={{ margin: '10px' }}>
+                    <img src={GuildRwards} alt="Guild Rewards" width={125} />
+                    <Text>Guild Rewards</Text>
+                  </div>
+                  
+                  <div style={{ margin: '10px' }}>
+                    <img src={GameFiVault} alt="In-game Rewards" width={125} />
+                    <Text>In-game Rewards</Text>
+                  </div>
+                  
+                  <div style={{ margin: '10px' }}>
+                    <img src={LiquidityRewards} alt="Liquidity Rewards" width={125} />
+                    <Text>Liquidity Rewards</Text>
+                  </div>
+                  
+                  <div style={{ margin: '10px' }}>
+                    <img src={DAOG} alt="DAO Governance" width={125} />
+                    <Text>DAO Governance</Text>
+                  </div>
+                </div>
+              </div>
             </Section>
             <Section style={{padding: '5rem 0 0 0'}}>
               <Heading size='xl' color={theme.colors.primary}>MGG Contract Address</Heading>
@@ -146,18 +157,18 @@ const MggToken = () => {
                 </div>
               </Flex>
             </Section>
-            <Section style={{padding: '5rem 0 0 0'}}>
-              <Heading size='xl' color={theme.colors.primary}>BUY $MGG Token</Heading>
-              <Flex style={{flexFlow: 'row wrap', justifyContent: 'center'}}>
-                {
-                  Exchanges.map((exchange) => (
-                    <LogoHighlightLink href={exchange.link} target='_blank'>
-                        <img width='120px' src={exchange.image} alt='icon-exchange'/>
-                    </LogoHighlightLink>
-                  ))
-                }
-              </Flex>
-            </Section>
+            <Section style={{ padding: '5rem 0 0 0' }}>
+            <Heading size='xl' color={theme.colors.primary}>BUY $MGG Token</Heading>
+            <Flex style={{ flexFlow: 'row wrap', justifyContent: 'center', alignItems: 'center' }}>
+              {
+                Exchanges.map((exchange) => (
+                  <LogoHighlightLink href={exchange.link} target='_blank' key={exchange.name}>
+                    <img width='120px' src={exchange.image} alt='icon-exchange' />
+                  </LogoHighlightLink>
+                ))
+              }
+            </Flex>
+          </Section>
           </div>
         </BgContainer>
       </Page>

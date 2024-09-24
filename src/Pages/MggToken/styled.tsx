@@ -55,7 +55,7 @@ export const Section = styled.div`
 export const LogoHighlightLink = styled.a`
   cursor: pointer;
   position: relative;
-  box-shadow: 0 0 2px rgba(0, 234, 255, 0.1);
+  box-shadow: 0 0 0px rgba(0, 234, 255, 0.1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   margin: 0.5rem;
   z-index: 0;

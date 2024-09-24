@@ -1,4 +1,4 @@
-import { IEcosystems, IFigures } from "./types";
+import { IEcosystems, IFigures, IApp, INews } from "./types";
 
 export const Ecosystems: IEcosystems[] = [
   {
@@ -12,14 +12,14 @@ export const Ecosystems: IEcosystems[] = [
     name: "STRATEGIC INVESTMENTS",
     subtitle: "NFTs, Assets, Token Acquisition",
     description:
-      "Backed by industry-leadinf partners, MGG carefully selects and acquires NFTs, tokens, and gaming assets to drive sustainable growth and deliver value to our community.",
+      "Backed by industry-leading partners, MGG carefully selects and acquires NFTs, tokens, and gaming assets to drive sustainable growth and deliver value to our community.",
     image: "Labs",
   },
   {
     name: "BLOCKCHAIN VALIDATION",
     subtitle: "Node Operations",
     description:
-      "MGG particiaptes in the security and scability of some blockchain networks through active node operations, contributing to decentralized infrastructure and generating additional revenue for our guild members.",
+      "MGG participates in the security and scability of some blockchain networks through active node operations, contributing to decentralized infrastructure and generating additional revenue for our guild members.",
     image: "Dao",
     // link: '/mgg-NFTs',
     // status: "msw.gg",
@@ -36,10 +36,6 @@ export const Ecosystems: IEcosystems[] = [
 
 
 export const Figures:IFigures[] = [
-  // {
-  //   amount: '$100,000+',
-  //   subtitle: 'Monthly Revenue',
-  // },
   {
     amount: '80+',
     subtitle: 'Renowned Gaming Partners'
@@ -60,4 +56,49 @@ export const Figures:IFigures[] = [
     amount: '5,000+',
     subtitle: 'NFTs in the Treasury'
   }
+]
+
+
+
+export const App:IApp[] = [
+  {
+    description: 'STAKING'  
+  },
+  {
+    description: 'GAMEFI VAULT'  
+  },
+  {
+    description: 'META GAMING PAD'  
+  },
+  {
+    description: 'EARNING DASHBOARD'  
+  },
+  {
+    description: 'BRIDGE'  
+  },
+  
+]
+
+
+
+export const News:INews[] = [
+  {
+    image: 'News1',
+    description: `Metagaming Guild's Pixels Scholarship Welcomes 1,500 Scholars`,
+    name: "page1",
+    link: "https://medium.com/metagamingguild/metagaming-guilds-pixels-scholarship-welcomes-1-500-scholars-181bff1ad4b6",
+  },
+  {
+    image: 'News2',
+    description: 'Unveiling The Earning Mechanism Of Meatasaga Warriors With $MGG Token',
+    name: "page2",
+    link: "https://medium.com/metagamingguild/unveiling-the-earning-mechanism-of-metasaga-warriors-with-mgg-token-426d8870dd78",
+  },
+  {
+    image: 'News3',
+    description: 'Deep Dive Into $MGG Token: Understanding Its Utilities And Value',
+    name: "page3",
+    link: "https://medium.com/metagamingguild/deep-dive-into-mgg-token-understanding-its-utilities-and-value-95571164e817",
+  },
+  
 ]

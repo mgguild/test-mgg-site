@@ -5,22 +5,17 @@ import GridGradientFlipped from '../../assets/background/gridwgradientFlipped.pn
 
 export const Card = styled.div<{border?: string; fontSize?: string}>`
   background-color: #0c012c;
-  border: ${({border}) => border? border : '#00f4fd 0.15rem solid'};
-  border-radius: 0.5rem;
-  padding: 2rem;
-  -moz-box-shadow: inset 0 0 2rem #000000;
-  -webkit-box-shadow: inset 0 0 2rem #000000;
-  box-shadow: inset 0 0 2rem #000000, 0 0 0.5rem #00f4fd;
-  z-index: 0;
+  border-radius: 50%;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
+  height: 12rem;
+  width: 12rem;  // Set width to match height
   ${({fontSize}) => fontSize && `
-  font-size: ${fontSize}px;
+    font-size: ${fontSize}px;
   `}
-`
+`;
 
 export const Logo = styled.img`
   height: 5rem;
@@ -28,9 +23,10 @@ export const Logo = styled.img`
 
 export const CardContainer = styled.div`
   flex-basis: calc(100% / 6);
-  max-width: 26rem;
-  min-width: 16rem;
+  max-width: 16rem;
+  min-width: 0rem;
   position: relative;
+  padding-left: 55px;
 `
 
 export const CheckList = styled.li`
@@ -92,7 +88,7 @@ export const Logos = styled(Flex)`
   margin: 2rem 0 0 0;
   flex-flow: row wrap;
   column-gap: 1rem;
-  row-gap: 3rem;
+  row-gap: 1rem;
   justify-content: center;
   align-items: stretch;
   position: relative;
@@ -104,9 +100,30 @@ export const Logos = styled(Flex)`
   } */
 `
 
-export const HeadingGlow = styled(Heading)<{ glow?: string }>`
-  text-shadow: 0 0 0.5rem ${({ glow }) => (glow ??'#00f4fd')};
+export const PageTitle = styled(Heading)`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 3.5em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+  text-align: center; /* Center text inside PageTitle */
 `
+
+export const Title = styled(Heading)`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 2em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 0 6px yellow; /* Glow effect */
+  border-radius: 15px;
+  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+  text-align: center; /* Center text inside PageTitle */
+`
+
 
 export const Line = styled.div`
   width: 10%;
