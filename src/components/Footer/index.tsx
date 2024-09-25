@@ -23,6 +23,10 @@ const LaunchDiv = styled(Flex)`
   }
 `
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const Logo = () => {
   return (
     <Flex
@@ -69,7 +73,7 @@ const Footer: React.FC = () => {
         >
           {links.map((link) => (
             <Grid key={link.name} item xs={4} md={5}>
-              <Link to={link.href}>
+              <Link to={link.href} onClick={scrollToTop}>
                 <Text>{link.name}</Text>
               </Link>
             </Grid>

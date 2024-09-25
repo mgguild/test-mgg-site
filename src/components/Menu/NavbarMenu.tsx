@@ -54,6 +54,10 @@ const StyledLinkLabel = styled(LinkLabel)`
 `}
 `;
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const NavbarTitle: React.FC<{ label: string; isActive?: Array<{ label: string; href: string }> }> = ({
   label,
   isActive,
@@ -95,7 +99,7 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
         {links.map((link) => (
           link.href && (
             <MenuEntry key={link.label}>
-              <MenuLink href={link.href}>
+              <MenuLink href={link.href} onClick={scrollToTop}>
                 <LinkLabel isActive={link.href === location.pathname}>
                   {link.label}
                 </LinkLabel>

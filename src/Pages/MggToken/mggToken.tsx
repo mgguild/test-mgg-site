@@ -17,7 +17,7 @@ import {
   LogoHighlightLink
 } from './styled'
 import { CardContainer, Card as BoxCard } from 'Pages/Partners/styled'
-import bgImage from 'assets/background/revTokenBG.png'
+import bgImage from 'assets/background/BGextra.png'
 import GrowthBG from 'assets/background/GrowthBG.png'
 import MGGLogo from 'assets/background/MGGLogo.png'
 import EthLogo from 'assets/logo/ETH.png'
@@ -67,7 +67,7 @@ const MggToken = () => {
     <>
       <Page>
 
-        <BgContainer  bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
+        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
         
           <Section>
           <PageTitle >$MGG Token</PageTitle>
