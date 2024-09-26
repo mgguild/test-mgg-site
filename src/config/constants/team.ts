@@ -46,7 +46,7 @@ export const Teams:TeamsConfig = {
       title: 'Game Streamer/Content Creator'
     },
     {
-      name: 'Sheila Mae Perico',
+      name: 'Shiela Mae Perico',
       title: 'Guild Players Data Account Manager'
     },
     {
