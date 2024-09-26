@@ -65,7 +65,7 @@ const Section: React.FC = () => {
   return (
     <GrowthContainer height='50'>
         <div style={{textAlign: 'center'}}>
-        <GlowTitle><PageTitle size="xl">META GAMING APP FEATURES</PageTitle></GlowTitle>
+        <GlowTitle><PageTitle size="xl">METAGAMING GUILD APP FEATURES</PageTitle></GlowTitle>
         </div>
       <Container style={{padding: '0'}}>
         <FigureComponent />

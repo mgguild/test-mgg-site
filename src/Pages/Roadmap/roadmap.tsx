@@ -28,7 +28,7 @@ const Roadmap = () => {
       <Page>
         <BgPage>
           <div style={{position: 'relative', zIndex: 2}}>
-            <HeadingGlow size='xxl' color='#fdda00' glow="#fdda00">ROADMAP</HeadingGlow>
+            <HeadingGlow size='xxl' color='#fdda00' glow="#fdda00" paddingTop={123}>ROADMAP</HeadingGlow>
             <NavOptionContainer
               alignItems="center"
               margin="2.5rem 0px 2rem 0px"

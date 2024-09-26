@@ -46,7 +46,7 @@ export const Teams:TeamsConfig = {
       title: 'Game Streamer/Content Creator'
     },
     {
-      name: 'Sheila Mae Perico',
+      name: 'Shiela Mae Perico',
       title: 'Guild Players Data Account Manager'
     },
     {
@@ -54,37 +54,34 @@ export const Teams:TeamsConfig = {
       title: 'Discord Community Manager'
     },
     {
-      name: 'Jess Pardiñas',
-      title: 'QA Specialist'
-    },
-    {
       name: 'Ador Cruz',
       title: 'Gamer Analyst and Guild Trainer'
     }
   ],
   'TECHNOLOGY & DEVELOPMENT': [
-    
-    {
-      name: 'Diana Gee Delas Alas',
-      title: 'Full Stack Developer'
-    },
-  
-    {
-      name: 'Ralph Balanta',
-      title: 'Front-end Developer'
-    },
-    {
-      name: 'Aldrick Bonaobra',
-      title: 'Senior Blockchain Developer'
-    },
-   
     {
       name: 'Mike Reñevo',
       title: 'Lead Game Developer'
     },
     {
+      name: 'Aldrick Bonaobra',
+      title: 'Senior Blockchain Developer'
+    },
+    {
       name: 'Salvador Amba Jr',
       title: 'Back-end Developer'
+    },
+    {
+      name: 'Jess Pardiñas',
+      title: 'QA Specialist'
+    },
+    {
+      name: 'Diana Gee Delas Alas',
+      title: 'Full Stack Developer'
+    },
+    {
+      name: 'Ralph Balanta',
+      title: 'Front-end Developer'
     },
     {
       name: 'Shanie Polagñe',

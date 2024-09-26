@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Heading, Flex } from '@metagg/mgg-uikit'
 import { breakpoints } from '../../theme/Breakpoints'
-import BackgroundImage from 'assets/background/BGwlogo.png'
+import BackgroundImage from 'assets/background/bgpartner1@4x.png'
 
 const Container = styled.div`
   display: flex;
