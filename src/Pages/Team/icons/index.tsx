@@ -13,7 +13,7 @@ export { default as JobelynEllaAHidalgoImg } from "./JobelynHidalgo";
 export { default as RussmanGiananImg } from "./RussmanGianan";
 export { default as KhenMendozaImg } from "./KhenMendoza";
 export { default as AizaBBorinagaImg } from './AizaBorinaga';
-export { default as SheilaMaePericoImg } from './SheilaMaePerico';
+export { default as ShielaMaePericoImg } from './ShielaMaePerico';
 export { default as MarcRapiImg } from './Marc';
 export { default as JessPardiñasImg } from './JessPardiñas';
 export { default as AdorCruzImg } from './AdorCruz';
