@@ -8,7 +8,8 @@ import partners from "../../config/constants/partners";
 import { NavOptionContainer } from "../../style/Global";
 import {
   BgPage,
-  HeadingGlow,
+  PageTitle,
+  Title,
   Logos,
   Logo,
   Card,
@@ -16,6 +17,7 @@ import {
   List,
   CheckList,
 } from "./styled";
+
 
 const Partners = () => {
   const theme = useContext(ThemeContext);
@@ -27,9 +29,9 @@ const Partners = () => {
       <Page>
         <BgPage>
           <div style={{ position: "relative", zIndex: 2 }}>
-            <HeadingGlow size="xxl" color="#fdda00" glow="#fdda00">
+            <PageTitle size="xxl" color="#fdda00">
               Partners
-            </HeadingGlow>
+            </PageTitle>
             <NavOptionContainer
               alignItems="center"
               margin="2.5rem 0px 2rem 0px"
@@ -85,7 +87,9 @@ const Partners = () => {
             ) : (
               <div>
                 <div style={{ margin: "0 0 2rem 0" }}>
-                  <Heading size="xl">Investors</Heading>
+                <Title size="xl" color="#fdda00">
+                INVESTORS AND BACKERS
+                </Title>
                   <Logos>
                     {Object.keys(partners.InvsBckrs).map((partner) => (
                       <CardContainer>
@@ -99,7 +103,9 @@ const Partners = () => {
                   </Logos>
                 </div>
                 <div style={{ margin: "0 0 2rem 0" }}>
-                  <Heading size="xl">Partners</Heading>
+                <Title size="xl" color="#fdda00">
+                GAMING PARTNERS
+                </Title>
                   <Logos>
                     {Object.keys(partners.Partners).map((partner) => (
                       <CardContainer>

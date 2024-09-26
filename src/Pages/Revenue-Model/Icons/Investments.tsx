@@ -1,11 +1,8 @@
-import React, { SVGAttributes, useContext } from 'react'
-import { ThemeContext } from 'styled-components'
-import PNG from 'assets/revenue-model/Investment.png'
-import { SvgProps } from 'components/SvgIcon/types'
-import SvgIcon from 'components/SvgIcon/SvgIcon'
+import React from 'react';
+import PNG from 'assets/revenue-model/RM_NFTS.png';
 
-const Icon: React.FC<SvgProps> = (props) => {
-  return <SvgIcon Img={PNG} />
+const Icon: React.FC = () => {
+  return <img src={PNG} alt="NFT Icon" />;
 }
 
-export default Icon
+export default Icon;

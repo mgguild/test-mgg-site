@@ -8,7 +8,7 @@ import { names } from "components/Footer/types"
 const StyledLogo = styled.span`
     & > * {
         color: ${(({theme}) => theme.colors.primary)};
-        font-size: 30px;
+        font-size: 20px;
         // margin: 0 5px;
         // width: 30px;
         // height: 30px;

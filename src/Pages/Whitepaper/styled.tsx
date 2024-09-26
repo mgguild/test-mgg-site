@@ -14,9 +14,6 @@ export const Card = styled.div`
   text-align: center;
 `
 
-export const HeadingGlow = styled(Heading)<{ glow?: string }>`
-  text-shadow: 0 0 0.5rem ${({ glow }) => (glow ??'#00f4fd')};
-`
 
 export const Btn = styled(Button)`
   background-color: #00f4fd;
@@ -46,4 +43,14 @@ export const Section = styled.div`
   align-items: center;
   text-align: center;
   row-gap: 2rem;
+`
+export const PageTitle = styled(Heading)`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 3.2em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 37px; 
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+   margin-bottom: 20px; // Adjust the margin-bottom value as needed 
 `

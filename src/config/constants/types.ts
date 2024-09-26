@@ -1,3 +1,5 @@
+import { Key, ReactNode } from "react";
+
 export interface Address {
     1?: string
     4?: string
@@ -33,6 +35,16 @@ export interface IEcosystems extends DetailsConfig{
 export interface IFigures {
   amount: string;
   subtitle: string;
+}
+
+export interface IApp {
+  description: string;
+}
+
+export interface INews extends DetailsConfig  {
+  image: string
+  description: string;
+  link?: string; 
 }
 
 export interface RevenueModelConfig extends DetailsConfig {}

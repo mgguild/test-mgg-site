@@ -4,7 +4,7 @@ const Config: Props = {
   links: [
     {
       name: names.links.home,
-      href: "/home",
+      href: "/",
     },
     {
       name: names.links.token,
@@ -16,12 +16,8 @@ const Config: Props = {
       href: "/revenue-model",
     },
     {
-      name: names.links.NFT,
-      href: '/mgg-NFTs'
-    },
-    {
       name: names.links.teams,
-      href: "/teams",
+      href: "/team",
     },
     {
       name: names.links.partners,

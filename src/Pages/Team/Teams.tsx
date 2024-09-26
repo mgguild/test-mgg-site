@@ -17,7 +17,7 @@ const TeamsPage: React.FC = () => {
       <BgPage>
         <div style={{ position: "relative", zIndex: 2 }}>
           <HeaderContainer>
-            <PageTitle> MGG Team and Advisors </PageTitle>
+            <PageTitle> MGG TEAM AND ADVISORS </PageTitle>
             <Text as="p">
               MGG is developed by the collective minds of people who believe
               that the future of gaming will be a play-to-earn model powered by

@@ -29,7 +29,13 @@ export const ContentContainer = styled(Container)`
 
 export const PageTitle = styled(Heading)`
   color: ${({theme}) => theme.colors.primary};
-  font-size: 2em;
+  font-size: 1.7em;
+  border: 2px solid yellow; /* Yellow border */
+  padding: 37px; 
+  display: inline-block;
+  box-shadow: 0 0 10px yellow; /* Glow effect */
+  border-radius: 15px;
+   margin-bottom: 20px; // Adjust the margin-bottom value as needed 
 `
 
 export const CardContainer = styled.div`
@@ -56,7 +62,6 @@ export const BgPage = styled.div`
     height: 105%;
     z-index: 0;
     background-color: ${({theme}) => theme.addOnColors.background1};
-    background-image: url(${BackgroundImage});
     background-repeat: no-repeat;
     // background-position: center;
     background-size: cover;

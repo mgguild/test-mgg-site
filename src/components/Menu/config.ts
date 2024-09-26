@@ -21,10 +21,10 @@ const links: MenuEntry[] = [
     label: 'MGG Token',
     href: "/mgg-token"
   },
-  {
-    label: 'NFTs',
-    href: "/mgg-NFTs"
-  },
+  // {
+  //   label: 'NFTs',
+  //   href: "/mgg-NFTs"
+  // },
   {
     label: 'Partners',
     href: "/partners"
@@ -32,6 +32,10 @@ const links: MenuEntry[] = [
   {
     label: 'White Paper',
     href: "/White-Paper"
+  },
+  {
+    label: 'Launch App',
+    href: "https://app.metagg.com/#/farms"
   },
 ]
 
