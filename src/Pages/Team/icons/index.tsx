@@ -5,28 +5,21 @@ export { default as RicoZuñigaImg } from "./RicoZuniga";
 export { default as MorrisPericoImg } from "./MorrisPerico";
 export { default as MyrtleAnneRamosImg } from "./MyrtleAnneRamos";
 export { default as LeslieDianaApongolImg } from "./LeslieDianaApongol";
-export { default as KaranSharmaImg } from "./KaranSharma";
-export { default as LyrafeAriolaImg } from "./LyrafeAriola";
+
 export { default as DianaGeeDelasAlasImg } from "./DianaGeeDelasAlas";
 export { default as RalphBalantaImg } from "./RalphBalanta";
 export { default as JobelynEllaAHidalgoImg } from "./JobelynHidalgo";
-export { default as YandroAbrazadoImg } from "./YandroAbrazado";
-export { default as MatthewWillsImg } from "./MatthewWills";
-export { default as MaritesCabanillaImg } from "./MaritesCabanilla";
-export { default as MrHyoImg } from "./MrHyo";
+
+export { default as RussmanGiananImg } from "./RussmanGianan";
 export { default as KhenMendozaImg } from "./KhenMendoza";
 export { default as AizaBBorinagaImg } from './AizaBorinaga';
-export { default as SheilaImg } from './Sheila';
-export { default as MarcImg } from './Marc';
-export { default as JessImg } from './Jess';
+export { default as SheilaMaePericoImg } from './SheilaMaePerico';
+export { default as MarcRapiImg } from './Marc';
+export { default as JessPardiñasImg } from './JessPardiñas';
 export { default as AdorCruzImg } from './AdorCruz';
 
 export { default as AldrickBonaobraImg } from "./AldrickBonaobra";
-export { default as MedardMandaneImg } from "./MedardMandane";
-export { default as HarvinCadagImg } from "./HarvinCadag";
-export { default as KojiAdrianoJrImg } from "./KojiAdrianoJr";
 export { default as MikeReñevoImg } from "./MikeReveno";
 export { default as SalvadorAmbaJrImg } from "./SalvadorAmba";
-export { default as JohnAnthonyBalbinImg } from "./JohnBalbin";
-export { default as EmmanAdornadoImg } from "./EmmanAdornado";
-export { default as PlaceholderImg } from "./Placeholder";
+
+export { default as ShaniePolagñeImg} from  "./ShaniePolagñe";

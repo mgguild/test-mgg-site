@@ -7,10 +7,10 @@ import PageContainer from 'components/layout/Page'
 import { BgContainer } from '../../style/Global'
 import {
   Card,
-  HeadingGlow,
   Btn,
   Icons,
   IconHolder,
+  PageTitle,
   Section,
 } from './styled'
 import bgImage from 'assets/background/revTokenBG.png'
@@ -24,9 +24,9 @@ const MggToken = () => {
     <>
       <PageContainer>
 
-        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
-          <Section>
-            <HeadingGlow style={{margin: '0 4rem 0 0'}} size='xxl' color={theme.colors.primary} glow={theme.colors.primary}>White Paper</HeadingGlow>
+        <BgContainer  bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
+          <Section style={{margin: '0 4rem 0 0', paddingTop: '9rem'}}>
+          <PageTitle style={{margin: '0 0rem 0 0'}} size='xxl' color={theme.colors.primary} >White Paper</PageTitle>
             <div style={{position: 'relative', zIndex: 1, width: '100%', maxWidth: '50rem'}}>
               <ImageGallery items={whitepaper} showPlayButton={false} thumbnailPosition='right' lazyLoad={true} />
               <a target='_blank' href={PDF} download>

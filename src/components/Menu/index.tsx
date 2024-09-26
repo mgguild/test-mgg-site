@@ -23,7 +23,7 @@ const Menu = ({children}:{children:React.ReactNode}) => {
         isMobile={isMobile}
         />
         {!isMobile && <NavbarMenu links={links} />}
-        <LaunchButton />
+        {/* <LaunchButton /> */}
       </StyledNav>
       <BodyWrapper>
         { isMobile && (

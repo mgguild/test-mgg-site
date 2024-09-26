@@ -19,6 +19,11 @@ const Exchanges:ExchangesConfig[] = [
     link: 'https://www.gate.io/trade/MGG_USDT'
   },
   {
+    name: 'MEXC',
+    image: Mexc,
+    link: 'https://www.mexc.com/'
+  },
+  {
     name: 'PancakeSwap',
     image: Pancakeswap,
     link: 'https://pancakeswap.finance/swap'

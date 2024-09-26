@@ -49,5 +49,5 @@ export const StyledMenuWrapper = styled(WrapperChild)`
 export const Description = styled(Heading)`
     width: 100%;
     text-align: center;
-    color: ${(({theme}) => theme.colors.MGG_accent2)};
+    color: white;
 `

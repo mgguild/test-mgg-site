@@ -12,7 +12,7 @@ export const Teams:TeamsConfig = {
     },
     {
       name: 'Rico Zuñiga',
-      title: 'CTO'
+      title: 'Advisor'
     }
   ],
   'OPERATIONS & MARKETING': [
@@ -33,63 +33,42 @@ export const Teams:TeamsConfig = {
       title: 'Marketing Asssociate'
     },
     {
-      name: 'Karan Sharma',
-      title: "Community Manager - India"
-    },
-    // {
-    //   name: 'Yandro Abrazado',
-    //   title: 'Content Strategist at MSW'
-    // },
-    {
-      name: 'Matthew Wills',
-      title: 'Telegram Community Moderator'
-    },
-    {
-      name: 'Marites Cabanilla',
-      title: 'Telegram Community Moderator'
-    },
-    {
-      name: 'Mr Hyo',
+      name: 'Russman Gianan',
       title: 'Telegram Community Moderator'
     },
     {
       name: 'Khen Mendoza',
-      title: 'Community Manager',
+      title: 'Community Esports Coordinator',
     },
+
     {
       name: 'Aiza B Borinaga',
-      title: 'Discord Admin'
+      title: 'Game Streamer/Content Creator'
     },
     {
-      name: 'Sheila',
-      title: 'Discord Admin'
+      name: 'Sheila Mae Perico',
+      title: 'Guild Players Data Account Manager'
     },
     {
-      name: 'Marc',
-      title: 'Discord Admin'
+      name: 'Marc Rapi',
+      title: 'Discord Community Manager'
     },
     {
-      name: 'Jess',
-      title: 'Discord Support Staff'
+      name: 'Jess Pardiñas',
+      title: 'QA Specialist'
     },
     {
       name: 'Ador Cruz',
-      title: 'MGG  Trainer'
+      title: 'Gamer Analyst and Guild Trainer'
     }
   ],
   'TECHNOLOGY & DEVELOPMENT': [
-    // {
-    //   name: 'Lyrafe Ariola',
-    //   title: 'UI/UX Designer'
-    // },
+    
     {
       name: 'Diana Gee Delas Alas',
       title: 'Full Stack Developer'
     },
-    // {
-    //   name: 'Koji Adriano Jr',
-    //   title: 'Full Stack Developer'
-    // },
+  
     {
       name: 'Ralph Balanta',
       title: 'Front-end Developer'
@@ -98,10 +77,7 @@ export const Teams:TeamsConfig = {
       name: 'Aldrick Bonaobra',
       title: 'Senior Blockchain Developer'
     },
-    // {
-    //   name: 'Medard Mandane',
-    //   title: 'Lead Back-end Developer'
-    // },
+   
     {
       name: 'Mike Reñevo',
       title: 'Lead Game Developer'
@@ -110,18 +86,9 @@ export const Teams:TeamsConfig = {
       name: 'Salvador Amba Jr',
       title: 'Back-end Developer'
     },
-    // {
-    //   name: 'John Anthony Balbin',
-    //   title: 'Software Engineer'
-    // },
-    // {
-    //   name: 'Emman Adornado',
-    //   title: 'QA Specialist'
-    // },
-    //
     {
-      name: 'Harvin Cadag',
-      title: 'Game Developer'
+      name: 'Shanie Polagñe',
+      title: 'UI/UX Game Designer'
     },
   ]
 }

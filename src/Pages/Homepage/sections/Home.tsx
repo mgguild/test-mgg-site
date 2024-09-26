@@ -16,15 +16,14 @@ const Container = styled(Flex)`
     position: relative;
     font-size: 12px;
      :before {
-        top: 0;
+        top: 150px;
         width: 100%;
         height: 100%;
-        opacity: 0.3;
         display: block;
         position: absolute;
         background-image: url(${MGGLogo});
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 40%;
         background-position: center 10px;
         content: ' ';
         z-index: 0;
@@ -40,31 +39,12 @@ const Container = styled(Flex)`
     }
 
 `
-const DescriptionContainer = styled(Flex)`
-
-    // margin-top: 30px;
-    & > * {
-        margin: 10px 0px;
-    }
-`
-
 const Section:React.FC = () => {
 
     return (
-        <HomeContainer height='95'>
+        <HomeContainer height='100'>
             <Container>
-                <Text fontSize="2em" bold marginTop='160px'>We Create Metaverse Gaming Opportunities for P2E Masses </Text>
-                <DescriptionContainer flexDirection='column' alignItems='space-around' padding='10px 0px'>
-                    <PageTitle size='lg'> About MetaGaming Guild </PageTitle>
-                    <Text as='p' fontSize='1.2em'>
-                        MetaGaming Guild is a unified DAO-based ecosystem of Gaming Guild, INO/IGO Launchpad, GameFi Vaults, Game Yield Farming
-                        and Play-to-Earn Game aimed at democratizing game finance.
-                    </Text>
-                    <Text fontSize='1.2em'>
-                        MetaGaming Guild envisions to become the primary and most
-                        community-centric DAO in the GameFi metaverse!
-                    </Text>
-                </DescriptionContainer>
+                <Text fontSize="2.5em" bold marginTop='500px'>We Create Metaverse Gaming Opportunities for P2E Masses </Text>
             </Container>
         </HomeContainer>
     )
