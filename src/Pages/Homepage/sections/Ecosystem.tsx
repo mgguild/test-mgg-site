@@ -167,7 +167,7 @@ const Section: React.FC = () => {
                     </Text>
               </TextContainer>
           </DescriptionContainer>
-        <GlowTitle><PageTitle size="xl" >META GAMING GUILD ECOSYSTEMS</PageTitle></GlowTitle>
+        <GlowTitle><PageTitle size="xl" >METAGAMING GUILD ECOSYSTEMS</PageTitle></GlowTitle>
         <Cards />
       </Container>
     </EcoContainer>

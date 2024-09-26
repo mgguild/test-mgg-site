@@ -66,7 +66,7 @@ const Section: React.FC = () => {
   return (
     <GrowthContainer height='50'>
         <div style={{textAlign: 'center'}}>
-        <GlowTitle><PageTitle size="xl">MetaGaming Guild Growth Figures</PageTitle></GlowTitle>
+        <GlowTitle><PageTitle size="xl">METAGAMING GUILD GROWTH FIGURES</PageTitle></GlowTitle>
           <Text fontSize="1.2em" marginTop={4}>
             Since the project was launched in 2021, MetaGaming Guild has
             maintaned a 50% Month-on-Month growth

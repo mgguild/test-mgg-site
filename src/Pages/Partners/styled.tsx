@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Flex, Heading } from '@metagg/mgg-uikit'
-import GridGradient from '../../assets/background/gridwgradient.png'
-import GridGradientFlipped from '../../assets/background/gridwgradientFlipped.png'
+import GridGradient from '../../assets/background/bgpartner1@4x.png'
+import GridGradientFlipped from '../../assets/background/bgpartner1@4xinverted.png'
 
 export const Card = styled.div<{border?: string; fontSize?: string}>`
   background-color: #0c012c;
@@ -61,7 +61,7 @@ export const BgPage = styled.div`
   height: 100%;
   position: relative;
   background-color: ${({ theme }) => theme.addOnColors.background2};
-
+  /* background-image: url(${GridGradient}); */
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -73,7 +73,7 @@ export const BgPage = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0;
- 
+    /* background-image: url(${GridGradientFlipped}) */
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;

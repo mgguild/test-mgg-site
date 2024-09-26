@@ -84,21 +84,21 @@ export const App:IApp[] = [
 export const News:INews[] = [
   {
     image: 'News1',
-    description: `Metagaming Guild's Pixels Scholarship Welcomes 1,500 Scholars`,
+    description: `MGG Celebrates Year 3 in Web3`,
     name: "page1",
-    link: "https://medium.com/metagamingguild/metagaming-guilds-pixels-scholarship-welcomes-1-500-scholars-181bff1ad4b6",
+    link: "https://medium.com/@support_62719/mgg-celebrates-year-3-in-web3-a2cfb5257a3d",
   },
   {
     image: 'News2',
-    description: 'Unveiling The Earning Mechanism Of Meatasaga Warriors With $MGG Token',
+    description: 'Deep Dive into $MGG Token: Understanding Its Utilities and Value',
     name: "page2",
-    link: "https://medium.com/metagamingguild/unveiling-the-earning-mechanism-of-metasaga-warriors-with-mgg-token-426d8870dd78",
+    link: "https://medium.com/metagamingguild/deep-dive-into-mgg-token-understanding-its-utilities-and-value-95571164e817",
   },
   {
     image: 'News3',
-    description: 'Deep Dive Into $MGG Token: Understanding Its Utilities And Value',
+    description: 'MetaGaming Guild’s Pixels Scholarship Welcomes 1,500 Scholars',
     name: "page3",
-    link: "https://medium.com/metagamingguild/deep-dive-into-mgg-token-understanding-its-utilities-and-value-95571164e817",
+    link: "https://medium.com/metagamingguild/metagaming-guilds-pixels-scholarship-welcomes-1-500-scholars-181bff1ad4b6",
   },
   
 ]
