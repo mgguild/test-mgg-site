@@ -33,7 +33,7 @@ export const Teams:TeamsConfig = {
       title: 'Marketing Asssociate'
     },
     {
-      name: 'Mr Hyo',
+      name: 'Russman Gianan',
       title: 'Telegram Community Moderator'
     },
     {
@@ -46,7 +46,7 @@ export const Teams:TeamsConfig = {
       title: 'Game Streamer/Content Creator'
     },
     {
-      name: 'Sheila Mae',
+      name: 'Sheila Mae Perico',
       title: 'Guild Players Data Account Manager'
     },
     {
@@ -54,7 +54,7 @@ export const Teams:TeamsConfig = {
       title: 'Discord Community Manager'
     },
     {
-      name: 'Jess',
+      name: 'Jess Pardiñas',
       title: 'QA Specialist'
     },
     {

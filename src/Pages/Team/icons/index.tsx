@@ -10,12 +10,12 @@ export { default as DianaGeeDelasAlasImg } from "./DianaGeeDelasAlas";
 export { default as RalphBalantaImg } from "./RalphBalanta";
 export { default as JobelynEllaAHidalgoImg } from "./JobelynHidalgo";
 
-export { default as MrHyoImg } from "./MrHyo";
+export { default as RussmanGiananImg } from "./RussmanGianan";
 export { default as KhenMendozaImg } from "./KhenMendoza";
 export { default as AizaBBorinagaImg } from './AizaBorinaga';
-export { default as SheilaMaeImg } from './Sheila';
+export { default as SheilaMaePericoImg } from './SheilaMaePerico';
 export { default as MarcRapiImg } from './Marc';
-export { default as JessImg } from './Jess';
+export { default as JessPardiñasImg } from './JessPardiñas';
 export { default as AdorCruzImg } from './AdorCruz';
 
 export { default as AldrickBonaobraImg } from "./AldrickBonaobra";
