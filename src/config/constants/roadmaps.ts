@@ -9,7 +9,7 @@ const roadmaps: RoadmapConfig = {
       {txt: "Continue Onboarding of GameFi Partners and P2E players", check: true},
       {txt: "Revamp MGG website", check: true},
       {txt: "Blockchain Validator / Operator Rollout ", check: true},
-      {txt: "Continue Backing High-Pontential GameFi porjects", check: true},
+      {txt: "Continue Backing High-Pontential GameFi projects", check: true},
       {txt: "Expansion of MGG Network and Community", check: true},
       {txt: "Launch of New Game on TON Blockchain", check: true},
       {txt: "Helltoons game early access and monetization", check: true},
