@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Flex, Heading } from '@metagg/mgg-uikit'
-import GridGradient from '../../assets/background/bgpartner1@4x.png'
+import GridGradient from '../../assets/background/BGGridperspective.png'
 import GridGradientFlipped from '../../assets/background/bgpartner1@4xinverted.png'
 
 export const Card = styled.div<{border?: string; fontSize?: string}>`
