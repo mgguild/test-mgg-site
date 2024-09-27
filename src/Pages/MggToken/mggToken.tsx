@@ -67,7 +67,7 @@ const MggToken = () => {
     <>
       <Page>
 
-        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center'}}>
+        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center', paddingTop: 100}}>
         
           <Section>
           <PageTitle >$MGG Token</PageTitle>
