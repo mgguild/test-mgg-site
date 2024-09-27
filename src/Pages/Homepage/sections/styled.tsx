@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BackgroundImage from "assets/background/GrowthBG.png";
 import BGLanding from "assets/background/BGLanding.png";
 import LandingLogo from "assets/background/LandingLogo.png";
+import bgimage from "assets/background/bgpartner2@4x.png";
 // Sections
 
 const SectionContainer = styled.div<{ height?: string }>`
@@ -19,8 +20,13 @@ export const HomeContainer = styled(SectionContainer)`
   background-position: center top;
 `;
 export const EcoContainer = styled(SectionContainer)`
-  background-color: ${({ theme }) => theme.addOnColors.background2};
-  padding: 24px;
+    height: 100%;
+  width: 100%;
+  background-image: url(${bgimage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 `;
 
 export const GrowthContainer = styled(SectionContainer)`
