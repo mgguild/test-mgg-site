@@ -48,7 +48,7 @@ export const PageTitle = styled(Heading)`
   color: ${({theme}) => theme.colors.primary};
   font-size: 3.2em;
   border: 2px solid yellow; /* Yellow border */
-  padding: 37px; 
+  padding: 28px; 
   display: inline-block;
   box-shadow: 0 0 10px yellow; /* Glow effect */
   border-radius: 15px;

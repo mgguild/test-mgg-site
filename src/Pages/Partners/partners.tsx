@@ -28,7 +28,7 @@ const Partners = () => {
     <>
       <Page>
         <BgPage>
-          <div style={{ position: "relative", zIndex: 2 }}>
+          <div style={{ position: "relative", zIndex: 2, paddingTop: 100, }}>
             <PageTitle size="xxl" color="#fdda00">
               Partners
             </PageTitle>

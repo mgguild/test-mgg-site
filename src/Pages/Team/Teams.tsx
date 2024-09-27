@@ -15,7 +15,7 @@ const TeamsPage: React.FC = () => {
   return (
     <Page>
       <BgPage>
-        <div style={{ position: "relative", zIndex: 2 }}>
+        <div style={{ position: "relative", zIndex: 2, paddingTop: 90, }}>
           <HeaderContainer>
             <PageTitle> MGG TEAM AND ADVISORS </PageTitle>
             <Text as="p">
