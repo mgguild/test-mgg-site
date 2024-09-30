@@ -1,9 +1,8 @@
 import { Heading } from "@metagg/mgg-uikit";
 import styled from "styled-components";
-import BackgroundImage from "assets/background/GrowthBG.png";
-import BGLanding from "assets/background/BGLanding.png";
+import BackgroundImage from "assets/background/bgpartner2@4x.png";
+import BGLanding from "assets/background/bgpartner1@4x.png";
 import LandingLogo from "assets/background/LandingLogo.png";
-import bgimage from "assets/background/bgpartner2@4x.png";
 // Sections
 
 const SectionContainer = styled.div<{ height?: string }>`
@@ -20,14 +19,24 @@ export const HomeContainer = styled(SectionContainer)`
   background-position: center top;
 `;
 export const EcoContainer = styled(SectionContainer)`
-    height: 100%;
+  background-color: ${({ theme }) => theme.addOnColors.background2};
+   height: 100%;
   width: 100%;
-  background-image: url(${bgimage});
+  background-image: url(${BackgroundImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  `;
 
+export const NewsContainer = styled(SectionContainer)`
+  height: 100%;
+  width: 100%;
+  background-image: url(${BGLanding});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
+
 
 export const GrowthContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};

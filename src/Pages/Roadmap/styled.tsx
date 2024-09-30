@@ -7,6 +7,7 @@ export const Card = styled.div`
   border-radius: 0.5rem;
   padding: 2rem;
   z-index: 3;
+  background-color: ${({ theme }) => theme.addOnColors.background2};
 `
 
 export const CardContainer = styled.div`
