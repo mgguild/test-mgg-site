@@ -10,14 +10,21 @@ const SectionContainer = styled.div<{ height?: string }>`
   display: flex;
   padding: 15px;
 `;
-
 export const HomeContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
   background-image: url(${LandingLogo});
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center top;
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    background-size: cover; /* Adjust background size */
+    background-position: center center; /* Adjust position for mobile */
+    padding: 20px; /* Add padding for mobile */
+  }
 `;
+
 export const EcoContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background2};
    height: 100%;

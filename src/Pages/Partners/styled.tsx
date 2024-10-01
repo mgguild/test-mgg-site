@@ -16,10 +16,19 @@ export const Card = styled.div<{border?: string; fontSize?: string}>`
   ${({fontSize}) => fontSize && `
     font-size: ${fontSize}px;
   `}
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+
   &:hover {
-    transform: scale(1.1); /* Increases the size on hover */
-    box-shadow: 0 0 10px rgba(253, 218, 0, 0.7); /* Adds a yellow glow shadow effect */
+    animation: moveLeftRight 0.6s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0); /* Initial position */
+    }
+    100% {
+      transform: translateX(10px); /* Move 10px to the right */
+    }
   }
 `;
 
