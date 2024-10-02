@@ -4,7 +4,7 @@ import { Button, Flex, Text } from "@metagg/mgg-uikit";
 import { Grid } from "@mui/material";
 import { breakpoints } from "theme/Breakpoints";
 import { SvgProps } from "components/SvgIcon/types";
-import { EcoContainer, GlowTitle, PageTitle } from "./styled";
+import { EcoContainer, GlowTitle, NewsContainer, PageTitle } from "./styled";
 import { INews } from "config/constants/types";
 import { News } from "config/constants/homepageConfig";
 import * as IconModule from "./icons";
@@ -132,12 +132,12 @@ const Cards: React.FC = () => {
 const Section: React.FC = () => {
   return (
     
-    <EcoContainer height="100">
+    <NewsContainer height="100">
       <Container>
         <GlowTitle><PageTitle size="xl" >MGG NEWS AND UPDATE</PageTitle></GlowTitle>
         <Cards />
       </Container>
-    </EcoContainer>
+    </NewsContainer>
   );
 };
 

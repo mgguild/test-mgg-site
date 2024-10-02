@@ -4,8 +4,8 @@ const roadmaps: RoadmapConfig = {
    2024 : {
     2024 : [
       {txt: "Official launch of MetaSaga Warriors", check: true},
-      {txt: "MSW Play to Aisdrop Season 1", check: true},
-      {txt: "Quartley BuyBack Program", check: true},
+      {txt: "MSW Play to Airdrop Season 1", check: true},
+      {txt: "Quarterly BuyBack Program", check: true},
       {txt: "Continue Onboarding of GameFi Partners and P2E players", check: true},
       {txt: "Revamp MGG website", check: true},
       {txt: "Blockchain Validator / Operator Rollout ", check: true},

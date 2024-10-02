@@ -12,16 +12,21 @@ import MenuLink from "components/Menu/MenuLink";
 import TeaserVideo from "../../../assets/video/MGG_teaser_video.mp4"
 
 const Container = styled(Flex)`
-  padding: 2rem 260px 50px 260px;
+ padding: 2rem 260px 50px 260px;
   flex-direction: column;
   text-align: center;
   margin: 0px auto;
   max-width: 1400px;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-evenly;
 
-  @media screen and (max-width: 500px) {
-    padding: 0;
+  @media screen and (max-width: 768px) { /* Tablet and below */
+    padding: 1rem 20px; /* Adjust padding */
+  }
+
+  @media screen and (max-width: 500px) { /* Mobile screens */
+    padding: 0.5rem 10px;
+    align-items: center;
   }
 `;
 
@@ -48,6 +53,12 @@ const StyledCard = styled.div<{ link?: boolean }>`
   `}
   @media screen and (max-width: ${breakpoints.Mobile.tablet}px) {
     font-size: 12px;
+  }
+   @media screen and (max-width: 430px) {
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 10px;
+    height: auto;
+    border-radius: 10px;
   }
   & > * {
     margin: 0 0 1rem 0;
