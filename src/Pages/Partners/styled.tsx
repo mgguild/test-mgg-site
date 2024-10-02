@@ -16,20 +16,20 @@ export const Card = styled.div<{border?: string; fontSize?: string}>`
   ${({fontSize}) => fontSize && `
     font-size: ${fontSize}px;
   `}
-  transition: transform 0.3s ease-in-out;
+  //transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    animation: moveLeftRight 0.6s ease-in-out infinite alternate;
-  }
+  //&:hover {
+  //  animation: moveLeftRight 0.6s ease-in-out infinite alternate;
+  //}
 
-  @keyframes moveLeftRight {
-    0% {
-      transform: translateX(0); /* Initial position */
-    }
-    100% {
-      transform: translateX(10px); /* Move 10px to the right */
-    }
-  }
+  //@keyframes moveLeftRight {
+  //  0% {
+  //    transform: translateX(0); /* Initial position */
+  //  }
+  //  100% {
+  //    transform: translateX(10px); /* Move 10px to the right */
+  //  }
+  //}
 `;
 
 export const Logo = styled.img`
