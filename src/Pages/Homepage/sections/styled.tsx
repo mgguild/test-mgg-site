@@ -1,9 +1,8 @@
 import { Heading } from "@metagg/mgg-uikit";
 import styled from "styled-components";
-import BackgroundImage from "assets/background/GrowthBG.png";
-import BGLanding from "assets/background/BGLanding.png";
+import BackgroundImage from "assets/background/bgpartner2@4x.png";
+import BGLanding from "assets/background/bgpartner1@4x.png";
 import LandingLogo from "assets/background/LandingLogo.png";
-import bgimage from "assets/background/bgpartner2@4x.png";
 // Sections
 
 const SectionContainer = styled.div<{ height?: string }>`
@@ -11,23 +10,40 @@ const SectionContainer = styled.div<{ height?: string }>`
   display: flex;
   padding: 15px;
 `;
-
 export const HomeContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
   background-image: url(${LandingLogo});
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center top;
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    background-size: cover; /* Adjust background size */
+    background-position: center center; /* Adjust position for mobile */
+    padding: 20px; /* Add padding for mobile */
+  }
 `;
+
 export const EcoContainer = styled(SectionContainer)`
-    height: 100%;
+  background-color: ${({ theme }) => theme.addOnColors.background2};
+   height: 100%;
   width: 100%;
-  background-image: url(${bgimage});
+  background-image: url(${BackgroundImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  `;
 
+export const NewsContainer = styled(SectionContainer)`
+  height: 100%;
+  width: 100%;
+  background-image: url(${BGLanding});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
+
 
 export const GrowthContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { Flex, Heading } from '@metagg/mgg-uikit'
 import GridGradient from '../../assets/background/BGGridperspective.png'
-import GridGradientFlipped from '../../assets/background/bgpartner1@4xinverted.png'
+import GridGradientFlipped from '../../assets/background/BGGridperspectiveInverted.png'
+import BgGrid from '../../assets/background/BGGrid.png'
 
 export const Card = styled.div<{border?: string; fontSize?: string}>`
   background-color: #0c012c;
@@ -15,6 +16,20 @@ export const Card = styled.div<{border?: string; fontSize?: string}>`
   ${({fontSize}) => fontSize && `
     font-size: ${fontSize}px;
   `}
+  //transition: transform 0.3s ease-in-out;
+
+  //&:hover {
+  //  animation: moveLeftRight 0.6s ease-in-out infinite alternate;
+  //}
+
+  //@keyframes moveLeftRight {
+  //  0% {
+  //    transform: translateX(0); /* Initial position */
+  //  }
+  //  100% {
+  //    transform: translateX(10px); /* Move 10px to the right */
+  //  }
+  //}
 `;
 
 export const Logo = styled.img`
@@ -58,10 +73,10 @@ export const BgPage = styled.div`
   text-align: center;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 98%;
   position: relative;
   background-color: ${({ theme }) => theme.addOnColors.background2};
-  /* background-image: url(${GridGradient}); */
+  background-image: url(${GridGradient});
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -73,7 +88,6 @@ export const BgPage = styled.div`
     width: 100%;
     height: 100%;
     z-index: 0;
-    /* background-image: url(${GridGradientFlipped}) */
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -110,6 +124,7 @@ export const PageTitle = styled(Heading)`
   border-radius: 15px;
   margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
   text-align: center; /* Center text inside PageTitle */
+  background-color: ${({ theme }) => theme.addOnColors.background2};
 `
 
 export const Title = styled(Heading)`
