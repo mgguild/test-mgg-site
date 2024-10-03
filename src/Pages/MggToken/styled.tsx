@@ -8,18 +8,30 @@ export const Card = styled.div`
   z-index: 3;
   margin: 2rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 0.3rem;
+  }
 `
 
 export const PageTitle = styled(Heading)`
-  color: ${({theme}) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 3em;
-  border: 2px solid yellow; /* Yellow border */
+  border: 2px solid yellow;
   padding: 20px;
   display: inline-block;
-  box-shadow: 0 0 10px yellow; /* Glow effect */
+  box-shadow: 0 0 10px yellow;
   border-radius: 15px;
-  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
-  text-align: center; /* Center text inside PageTitle */
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+  }
 `
 
 export const Btn = styled(Button)`
@@ -28,6 +40,12 @@ export const Btn = styled(Button)`
   border-radius: 0.3rem;
   margin: 0 auto;
   padding: 4px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 2px;
+    border-radius: 0.2rem;
+  }
 `
 
 export const Icons = styled(Flex)`
@@ -38,9 +56,20 @@ export const Icons = styled(Flex)`
   justify-content: center;
   align-items: baseline;
   position: relative;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    flex-flow: column;
+    row-gap: 1rem;
+  }
 `
+
 export const IconHolder = styled.div`
   min-width: 15rem;
+
+  @media (max-width: 768px) {
+    min-width: 0rem;
+  }
 `
 
 export const Section = styled.div`
@@ -50,6 +79,11 @@ export const Section = styled.div`
   justify-content: center;
   text-align: center;
   row-gap: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0rem;
+    row-gap: 1rem;
+  }
 `
 
 export const LogoHighlightLink = styled.a`
@@ -78,6 +112,13 @@ export const LogoHighlightLink = styled.a`
     transform: scale(1.2, 1.2);
     &::after {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.3rem;
+    &:hover {
+      transform: scale(1.1, 1.1);
     }
   }
 `
