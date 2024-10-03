@@ -56,7 +56,7 @@ const StyledCard = styled.div<{ link?: boolean }>`
   }
    @media screen and (max-width: 430px) {
     font-size: 12px; /* Smaller font size for mobile */
-    padding: 10px;
+    padding-bottom: 10px;
     height: auto;
     border-radius: 10px;
   }
@@ -167,7 +167,7 @@ const Section: React.FC = () => {
     
     <EcoContainer height="100">
       <Container>
-      <DescriptionContainer flexDirection='column' alignItems='space-around' padding='80px 80px'>
+      <DescriptionContainer flexDirection='column' alignItems='space-around' padding='80px 20px'>
           <PageTitle size='xl'> About MetaGaming Guild </PageTitle>
                <TextContainer>
                <Text as='p' fontSize='1.2em' >

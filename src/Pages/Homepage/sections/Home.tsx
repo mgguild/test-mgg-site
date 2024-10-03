@@ -42,8 +42,8 @@ const Container = styled(Flex)`
   }
 
   /* Mobile view styles */
-  @media (max-width: 768px) {
-    max-width: 100%; 
+  @media (max-width: 500px) {
+    max-width: 80%; 
     font-size: 14px; 
     padding: 20px; 
     :before {
