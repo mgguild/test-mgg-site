@@ -17,7 +17,7 @@ const Container = styled.div`
     /* Mobile View */
   ${({ theme }) => theme.mediaQueries.sm} {
     font-size: 12px; /* Adjust font size for mobile view */
-    padding: 10px; /* Optional: Add padding for mobile */
+    padding: 0px; /* Optional: Add padding for mobile */
   }
 
   /* Tablet View */
