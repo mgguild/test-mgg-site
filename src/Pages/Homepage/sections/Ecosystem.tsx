@@ -25,7 +25,7 @@ const Container = styled(Flex)`
   }
 
   @media screen and (max-width: 500px) { /* Mobile screens */
-    padding: 0.5rem 10px;
+    padding: 0.5rem 0px;
     align-items: center;
   }
 `;
@@ -117,7 +117,7 @@ const Card: React.FC<IEcosystems> = ({
         <Text className="status" textTransform="uppercase" bold>
           {status && status}
         </Text>
-        <Text className="desc" as="p" fontSize="0.9em" >
+        <Text className="desc" as="p" fontSize="1em"  >
           {description}
         </Text>
       </CardSection>

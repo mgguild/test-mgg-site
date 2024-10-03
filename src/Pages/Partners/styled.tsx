@@ -1,8 +1,29 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Flex, Heading } from '@metagg/mgg-uikit'
 import GridGradient from '../../assets/background/BGGridperspective.png'
 import GridGradientFlipped from '../../assets/background/BGGridperspectiveInverted.png'
 import BgGrid from '../../assets/background/BGGrid.png'
+
+// Keyframes for left turn animation
+const leftTurn = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+`;
+
+// Keyframes for right turn animation
+const rightTurn = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+`;
+
 
 export const Card = styled.div<{border?: string; fontSize?: string}>`
   background-color: #0c012c;
@@ -16,20 +37,38 @@ export const Card = styled.div<{border?: string; fontSize?: string}>`
   ${({fontSize}) => fontSize && `
     font-size: ${fontSize}px;
   `}
-  //transition: transform 0.3s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+  
+  &:hover {
+    /* Flip the logo like a coin to the left or right */
+    animation: turn 0.6s forwards;
+  }
 
-  //&:hover {
-  //  animation: moveLeftRight 0.6s ease-in-out infinite alternate;
-  //}
+  &:active {
+    /* When the logo is clicked, reverse the coin flip */
+    animation: turn-back 0.6s forwards;
+  }
 
-  //@keyframes moveLeftRight {
-  //  0% {
-  //    transform: translateX(0); /* Initial position */
-  //  }
-  //  100% {
-  //    transform: translateX(10px); /* Move 10px to the right */
-  //  }
-  //}
+  /* Keyframes for turning to the left (hover effect) */
+  @keyframes turn {
+    0% {
+      transform: rotateY(20deg);
+    }
+    50% {
+      transform: rotateY(50deg); /* Midpoint where it disappears */
+    }
+    
+  }
+
+  /* Keyframes for turning back to the right (active effect) */
+  @keyframes turn-back {
+    0% {
+      transform: rotateY(50deg);
+    }
+    50% {
+      transform: rotateY(20deg); /* Midpoint where it disappears */
+    }
+  }
 `;
 
 export const Logo = styled.img`
