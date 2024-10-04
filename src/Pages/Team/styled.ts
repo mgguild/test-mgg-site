@@ -46,7 +46,7 @@ export const PageTitle = styled(Heading)`
   margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
 
   @media screen and (max-width: ${breakpoints.Mobile.l}px) {
-    font-size: 1.2em; /* Smaller font size */
+    font-size: 2.2em; /* Smaller font size */
     padding: 20px; /* Less padding */
     border-radius: 10px; /* Smaller border radius */
   }

@@ -174,7 +174,7 @@ export const PageTitle = styled(Heading)`
   }
 
   @media screen and (max-width: 500px) {
-    font-size: 2em; /* Further adjust font size for smaller screens */
+    font-size: 2.9em; /* Further adjust font size for smaller screens */
     padding: 10px; /* Further adjust padding */
   }
 `;

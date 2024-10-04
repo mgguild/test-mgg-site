@@ -28,7 +28,7 @@ export const PageTitle = styled(Heading)`
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 2em;
+    font-size: 2.8em;
     padding: 10px;
     border-radius: 10px;
   }

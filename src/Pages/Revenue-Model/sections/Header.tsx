@@ -33,6 +33,9 @@ const StyledGlowTitle = styled(GlowTitle)`
   ${({ theme }) => theme.mediaQueries.sm} {
     margin: 10px 0; /* Reduce margin for mobile view */
   }
+  @media (max-width: 500px) {
+   font-size: 4em;
+  }   
 `;
 
 const Section: React.FC = () => {

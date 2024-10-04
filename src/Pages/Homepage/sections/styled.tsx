@@ -68,6 +68,9 @@ export const PageTitle = styled(Heading)`
   color: ${({ theme }) => theme.colors.primary};
   margin: 30px 0px;
   letter-spacing: 1px;
+  @media (max-width: 500px) {
+   font-size: 30px;
+  } 
 `;
 
 export const App = styled(Heading)`
