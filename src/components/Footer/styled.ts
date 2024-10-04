@@ -11,6 +11,10 @@ export const WrapperContainer = styled.div`
         flex-direction: column;
         min-height: 10vh;
     }
+    @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const WrapperChild = styled.div`

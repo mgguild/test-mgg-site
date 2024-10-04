@@ -52,5 +52,8 @@ export const PageTitle = styled(Heading)`
   display: inline-block;
   box-shadow: 0 0 10px yellow; /* Glow effect */
   border-radius: 15px;
-   margin-bottom: 20px; // Adjust the margin-bottom value as needed 
+  margin-bottom: 20px; // Adjust the margin-bottom value as needed
+  @media (max-width: 500px) {
+   font-size: 2.5em;
+  }  
 `

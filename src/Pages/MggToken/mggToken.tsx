@@ -42,10 +42,13 @@ export const Icon: React.FC<IconProps> = (props) => {
 
 const HoverCard = styled(Card)`
   width: 20rem;
- transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
   &:hover {
-    background-color: #000058;  // Example background color on hover
-    color: #007bff;             // Example text color on hover
+    background-color: #000058; // Example background color on hover
+    color: #007bff; // Example text color on hover
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%; // Full width on mobile view
   }
 `;
 
@@ -57,7 +60,29 @@ const AdaptTxt = styled(Text)`
   @media screen and (max-width: 300px) {
     font-size: 10px;
   }
-`
+`;
+
+const TokenInfoContainer = styled(Flex)`
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 0rem;
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+    align-items: center;
+  }
+`;
+
+const SectionContainer = styled(Section)`
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column; // Stack items on mobile view
+    text-align: center;
+  }
+`;
 
 
 const MggToken = () => {
@@ -65,15 +90,25 @@ const MggToken = () => {
   const isMobile = useMedia({ maxWidth: 500 })
   return (
     <>
-      <Page>
-
-        <BgContainer bgImage={bgImage} bgColor='#140937' size='cover' style={{alignItems: 'center', justifyContent: 'center', paddingTop: 100}}>
-        
+         <Page>
+        <BgContainer
+          bgImage={bgImage}
+          bgColor="#140937"
+          size="cover"
+          style={{ alignItems: 'center', justifyContent: 'center', paddingTop: 100 }}
+        >
           <Section>
-          <PageTitle >$MGG Token</PageTitle>
-            <img src={`${MGGLogo}`} style={{maxWidth: '17rem', margin: '1rem auto'}}></img>
-            <div style={{maxWidth: '50rem', margin: '0 auto'}}>
-              <Heading size={isMobile ? 'l' : 'lg'} style={{margin: '1rem 0', textAlign: 'justify', textAlignLast: 'center', lineHeight: '2rem'}}>
+            <PageTitle>$MGG Token</PageTitle>
+            <img
+              src={MGGLogo}
+              style={{ maxWidth: '17rem', margin: '1rem auto' }}
+              alt="MGG Logo"
+            />
+            <div style={{ maxWidth: '50rem', margin: '0 auto' }}>
+              <Heading
+                size={isMobile ? 'l' : 'lg'}
+                style={{ margin: '1rem 0', textAlign: 'justify', textAlignLast: 'center', lineHeight: '2rem' }}
+              >
                 The $MGG token holds many utilities that generally fuel the overall MGG ecosystem.
                 It is an ERC20 and BEP20 utility token designed to synergistically foster growth in
                 the crypto space while distributing fair power and rewards among $MGG token holders.
@@ -82,55 +117,72 @@ const MggToken = () => {
           </Section>
         </BgContainer>
 
+        <BgContainer bgColor="#140937" position="center bottom" style={{ flexFlow: 'column' }}>
+          <TokenInfoContainer>
+            <HoverCard>
+              <Heading size="xl" color={theme.colors.primary}>
+                $MGG
+              </Heading>
+              <Text>Ticker</Text>
+            </HoverCard>
 
-        <BgContainer  bgColor='#140937' position='center bottom' style={{flexFlow: 'column'}}>
-        <Flex style={{ flexFlow: 'row wrap', columnGap: '0rem', justifyContent: 'center' }}>
-          <HoverCard>
-            <Heading size="xl" color={theme.colors.primary}>$MGG</Heading>
-            <Text>Ticker</Text>
-          </HoverCard>
+            <HoverCard>
+              <Heading size="xl" color={theme.colors.primary}>
+                1 BILLION
+              </Heading>
+              <Text>Total Supply</Text>
+            </HoverCard>
 
-          <HoverCard>
-            <Heading size="xl" color={theme.colors.primary}>1 BILLION</Heading>
-            <Text>Total Supply</Text>
-          </HoverCard>
+            <HoverCard>
+              <Heading size="xl" color={theme.colors.primary}>
+                288,424,658
+              </Heading>
+              <Text>Circulating Supply</Text>
+            </HoverCard>
+          </TokenInfoContainer>
 
-          <HoverCard>
-            <Heading size="xl" color={theme.colors.primary}>288,424,658</Heading>
-            <Text>Circulating Supply</Text>
-          </HoverCard>
-        </Flex>
+          <SectionContainer style={{ padding: '5rem 0' }}>
+            <div style={{ flex: '1' }}>
+              <Heading size="xl" color={theme.colors.primary}>
+                What You Can Do with $MGG Token
+              </Heading>
+            </div>
+            <div style={{ flex: '1', textAlign: 'right' }}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: '20px',
+                  justifyItems: 'center',
+                  alignItems: 'end',
+                }}
+              >
+                <div style={{ margin: '10px' }}>
+                  <img src={GuildRwards} alt="Guild Rewards" width={125} />
+                  <Text>Guild Rewards</Text>
+                </div>
 
-          <div style={{position: 'relative', margin: '0 auto 3rem auto'}}>
-          <Section style={{ padding: '4rem 0', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ flex: '1' }}>
-                <Heading size='xl' color={theme.colors.primary}>What You Can Do with $MGG Token</Heading>
-                {/* <Btn disabled>Go To Tokenomics Page</Btn> */}
-              </div>
-              <div style={{ flex: '1', textAlign: 'right' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', justifyItems: 'center', alignItems: 'end'  }}>
-                  <div style={{ margin: '10px' }}>
-                    <img src={GuildRwards} alt="Guild Rewards" width={125} />
-                    <Text>Guild Rewards</Text>
-                  </div>
-                  
-                  <div style={{ margin: '10px' }}>
-                    <img src={GameFiVault} alt="In-game Rewards" width={125} />
-                    <Text>In-game Rewards</Text>
-                  </div>
-                  
-                  <div style={{ margin: '10px' }}>
-                    <img src={LiquidityRewards} alt="Liquidity Rewards" width={125} />
-                    <Text>Liquidity Rewards</Text>
-                  </div>
-                  
-                  <div style={{ margin: '10px' }}>
-                    <img src={DAOG} alt="DAO Governance" width={125} />
-                    <Text>DAO Governance</Text>
-                  </div>
+                <div style={{ margin: '10px' }}>
+                  <img src={GameFiVault} alt="In-game Rewards" width={125} />
+                  <Text>In-game Rewards</Text>
+                </div>
+
+                <div style={{ margin: '10px' }}>
+                  <img src={LiquidityRewards} alt="Liquidity Rewards" width={125} />
+                  <Text>Liquidity Rewards</Text>
+                </div>
+
+                <div style={{ margin: '10px' }}>
+                  <img src={DAOG} alt="DAO Governance" width={125} />
+                  <Text>DAO Governance</Text>
                 </div>
               </div>
-            </Section>
+            </div>
+          </SectionContainer>
+
+          {/* Additional sections with similar responsive styles */}
+
+        
             <Section style={{padding: '5rem 0 0 0'}}>
               <Heading size='xl' color={theme.colors.primary}>MGG Contract Address</Heading>
               <Flex style={{flexDirection: 'column', rowGap: '2.5rem', margin: '2rem 0 0 0'}}>
@@ -169,7 +221,7 @@ const MggToken = () => {
               }
             </Flex>
           </Section>
-          </div>
+          
         </BgContainer>
       </Page>
     </>

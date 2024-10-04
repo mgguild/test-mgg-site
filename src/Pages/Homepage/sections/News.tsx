@@ -10,68 +10,93 @@ import { News } from "config/constants/homepageConfig";
 import * as IconModule from "./icons";
 import MenuLink from "components/Menu/MenuLink";
 
-
+// Container styles for responsive view
 const Container = styled(Flex)`
   padding: 2rem 260px 50px 260px;
   flex-direction: column;
   text-align: center;
   margin: 0px auto;
   max-width: 1400px;
-  align-items: space-between;
+  align-items: center;
   justify-content: space-evenly;
 
+  @media screen and (max-width: ${breakpoints.Mobile.tablet}px) {
+    padding: 1rem; // Adjusted padding for tablet view
+  }
+
   @media screen and (max-width: 500px) {
-    padding: 0;
+    padding: 0; // Minimal padding for mobile view
+  
   }
 `;
 
 // Create a custom button with a blue-to-white gradient
 const GradientButton = styled(Button)`
   background: linear-gradient(to right, #0000ff, #00a0ff);
-  color: #000;  // You can customize the text color if needed
+  color: #fff; // Adjusted text color for better contrast
   border-radius: 10px;
   &:hover {
     background: #e6e600;
   }
-`;
 
+  @media screen and (max-width: ${breakpoints.Mobile.tablet}px) {
+    font-size: 13px; // Adjust font size for tablet view
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 12px; // Adjust font size for mobile view
+  }
+`;
 
 const StyledCard = styled.div<{ link?: boolean }>`
   padding: 20px;
   border: 1px solid ${({ theme }) => theme.colors.MGG_accent2};
   background-color: ${({ theme }) => theme.addOnColors.background1};
-    border-radius: 15px;
+  border-radius: 15px;
   height: 400px;
   display: flex;
   flex-direction: column;
   cursor: default;
-  // justify-content: space-around;
   ${({ link }) =>
     link &&
     `
-  cursor: pointer;
+    cursor: pointer;
   `}
+
   @media screen and (max-width: ${breakpoints.Mobile.tablet}px) {
-    font-size: 12px;
+    height: 300px; // Reduce card height for tablet view
+    padding: 16px; // Adjust padding for tablet view
   }
+
+  @media screen and (max-width: 500px) {
+    height: 380px; // Reduce card height for mobile view
+    padding: 10px; // Adjust padding for mobile view
+  }
+
   & > * {
     margin: 0 0 1rem 0;
   }
 `;
+
 const CardSection = styled(Flex)`
   align-items: center;
+  flex-direction: column; // Ensure alignment is centered on mobile view
+
   & > ${Text}.status {
     color: ${({ theme }) => theme.colors.MGG_accent1};
     margin: 0.5rem 0rem;
   }
+
   & > ${Text}.desc {
     color: ${({ theme }) => theme.colors.text};
     margin: 0px;
   }
+
   & > div.action {
     border: 1px solid red;
   }
 `;
+
 
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
@@ -86,17 +111,17 @@ const Card: React.FC<INews> = ({
   const iconElement: React.ReactElement = <Icon />;
   return (
     <MenuLink href={link}>
-    <StyledCard link={link !== ''}>
-      {iconElement}
-      <CardSection flexDirection="column">
-        <Text className="title"  fontSize="1.2em" color="#00F4FD">
-          {description}
-        </Text>
-        <GradientButton mt="16px">
-          <Text color="white">Read More</Text> 
-        </GradientButton>
-      </CardSection>
-    </StyledCard>
+      <StyledCard link={link !== ''}>
+        {iconElement}
+        <CardSection flexDirection="column">
+          <Text className="title" fontSize="1.2em" color="#00F4FD">
+            {description}
+          </Text>
+          <GradientButton mt="16px">
+            <Text color="white">Read More</Text> 
+          </GradientButton>
+        </CardSection>
+      </StyledCard>
     </MenuLink>
   );
 };
@@ -107,15 +132,15 @@ const Cards: React.FC = () => {
       container
       spacing={4}
       padding-top={3}
-      justifyContent="space-between"
+      justifyContent="center" // Center content on all screen sizes
       alignItems="center"
       direction="row"
-      wrap="nowrap"
+      wrap="wrap" // Allow wrapping for smaller screens
     >
       {News.map((Ecosystem) => {
         const { name, description, image, link } = Ecosystem;
         return (
-          <Grid key={name} item xs={12} sm={12} md={6}>
+          <Grid key={name} item xs={12} sm={6} md={4}>
             <Card
               name={name}
               description={description}
@@ -131,10 +156,11 @@ const Cards: React.FC = () => {
 
 const Section: React.FC = () => {
   return (
-    
     <NewsContainer height="100">
       <Container>
-        <GlowTitle><PageTitle size="xl" >MGG NEWS AND UPDATE</PageTitle></GlowTitle>
+        <GlowTitle>
+          <PageTitle size="xl">MGG NEWS AND UPDATE</PageTitle>
+        </GlowTitle>
         <Cards />
       </Container>
     </NewsContainer>

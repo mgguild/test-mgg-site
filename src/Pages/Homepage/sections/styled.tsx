@@ -9,6 +9,10 @@ const SectionContainer = styled.div<{ height?: string }>`
   min-height: ${({ height }) => height ?? "100"}vh;
   display: flex;
   padding: 15px;
+  @media (max-width: 500px) {
+    padding: 0px; /* Add padding for mobile */
+    align-items: center;
+  }
 `;
 export const HomeContainer = styled(SectionContainer)`
   background-color: ${({ theme }) => theme.addOnColors.background1};
@@ -64,6 +68,9 @@ export const PageTitle = styled(Heading)`
   color: ${({ theme }) => theme.colors.primary};
   margin: 30px 0px;
   letter-spacing: 1px;
+  @media (max-width: 500px) {
+   font-size: 30px;
+  } 
 `;
 
 export const App = styled(Heading)`
