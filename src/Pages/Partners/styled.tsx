@@ -66,7 +66,7 @@ export const CardContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-basis: 100%;
     max-width: 100%;
-    padding-left: 0;
+    padding-left: 15px;
     margin: 0 0 1rem 0; /* Add margin for spacing on mobile */
   }
 `;
