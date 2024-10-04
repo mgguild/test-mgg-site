@@ -13,10 +13,21 @@ const Container = styled.div`
   text-align: center;
   align-items: center;
   flex-direction: column;
+
+  // Mobile view styles
+  @media (max-width: 768px) {
+    padding: 15px;
+    margin: 15px auto;
+  }
 `;
 
 const FigureWrapper = styled.div`
   padding: 1rem;
+
+  // Mobile view styles
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 `;
 
 const GridAdapt = styled.div`
@@ -24,6 +35,12 @@ const GridAdapt = styled.div`
   justify-content: center;
   flex-wrap: no-wrap;
   gap: 1rem;
+
+  // Mobile view styles
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 `;
 
 const FigureGridItem = styled.div`

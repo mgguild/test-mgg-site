@@ -19,6 +19,8 @@ const Section: React.FC = () => {
   return (
     <DetailsContainer>
       <Container>
+         {/* Desktop View */}
+         <div className="desktop-view">
         {RevenueModel.map((model: RevenueModelConfig, ind: number) => {
           const { name, description, image } = model;
           const Icon = Icons[image];
@@ -52,6 +54,26 @@ const Section: React.FC = () => {
             </Box>
           );
         })}
+  </div>
+              {/* Mobile View */}
+          <div className="mobile-view">
+          {RevenueModel.map((model: RevenueModelConfig, ind: number) => {
+            const { name, description, image } = model;
+            const Icon = Icons[image];
+            const iconElement: React.ReactElement = <Icon mr="8px" />;
+            return (
+              <Box key={ind} className="flex flex-col items-center space-y-4">
+                <div className="text-section text-center">
+                  <Title fontSize="2em">{name}</Title>
+                  <Text color="textSubtle" fontSize="1em">
+                    {description}
+                  </Text>
+                </div>
+                <div className="icon-element">{iconElement}</div>
+              </Box>
+            );
+          })}
+        </div>
       </Container>
     </DetailsContainer>
   );

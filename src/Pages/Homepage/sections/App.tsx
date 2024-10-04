@@ -13,10 +13,21 @@ const Container = styled.div`
   text-align: center;
   align-items: center;
   flex-direction: column;
+
+   // Mobile view styles
+  @media (max-width: 768px) {
+    padding: 15px;
+    margin: 15px auto;
+  }
 `;
 
 const FigureWrapper = styled.div`
   padding: 1rem;
+
+   // Mobile view styles
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
 `;
 
 const GridAdapt = styled.div`
@@ -24,6 +35,12 @@ const GridAdapt = styled.div`
   justify-content: center;
   flex-wrap: no-wrap;
   gap: 1rem;
+
+    // Mobile view styles
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 `;
 
 const FigureGridItem = styled.div`
@@ -42,7 +59,15 @@ const FigureGridItem = styled.div`
     background-color: #000058;  // Example background color on hover
     color: #007bff;             // Example text color on hover
   }
+
+  // Mobile view styles
+  @media (max-width: 768px) {
+  width: 60%; /* Make the width consistent */
+  max-width: 30rem;
+  min-height: 148px; /* Set a minimum height to keep borders equal */
+  }
 `;
+
 
 const FigureComponent = () => {
   return (
