@@ -4,28 +4,26 @@ import GridGradient from '../../assets/background/BGGridperspective.png'
 import GridGradientFlipped from '../../assets/background/BGGridperspectiveInverted.png'
 import BgGrid from '../../assets/background/BGGrid.png'
 
-// Keyframes for left turn animation
-const leftTurn = keyframes`
+// Keyframes for a continuous left and right turn animation
+const continuousTurn = keyframes`
   0% {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(40deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(-40deg);
   }
   100% {
-    transform: rotate(-20deg);
+    transform: rotateY(0deg);
   }
 `;
 
-// Keyframes for right turn animation
-const rightTurn = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
-`;
-
-
-export const Card = styled.div<{border?: string; fontSize?: string}>`
+export const Card = styled.div<{ border?: string; fontSize?: string }>`
   background-color: #0c012c;
   border-radius: 50%;
   padding: 1rem;
@@ -33,47 +31,30 @@ export const Card = styled.div<{border?: string; fontSize?: string}>`
   align-items: center;
   justify-content: center;
   height: 12rem;
-  width: 12rem;  // Set width to match height
-  ${({fontSize}) => fontSize && `
+  width: 12rem; /* Set width to match height */
+  ${({ fontSize }) => fontSize && `
     font-size: ${fontSize}px;
   `}
-    transition: transform 0.6s ease-in-out;
-  
+  transition: transform 0.6s ease-in-out;
+
   &:hover {
-    /* Flip the logo like a coin to the left or right */
-    animation: turn 0.6s forwards;
+    animation: ${continuousTurn} 1.8s ease-in-out infinite; /* Infinite animation on hover */
   }
 
-  &:active {
-    /* When the logo is clicked, reverse the coin flip */
-    animation: turn-back 0.6s forwards;
-  }
-
-  /* Keyframes for turning to the left (hover effect) */
-  @keyframes turn {
-    0% {
-      transform: rotateY(20deg);
-    }
-    50% {
-      transform: rotateY(50deg); /* Midpoint where it disappears */
-    }
-    
-  }
-
-  /* Keyframes for turning back to the right (active effect) */
-  @keyframes turn-back {
-    0% {
-      transform: rotateY(50deg);
-    }
-    50% {
-      transform: rotateY(20deg); /* Midpoint where it disappears */
-    }
+  @media screen and (max-width: 768px) {
+    height: 8rem;
+    width: 8rem; /* Reduce size for mobile view */
+    padding: 0.5rem;
   }
 `;
 
 export const Logo = styled.img`
   height: 5rem;
-`
+
+  @media screen and (max-width: 768px) {
+    height: 3rem; /* Adjust logo size for mobile */
+  }
+`;
 
 export const CardContainer = styled.div`
   flex-basis: calc(100% / 6);
@@ -81,7 +62,14 @@ export const CardContainer = styled.div`
   min-width: 0rem;
   position: relative;
   padding-left: 55px;
-`
+
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    margin: 0 0 1rem 0; /* Add margin for spacing on mobile */
+  }
+`;
 
 export const CheckList = styled.li`
   padding: 1rem 0 0 1rem;
@@ -93,7 +81,11 @@ export const CheckList = styled.li`
     width: 1rem;
     margin-left: -1rem;
   }
-`
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 0 0 0.5rem; /* Adjust padding for mobile */
+  }
+`;
 
 export const List = styled.li`
   padding: 1rem 0 0 1rem;
@@ -105,7 +97,11 @@ export const List = styled.li`
     width: 1rem;
     margin-left: -1rem;
   }
-`
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 0 0 0.5rem; /* Adjust padding for mobile */
+  }
+`;
 
 export const BgPage = styled.div`
   padding: 5rem;
@@ -132,10 +128,14 @@ export const BgPage = styled.div`
     background-size: contain;
   }
 
-  @media screen and (max-width: 500px) {
-    padding: 0.5rem;
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
   }
-`
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+`;
 
 export const Logos = styled(Flex)`
   margin: 2rem 0 0 0;
@@ -146,12 +146,15 @@ export const Logos = styled(Flex)`
   align-items: stretch;
   position: relative;
 
-  /* @media (max-width: 1280px) {
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  } */
-`
+  @media (max-width: 768px) {
+    flex-flow: row wrap; /* Ensure it remains in row wrap */
+    justify-content: flex-end;; 
+    
+    & > * {
+      flex-basis: calc(50% - 1rem); /* Set width for two items per row */
+    }
+  }
+`;
 
 export const PageTitle = styled(Heading)`
   color: ${({theme}) => theme.colors.primary};
@@ -164,7 +167,17 @@ export const PageTitle = styled(Heading)`
   margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
   text-align: center; /* Center text inside PageTitle */
   background-color: ${({ theme }) => theme.addOnColors.background2};
-`
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5em; /* Adjust font size for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2em; /* Further adjust font size for smaller screens */
+    padding: 10px; /* Further adjust padding */
+  }
+`;
 
 export const Title = styled(Heading)`
   color: ${({theme}) => theme.colors.primary};
@@ -176,8 +189,17 @@ export const Title = styled(Heading)`
   border-radius: 15px;
   margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
   text-align: center; /* Center text inside PageTitle */
-`
 
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em; /* Adjust font size for mobile */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.2em; /* Further adjust font size for smaller screens */
+    padding: 10px; /* Further adjust padding */
+  }
+`;
 
 export const Line = styled.div`
   width: 10%;
@@ -195,4 +217,11 @@ export const Line = styled.div`
     top: 100%;
     height: 15%;
   }
-`
+
+  @media (max-width: 768px) {
+    width: 0.1rem;
+    height: 20%;
+    top: 80%;
+    left: 50%;
+  }
+`;
