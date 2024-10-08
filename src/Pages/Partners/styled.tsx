@@ -46,11 +46,23 @@ export const Card = styled.div<{ border?: string; fontSize?: string }>`
     width: 8rem; /* Reduce size for mobile view */
     padding: 0.5rem;
   }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; // Adjust the fit inside the container
+    min-width: 50px; // Minimum width to prevent shrinking too small
+    min-height: 50px; // Minimum height to prevent shrinking too small
+  }
 `;
 
 export const Logo = styled.img`
   height: 5rem;
-
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures image fits within the container */
+  display: block; /* Ensures the logo remains a block-level element */
+  margin: 0; /* Remove default margin */
+  
   @media screen and (max-width: 768px) {
     height: 3rem; /* Adjust logo size for mobile */
   }
@@ -58,16 +70,21 @@ export const Logo = styled.img`
 
 export const CardContainer = styled.div`
   flex-basis: calc(100% / 6);
-  max-width: 16rem;
-  min-width: 0rem;
-  position: relative;
-  padding-left: 55px;
-
+  
   @media screen and (max-width: 768px) {
     flex-basis: 100%;
     max-width: 100%;
     padding-left: 15px;
     margin: 0 0 1rem 0; /* Add margin for spacing on mobile */
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+
+  @media (max-width: 768px) {
+    margin: 0.5rem;
   }
 `;
 
@@ -138,20 +155,24 @@ export const BgPage = styled.div`
 `;
 
 export const Logos = styled(Flex)`
-  margin: 2rem 0 0 0;
+  margin: 2rem 0;
   flex-flow: row wrap;
-  column-gap: 1rem;
-  row-gap: 1rem;
-  justify-content: center;
-  align-items: stretch;
+  column-gap: 0rem;
+  row-gap: 0rem;
+  justify-content: center; /* Centers logos within the container */
+  align-items: center; /* Aligns logos vertically */
   position: relative;
+  width: 100%; /* Ensure it occupies the full width */
+  height: auto; /* Adjust height according to content */
+  overflow: hidden; /* Prevents overflow if the container resizes */
 
   @media (max-width: 768px) {
-    flex-flow: row wrap; /* Ensure it remains in row wrap */
-    justify-content: flex-end;; 
+    flex-flow: row wrap;
+    justify-content: center; /* Adjust this for smaller screens */
     
     & > * {
-      flex-basis: calc(50% - 1rem); /* Set width for two items per row */
+      flex-basis: calc(50% - 1rem); /* Two items per row on mobile */
+      text-align: center; /* Center items within each flex item */
     }
   }
 `;

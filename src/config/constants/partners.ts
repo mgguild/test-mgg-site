@@ -84,6 +84,8 @@ import Ecosmo from '../../assets/logo/Partners/Ecsomo.png'
 import Reanima from '../../assets/logo/Partners/Reanima.png'
 import WildForest from '../../assets/logo/Partners/wildForest.png'
 import PlanetAtmos from '../../assets/logo/Partners/planetatmos.png'
+import Sparkchain from '../../assets/logo/Partners/sparkchain_logo.png'
+import Thetan from '../../assets/logo/Partners/thetan.png'
 
 const partners: Partners = {
   InvsBckrs:{
@@ -503,6 +505,16 @@ const partners: Partners = {
       name: 'Planet Atmos',
       logo:  PlanetAtmos,
       link: 'https://planetatmos.com'
+    },
+    Sparkchain: {
+      name: 'Sparkchain',
+      logo:  Sparkchain,
+      link: 'https://sparkchain.network/'
+    },
+    Thetan: {
+      name: 'Thetan',
+      logo:  Thetan,
+      link: 'https://thetanworld.com'
     }
   }
 }
