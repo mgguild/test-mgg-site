@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Heading, Flex } from '@metagg/mgg-uikit';
 import { breakpoints } from '../../theme/Breakpoints';
-import BackgroundImage from 'assets/background/BGGrid.png';
+import BackgroundImage from 'assets/background/BGTeam2@4x.png';
 
 const Container = styled.div`
   display: flex;
@@ -80,9 +80,10 @@ export const BgPage = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    width: 105%;
-    height: 105%;
+    width: 100%;
+    height: 100%;
     z-index: 0;
+    background-image: url(${BackgroundImage});
     background-color: ${({ theme }) => theme.addOnColors.background1};
     background-repeat: no-repeat;
     background-position: center;
