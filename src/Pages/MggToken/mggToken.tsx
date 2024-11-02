@@ -180,8 +180,6 @@ const MggToken = () => {
             </div>
           </SectionContainer>
 
-          {/* Additional sections with similar responsive styles */}
-
         
             <Section style={{padding: '5rem 0 0 0'}}>
               <Heading size='xl' color={theme.colors.primary}>MGG Contract Address</Heading>
