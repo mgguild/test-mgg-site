@@ -17,6 +17,7 @@ const Website: React.FC = () => {
   const Partners = lazy(() => import("./Pages/Partners"));
   const Whitepaper = lazy(() => import("./Pages/Whitepaper"));
   const NFT = lazy(() => import("./Pages/NFTpage"));
+  const Staking = lazy(() => import("./Pages/Staking"));
   // const NotFound = lazy(() => import("./NotFound"));
   return (
     <HashRouter>
@@ -34,6 +35,7 @@ const Website: React.FC = () => {
             <Route path="/partners" element={<Partners />} />
             <Route path="/White-Paper" element={<Whitepaper />} />
             <Route path="/mgg-NFTs" element={<NFT />} />
+            <Route path="/staking" element={<Staking />} />
             {/* Redirects
             {/* <Route path="/" element={<Navigate replace to='/homepage' />} /> */}
             {/* 404 */}

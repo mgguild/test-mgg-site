@@ -21,10 +21,14 @@ const links: MenuEntry[] = [
     label: 'MGG Token',
     href: "/mgg-token"
   },
-  // {
-  //   label: 'NFTs',
-  //   href: "/mgg-NFTs"
-  // },
+  {
+    label: 'Bridge',
+    href: "https://app.chainport.io/"
+  },
+  {
+    label: 'Earn',
+    href: "/staking"
+  },
   {
     label: 'Partners',
     href: "/partners"
