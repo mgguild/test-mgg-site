@@ -88,7 +88,10 @@ const StakingCard = styled(Card)`
   width: 100%;
   max-width: 400px;
   margin: 1rem;
-
+  transition: background-color 0.3s ease; /* Smooth transition */
+  &:hover {
+    background-color: #000058;
+  }
   @media screen and (max-width: 600px) {
     padding: 1.5rem; /* Adjust padding */
     margin: 0.5rem; /* Adjust margin */
@@ -120,7 +123,7 @@ const Staking: React.FC = () => {
                 Earn Staking Rewards
               </HeadingGlow>
               <br />
-              <DescText>Stake your RON, CARV, and earn MGG Tokens.</DescText>
+              <DescText>Stake your RON, CARV, and earn rewards.</DescText>
             </div>
             <div style={{ margin: '10px' }}>
               <img src={StakingImg} alt="Guild Rewards" width={300} />
