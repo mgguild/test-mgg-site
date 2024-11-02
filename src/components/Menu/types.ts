@@ -10,6 +10,7 @@ export interface MenuEntry {
   href?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
+  subItems?:MenuEntry[];
 }
 export interface PanelProps {
   links: Array<MenuEntry>;
