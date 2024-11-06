@@ -62,7 +62,12 @@ const TableRow = styled(Flex)`
   width: 100%;
   max-width: 1200px;
   margin-bottom: 1rem;
-
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  &:hover {
+    border-color: #DAF7A6; 
+    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
+  }
+    
   @media screen and (max-width: 600px) {
     flex-direction: column;
     align-items: center;
@@ -88,10 +93,13 @@ const StakingCard = styled(Card)`
   width: 100%;
   max-width: 400px;
   margin: 1rem;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  
   &:hover {
-    background-color: #000058;
+    border-color: #DAF7A6; /* Change to highlight color on hover */
+    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
   }
+
   @media screen and (max-width: 600px) {
     padding: 1.5rem; /* Adjust padding */
     margin: 0.5rem; /* Adjust margin */
@@ -100,16 +108,29 @@ const StakingCard = styled(Card)`
 `;
 
 
+
+async function fetchPriceData() {
+  return {
+    ronPrice: 1.35,
+    ronTotalStake: '1,999,461 RON',
+    ronApr: '11.10/10.10%',
+  };
+}
+
 const Staking: React.FC = () => {
-  const theme = useContext(ThemeContext);
-  const web3 = useWeb3();
-  const [requestedMint, setRequestMint] = useState(false);
-  const [price, setPrice] = useState("TBA");
   const [totalStake, setTotalStake] = useState("TBA");
   const [apr, setApr] = useState("TBA");
+  const [price, setPrice] = useState<string | number>("TBA");
 
   useEffect(() => {
-    // Fetch data or perform other effects
+    // Fetch the data when the component mounts
+    fetchPriceData().then((data) => {
+      setPrice(data.ronPrice);
+      setTotalStake(data.ronTotalStake);
+      setApr(data.ronApr);
+    }).catch((error) => {
+      console.error("Failed to fetch price data:", error);
+    });
   }, []);
 
   return (
@@ -147,15 +168,15 @@ const Staking: React.FC = () => {
                   >
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$1.38</TableDesc2>
+                  <TableDesc2>${price}</TableDesc2>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>2,027,547 RON</TableDesc2>
+                  <TableDesc2>{totalStake}</TableDesc2>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>10.95/9.59%</TableDesc2>
+                  <TableDesc2>{apr}</TableDesc2>
                 </div>
               </Flex>
             </TableRow>
@@ -168,7 +189,7 @@ const Staking: React.FC = () => {
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 Ronin Token is the native cryptocurrency of the Ronin blockchain, designed specifically for gaming and digital asset ownership.
               </InfoSection>
-              <a href="https://app.roninchain.com/validator/0xea94e2f3f1b24214f9d9bfb5608084476f34d48a" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+              <a href="https://app.roninchain.com/validator/0xea94e2f3f1b24214f9d9bfb5608084476f34d48a" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
@@ -178,7 +199,7 @@ const Staking: React.FC = () => {
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 Carv Token is a utility cryptocurrency designed to enhance the Carv ecosystem, which focuses on decentralized social networking and user-generated content.
               </InfoSection>
-              <a href="https://explorer.carv.io/verifiers" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+              <a href="https://explorer.carv.io/verifiers" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>

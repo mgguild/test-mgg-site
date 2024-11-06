@@ -30,12 +30,14 @@ export const InformativeButton = styled(Button)`
   background-image: linear-gradient(blue, skyblue);
   border: none;
   border-radius: 4px;
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the shadow effect */
+  transition: box-shadow 0.3s ease-in-out, background-image 0.3s ease-in-out; /* Smooth transition for color */
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    background-image: linear-gradient(DarkSalmon, darkblue); /* New gradient on hover */
   }
 `;
+
 
 
 
