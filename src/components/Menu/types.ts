@@ -10,7 +10,7 @@ export interface MenuEntry {
   href?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
-  subItems?:MenuEntry[];
+  subMenu?: SubMenuEntry[]; 
 }
 export interface PanelProps {
   links: Array<MenuEntry>;
@@ -20,3 +20,8 @@ export interface PushedProps {
   isPushed: boolean;
   pushNav: (isPushed: boolean) => void;
 }
+
+export type SubMenuEntry = {
+  label: string;
+  href: string;
+};
