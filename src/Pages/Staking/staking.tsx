@@ -64,8 +64,8 @@ const TableRow = styled(Flex)`
   margin-bottom: 1rem;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   &:hover {
-    border-color: #FFD700; 
-    box-shadow: 0 0 8px 2px #FFD700; /* Optional shadow effect for highlight */
+    border-color: #DAF7A6; 
+    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
   }
     
   @media screen and (max-width: 600px) {
@@ -96,8 +96,8 @@ const StakingCard = styled(Card)`
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   
   &:hover {
-    border-color: #FFD700; /* Change to highlight color on hover */
-    box-shadow: 0 0 8px 2px #FFD700; /* Optional shadow effect for highlight */
+    border-color: #DAF7A6; /* Change to highlight color on hover */
+    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
   }
 
   @media screen and (max-width: 600px) {
@@ -112,7 +112,7 @@ const StakingCard = styled(Card)`
 async function fetchPriceData() {
   return {
     ronPrice: 1.35,
-    ronTotalStake: '1,998,630 RON',
+    ronTotalStake: '1,999,461 RON',
     ronApr: '11.10/10.10%',
   };
 }
@@ -189,7 +189,7 @@ const Staking: React.FC = () => {
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 Ronin Token is the native cryptocurrency of the Ronin blockchain, designed specifically for gaming and digital asset ownership.
               </InfoSection>
-              <a href="https://app.roninchain.com/validator/0xea94e2f3f1b24214f9d9bfb5608084476f34d48a" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+              <a href="https://app.roninchain.com/validator/0xea94e2f3f1b24214f9d9bfb5608084476f34d48a" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
@@ -199,7 +199,7 @@ const Staking: React.FC = () => {
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 Carv Token is a utility cryptocurrency designed to enhance the Carv ecosystem, which focuses on decentralized social networking and user-generated content.
               </InfoSection>
-              <a href="https://explorer.carv.io/verifiers" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+              <a href="https://explorer.carv.io/verifiers" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
