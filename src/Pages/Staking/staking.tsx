@@ -111,9 +111,9 @@ const StakingCard = styled(Card)`
 
 async function fetchPriceData() {
   return {
-    ronPrice: 1.35,
-    ronTotalStake: '1,999,461 RON',
-    ronApr: '11.10/10.10%',
+    ronPrice: 1.41,
+    ronTotalStake: '2,014,709 RON',
+    ronApr: '11.08/9.98%',
   };
 }
 
