@@ -111,8 +111,8 @@ const Staking: React.FC = () => {
   const validatorData = useFetchValidator();
 
   useEffect(() => {
-    // Fetch data or perform other effects
-  }, []);
+    console.log(validatorData);
+  }, [validatorData]);
 
   return (
     <Page>
