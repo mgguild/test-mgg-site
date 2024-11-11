@@ -107,13 +107,34 @@ const StakingCard = styled(Card)`
   }
 `;
 
+const AnimatedText = styled(DescText)`
+  display: inline-block;
+  animation: slide 10s linear infinite; // Customize timing as needed
+
+  @keyframes slide {
+    from {
+      transform: translateX(120%); // Start from right side outside the view
+    }
+    to {
+      transform: translateX(-120%); // End on the left side outside the view
+    }
+  }
+`;
+
+const DescTextContainer = styled.div`
+  padding-left: 12rem;
+  padding-right: 0rem;
+  overflow: hidden; 
+  white-space: nowrap; 
+  width: 115%;
+`;
 
 
 async function fetchPriceData() {
   return {
-    ronPrice: 1.49,
-    ronTotalStake: '2,059,914 RON',
-    ronApr: '11.07/9.88%',
+    ronPrice: 1.54,
+    ronTotalStake: '2,073,638 RON',
+    ronApr: '11.09/9.88%',
   };
 }
 
@@ -138,7 +159,7 @@ const Staking: React.FC = () => {
     <BgPage padding="0">
       <div style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ margin: '0rem 0', padding: window.innerWidth <= 768 ? '0rem' : '8rem', paddingTop: window.innerWidth <= 768 ? '5rem' : '8rem', }}>
-          <div style={{ display: 'inline-flex', gap: '50px', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+          <div style={{ display: 'inline-flex', gap: window.innerWidth <= 768 ? '3rem' : '17rem', justifyContent: 'space-around', flexWrap: 'wrap' }}>
             <div style={{ textAlign: 'left', alignContent: 'center' }}>
               <HeadingGlow size="xxl" color="#fdda00" glow="#fdda00" marginBottom= '1rem'>
                 Earn Staking Rewards
@@ -150,7 +171,13 @@ const Staking: React.FC = () => {
               <img src={StakingImg} alt="Guild Rewards" width={300} />
             </div>
           </div>
-
+          <div style={{ display: 'inline-grid',  justifyContent: 'space-around', flexWrap: 'wrap', paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', paddingTop: window.innerWidth <= 768 ? '4rem' : '3rem', paddingBottom: window.innerWidth <= 768 ? '2rem' : '3rem'}}>
+            <DescTextContainer>
+              <AnimatedText>
+                Stake your RONIN Tokens today and join the MGG Airdrop with a reward pool valued at $50,000.
+              </AnimatedText>
+            </DescTextContainer>
+            </div>
           <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
             <TableRow>
               <TableRowContent>
