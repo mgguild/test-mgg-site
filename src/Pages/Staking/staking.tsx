@@ -4,7 +4,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { BgPage, Btn, Card, HeadingGlow, InformativeButton } from './styled';
 import useWeb3 from "../../hooks/useWeb3";
 import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/formatBalance";
-import useFetchValidator from 'hooks/useValidatorData';
+import useFetchRoninData from 'hooks/useRoninData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
@@ -108,11 +108,11 @@ const Staking: React.FC = () => {
   const [price, setPrice] = useState("TBA");
   const [totalStake, setTotalStake] = useState("TBA");
   const [apr, setApr] = useState("TBA");
-  const validatorData = useFetchValidator();
+  const roninData = useFetchRoninData();
 
   useEffect(() => {
-    console.log(validatorData);
-  }, [validatorData]);
+    console.log(roninData);
+  }, [roninData]);
 
   return (
     <Page>
