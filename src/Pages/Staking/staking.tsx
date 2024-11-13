@@ -132,9 +132,9 @@ const DescTextContainer = styled.div`
 
 async function fetchPriceData() {
   return {
-    ronPrice: 1.54,
-    ronTotalStake: '2,073,638 RON',
-    ronApr: '11.09/9.88%',
+    ronPrice: 1.52,
+    ronTotalStake: '2,067,847 RON',
+    ronApr: '11.09/10.14%',
   };
 }
 
