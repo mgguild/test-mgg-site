@@ -9,13 +9,13 @@ import {ToastsProvider} from 'contexts/ToastsContext'
 const Providers: React.FC<{ children: React.ReactNode }> = ({children}) => {
     return (
         <Web3ReactProvider getLibrary={getLibrary}>
-            <ToastsProvider>
-                <ThemeContextProvider>
-                    <ModalProvider>
-                        {children}
-                    </ModalProvider>
-                </ThemeContextProvider>
-            </ToastsProvider>
+                <ToastsProvider>
+                    <ThemeContextProvider>
+                        <ModalProvider>
+                            {children}
+                        </ModalProvider>
+                    </ThemeContextProvider>
+                </ToastsProvider>
         </Web3ReactProvider>
     );
 };

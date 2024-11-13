@@ -4,6 +4,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { BgPage, Btn, Card, HeadingGlow, InformativeButton } from './styled';
 import useWeb3 from "../../hooks/useWeb3";
 import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/formatBalance";
+import useFetchRoninData from 'hooks/useRoninData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
@@ -141,18 +142,11 @@ async function fetchPriceData() {
 const Staking: React.FC = () => {
   const [totalStake, setTotalStake] = useState("TBA");
   const [apr, setApr] = useState("TBA");
-  const [price, setPrice] = useState<string | number>("TBA");
+  const roninData = useFetchRoninData();
 
   useEffect(() => {
-    // Fetch the data when the component mounts
-    fetchPriceData().then((data) => {
-      setPrice(data.ronPrice);
-      setTotalStake(data.ronTotalStake);
-      setApr(data.ronApr);
-    }).catch((error) => {
-      console.error("Failed to fetch price data:", error);
-    });
-  }, []);
+    console.log(roninData);
+  }, [roninData]);
 
   return (
     <Page>
