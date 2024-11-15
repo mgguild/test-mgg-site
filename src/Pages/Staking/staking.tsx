@@ -270,7 +270,7 @@ const Staking: React.FC = () => {
             </StakingCard>
             <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img src={RioImg} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
-              <Heading size="l" color="cyan" marginTop={"1rem"}>CARV</Heading>
+              <Heading size="l" color="cyan" marginTop={"1rem"}>RIO</Heading>
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 The Realio Network (RIO) is a cryptocurrency and utility token that serves as the native currency for the Realio Network platform. This platform is a comprehensive Software as a Service (SaaS) designed to tokenize real-world assets (RWAs) on the blockchain.
               </InfoSection>
