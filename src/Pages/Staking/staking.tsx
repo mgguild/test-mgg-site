@@ -192,9 +192,9 @@ const Staking: React.FC = () => {
               </TableRowContent>
               <Flex
                     style={{
-                      gap: window.innerWidth <= 768 ? '2.5rem' : '11.5rem', 
+                      gap: window.innerWidth <= 768 ? '2.5rem' : '12.5rem', 
                       color: '#FFD700',
-                      paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', 
+                      paddingRight: window.innerWidth <= 768 ? '0rem' : '8rem', 
                       paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
                       alignItems: 'center',
                     }}
