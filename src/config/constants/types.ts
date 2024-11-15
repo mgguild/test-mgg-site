@@ -68,3 +68,23 @@ export interface ExchangesConfig {
   image: string;
   link: string;
 }
+
+export interface Validator {
+  __typename: string;
+  address: string;
+  admin: string;
+  apr: string;
+  blockValidated: string;
+  bridge: string;
+  commission: string;
+  creditScore: string;
+  isTrusted: boolean
+  status: string;
+  totalClaimedReward: string;
+  totalReward: string;
+  totalSelfStaked: string;
+  totalSlashed: string;
+  totalStaked: string;
+  treasury: string;
+  uptime: string;
+}
