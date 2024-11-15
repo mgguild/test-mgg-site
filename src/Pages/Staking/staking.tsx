@@ -9,6 +9,7 @@ import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
 import StakingImg from '../../assets/images/Staking.png';
+import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
 
 const TableDesc = styled.div`
@@ -92,7 +93,7 @@ const StakingCard = styled(Card)`
   border: 1px solid #1E90FF;
   background-color: #0c0f2c;
   width: 100%;
-  max-width: 400px;
+  max-width: 365px;
   margin: 1rem;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   
@@ -140,12 +141,21 @@ async function fetchPriceData() {
 }
 
 const Staking: React.FC = () => {
-  const [totalStake, setTotalStake] = useState("TBA");
+  const theme = useContext(ThemeContext);
+  const web3 = useWeb3();
+  const [requestedMint, setRequestMint] = useState(false);
+  const [price, setPrice] = useState("TBA");
+  const [totalStaked, setTotalStaked] = useState("TBA");
   const [apr, setApr] = useState("TBA");
   const roninData = useFetchRoninData();
 
   useEffect(() => {
-    console.log(roninData);
+    if (roninData) {
+      console.log('Fetched roninData:', roninData);
+      setPrice(roninData.market["14101"].quote.USD.price ?? "TBA");  
+      setTotalStaked(roninData.totalStaked ?? "TBA");  
+      setApr(roninData.apr ?? "TBA");  
+    }
   }, [roninData]);
 
   return (
@@ -172,6 +182,8 @@ const Staking: React.FC = () => {
               </AnimatedText>
             </DescTextContainer>
             </div>
+
+            {/* RON */}
           <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
             <TableRow>
               <TableRowContent>
@@ -180,25 +192,57 @@ const Staking: React.FC = () => {
               </TableRowContent>
               <Flex
                     style={{
-                      gap: window.innerWidth <= 768 ? '3rem' : '12rem', // Adjust gap for mobile view
+                      gap: window.innerWidth <= 768 ? '2.5rem' : '11.5rem', 
+                      color: '#FFD700',
+                      paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', 
+                      paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
+                      alignItems: 'center',
+                    }}
+                  >
+                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
+                  <TableDesc color="#fdda00">Price:</TableDesc>
+                  <TableDesc2>$1.36</TableDesc2> 
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
+                  <TableDesc color="#fdda00">Total Stake:</TableDesc>
+                  <TableDesc2>{totalStaked} RON</TableDesc2>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
+                  <TableDesc color="#fdda00">APR:</TableDesc>
+                  <TableDesc2>11.08/{apr}%</TableDesc2> 
+                </div>      
+              </Flex>
+            </TableRow>
+          </Flex>
+
+          {/* RIO */}
+          <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
+            <TableRow>
+              <TableRowContent>
+                <img src={RioImg} alt="RON" style={{ width: '50px', height: '50px' }} />
+                <Heading size="xl" color="white">RIO</Heading>
+              </TableRowContent>
+              <Flex
+                    style={{
+                      gap: window.innerWidth <= 768 ? '3rem' : '14.5rem', // Adjust gap for mobile view
                       color: '#FFD700',
                       paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', // Adjust paddingRight for mobile view
                       paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
                       alignItems: 'center',
                     }}
                   >
-                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
+                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>${price}</TableDesc2>
+                  <TableDesc2>$0.7802</TableDesc2> {/* Use the price from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>{totalStake}</TableDesc2>
+                  <TableDesc2>72.38M</TableDesc2> {/* Use the totalStake from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>{apr}</TableDesc2>
-                </div>
+                  <TableDesc2>4.15%</TableDesc2> {/* Use the apr from state */}
+                </div>      
               </Flex>
             </TableRow>
           </Flex>
@@ -221,6 +265,16 @@ const Staking: React.FC = () => {
                 Carv Token is a utility cryptocurrency designed to enhance the Carv ecosystem, which focuses on decentralized social networking and user-generated content.
               </InfoSection>
               <a href="https://explorer.carv.io/verifiers" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+                <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
+              </a>
+            </StakingCard>
+            <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img src={RioImg} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
+              <Heading size="l" color="cyan" marginTop={"1rem"}>CARV</Heading>
+              <InfoSection color="white" style={{ textAlign: 'justify' }}>
+                The Realio Network (RIO) is a cryptocurrency and utility token that serves as the native currency for the Realio Network platform. This platform is a comprehensive Software as a Service (SaaS) designed to tokenize real-world assets (RWAs) on the blockchain.
+              </InfoSection>
+              <a href="https://app.realio.network/staking" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
