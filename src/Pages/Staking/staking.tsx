@@ -237,7 +237,7 @@ const Staking: React.FC = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>72.38M</TableDesc2> {/* Use the totalStake from state */}
+                  <TableDesc2>49,305.17 RIO</TableDesc2> {/* Use the totalStake from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
