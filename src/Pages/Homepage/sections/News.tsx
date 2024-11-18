@@ -56,7 +56,10 @@ const StyledCard = styled.div<{ link?: boolean }>`
   height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Space content evenly */
+  align-items: center; /* Center all child elements horizontally */
   cursor: default;
+
   ${({ link }) =>
     link &&
     `
@@ -64,23 +67,22 @@ const StyledCard = styled.div<{ link?: boolean }>`
   `}
 
   @media screen and (max-width: ${breakpoints.Mobile.tablet}px) {
-    height: 300px; // Reduce card height for tablet view
-    padding: 16px; // Adjust padding for tablet view
+    height: 300px;
+    padding: 16px;
   }
 
   @media screen and (max-width: 500px) {
-    height: 380px; // Reduce card height for mobile view
-    padding: 10px; // Adjust padding for mobile view
-  }
-
-  & > * {
-    margin: 0 0 1rem 0;
+    height: 380px;
+    padding: 10px;
   }
 `;
 
 const CardSection = styled(Flex)`
-  align-items: center;
-  flex-direction: column; // Ensure alignment is centered on mobile view
+  flex-grow: 1; /* Ensure this section grows to fill space */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically within the available space */
 
   & > ${Text}.status {
     color: ${({ theme }) => theme.colors.MGG_accent1};
@@ -90,22 +92,17 @@ const CardSection = styled(Flex)`
   & > ${Text}.desc {
     color: ${({ theme }) => theme.colors.text};
     margin: 0px;
+    text-align: center; /* Center the text content */
   }
 
   & > div.action {
-    border: 1px solid red;
+    margin-top: auto; /* Push the action (button) to the bottom */
   }
 `;
 
-
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
-const Card: React.FC<INews> = ({
-  image,
-  name,
-  description,
-  link = "",
-}) => {
+const Card: React.FC<INews> = ({ image, name, description, link = "" }) => {
   const theme = useContext(ThemeContext);
   const Icon = Icons[image];
   const iconElement: React.ReactElement = <Icon />;
@@ -113,13 +110,15 @@ const Card: React.FC<INews> = ({
     <MenuLink href={link}>
       <StyledCard link={link !== ''}>
         {iconElement}
-        <CardSection flexDirection="column">
-          <Text className="title" fontSize="1.2em" color="#00F4FD">
+        <CardSection>
+          <Text className="title" fontSize="1.2em" color="#00F4FD" paddingTop="2rem">
             {description}
           </Text>
-          <GradientButton mt="16px">
-            <Text color="white">Read More</Text> 
-          </GradientButton>
+          <div className="action">
+            <GradientButton mt="16px">
+              <Text color="white">Read More</Text>
+            </GradientButton>
+          </div>
         </CardSection>
       </StyledCard>
     </MenuLink>

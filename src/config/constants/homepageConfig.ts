@@ -96,9 +96,9 @@ export const News:INews[] = [
   },
   {
     image: 'News3',
-    description: 'MetaGaming Guild’s Pixels Scholarship Welcomes 1,500 Scholars',
+    description: 'MetaGaming Guild is Now a Ronin Validator',
     name: "page3",
-    link: "https://medium.com/metagamingguild/metagaming-guilds-pixels-scholarship-welcomes-1-500-scholars-181bff1ad4b6",
+    link: "https://medium.com/metagamingguild/metagaming-guild-is-now-a-ronin-validator-78b4845a6203",
   },
   
 ]
