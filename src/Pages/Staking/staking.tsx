@@ -201,7 +201,7 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$1.43</TableDesc2> 
+                  <TableDesc2>$1.46</TableDesc2> 
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
@@ -209,7 +209,7 @@ const Staking: React.FC = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>11.09/{apr}%</TableDesc2> 
+                  <TableDesc2>11.11/{apr}%</TableDesc2> 
                 </div>      
               </Flex>
             </TableRow>
@@ -233,11 +233,11 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$0.7202</TableDesc2> {/* Use the price from state */}
+                  <TableDesc2>$0.72</TableDesc2> {/* Use the price from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>49,473.17 RIO</TableDesc2> {/* Use the totalStake from state */}
+                  <TableDesc2>49,341.17 RIO</TableDesc2> {/* Use the totalStake from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
