@@ -111,7 +111,7 @@ const StakingCard = styled(Card)`
 
 const AnimatedText = styled(DescText)`
   display: inline-block;
-  animation: slide 10s linear infinite; // Customize timing as needed
+  animation: slide 15s linear infinite; // Customize timing as needed
 
   @keyframes slide {
     from {
@@ -177,7 +177,7 @@ const Staking: React.FC = () => {
           </div>
           <div style={{ display: 'inline-grid',  justifyContent: 'space-around', flexWrap: 'wrap', paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', paddingTop: window.innerWidth <= 768 ? '4rem' : '3rem', paddingBottom: window.innerWidth <= 768 ? '2rem' : '3rem'}}>
             <DescTextContainer>
-              <AnimatedText>
+              <AnimatedText style={{ color: 'yellow' }}>
                 Stake your RONIN Tokens today and join the MGG Airdrop with a reward pool valued at $50,000.
               </AnimatedText>
             </DescTextContainer>
@@ -201,7 +201,7 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$1.36</TableDesc2> 
+                  <TableDesc2>$1.46</TableDesc2> 
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
@@ -209,7 +209,7 @@ const Staking: React.FC = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>11.08/{apr}%</TableDesc2> 
+                  <TableDesc2>11.11/{apr}%</TableDesc2> 
                 </div>      
               </Flex>
             </TableRow>
@@ -224,7 +224,7 @@ const Staking: React.FC = () => {
               </TableRowContent>
               <Flex
                     style={{
-                      gap: window.innerWidth <= 768 ? '3rem' : '14.5rem', // Adjust gap for mobile view
+                      gap: window.innerWidth <= 768 ? '3rem' : '14.2rem', // Adjust gap for mobile view
                       color: '#FFD700',
                       paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', // Adjust paddingRight for mobile view
                       paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
@@ -233,15 +233,15 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$0.7802</TableDesc2> {/* Use the price from state */}
+                  <TableDesc2>$0.72</TableDesc2> {/* Use the price from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>49,305.17 RIO</TableDesc2> {/* Use the totalStake from state */}
+                  <TableDesc2>49,341.17 RIO</TableDesc2> {/* Use the totalStake from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>4.15%</TableDesc2> {/* Use the apr from state */}
+                  <TableDesc2>-</TableDesc2> {/* Use the apr from state */}
                 </div>      
               </Flex>
             </TableRow>
@@ -274,7 +274,7 @@ const Staking: React.FC = () => {
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
                 The Realio Network (RIO) is a cryptocurrency and utility token that serves as the native currency for the Realio Network platform. This platform is a comprehensive Software as a Service (SaaS) designed to tokenize real-world assets (RWAs) on the blockchain.
               </InfoSection>
-              <a href="https://app.realio.network/staking" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+              <a href="https://app.realio.network/validator/realiovaloper12szn0m0w5sjs0nkw0s8ws8y5d0g69303uuuray" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
