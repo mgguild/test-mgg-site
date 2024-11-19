@@ -83,6 +83,12 @@ export const App:IApp[] = [
 
 export const News:INews[] = [
   {
+    image: 'News3',
+    description: 'MetaGaming Guild is Now a Ronin Validator',
+    name: "page3",
+    link: "https://medium.com/metagamingguild/metagaming-guild-is-now-a-ronin-validator-78b4845a6203",
+  },
+  {
     image: 'News1',
     description: `MGG Celebrates Year 3 in Web3`,
     name: "page1",
@@ -94,11 +100,4 @@ export const News:INews[] = [
     name: "page2",
     link: "https://medium.com/metagamingguild/deep-dive-into-mgg-token-understanding-its-utilities-and-value-95571164e817",
   },
-  {
-    image: 'News3',
-    description: 'MetaGaming Guild’s Pixels Scholarship Welcomes 1,500 Scholars',
-    name: "page3",
-    link: "https://medium.com/metagamingguild/metagaming-guilds-pixels-scholarship-welcomes-1-500-scholars-181bff1ad4b6",
-  },
-  
 ]
