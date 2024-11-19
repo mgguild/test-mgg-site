@@ -132,14 +132,6 @@ const DescTextContainer = styled.div`
 `;
 
 
-async function fetchPriceData() {
-  return {
-    ronPrice: 1.52,
-    ronTotalStake: '2,067,847 RON',
-    ronApr: '11.09/10.14%',
-  };
-}
-
 const Staking: React.FC = () => {
   const theme = useContext(ThemeContext);
   const web3 = useWeb3();
@@ -201,7 +193,7 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$1.46</TableDesc2> 
+                  <TableDesc2>${parseFloat(price).toFixed(2)}</TableDesc2> 
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
@@ -209,7 +201,7 @@ const Staking: React.FC = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>11.11/{apr}%</TableDesc2> 
+                  <TableDesc2>11.12/{apr}%</TableDesc2> 
                 </div>      
               </Flex>
             </TableRow>
@@ -233,7 +225,7 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$0.72</TableDesc2> {/* Use the price from state */}
+                  <TableDesc2>$0.6898</TableDesc2> {/* Use the price from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
