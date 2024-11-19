@@ -8,7 +8,7 @@ import useFetchRoninData from 'hooks/useRoninData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
-import StakingImg from '../../assets/images/Staking.png';
+import StakingImg from '../../assets/images/Staking_New.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
 
