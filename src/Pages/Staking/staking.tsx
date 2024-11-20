@@ -8,7 +8,7 @@ import useFetchRoninData from 'hooks/useRoninData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
-import StakingImg from '../../assets/images/Staking.png';
+import StakingImg from '../../assets/images/Staking_New.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
 
@@ -225,7 +225,7 @@ const Staking: React.FC = () => {
                   >
                  <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
                   <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$0.6898</TableDesc2> {/* Use the price from state */}
+                  <TableDesc2>$0.6598</TableDesc2> {/* Use the price from state */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
                   <TableDesc color="#fdda00">Total Stake:</TableDesc>
