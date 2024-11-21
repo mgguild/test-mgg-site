@@ -27,7 +27,9 @@ const links: MenuEntry[] = [
   },
   {
     label: 'Earn',
-    href: "/staking"
+    subMenu: [
+      { label: 'Staking', href: "/staking" },
+    ]
   },
   {
     label: 'Partners',

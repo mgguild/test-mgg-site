@@ -131,6 +131,59 @@ const DescTextContainer = styled.div`
   width: 115%;
 `;
 
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text within columns */
+  justify-content: center;
+  width: 100px; /* Set consistent width */
+  color: #FFD700;
+
+  @media screen and (max-width: 600px) {
+    width: 80px; /* Adjust for smaller screens */
+    align-items: center; /* Center for mobile */
+  }
+`;
+
+const TableRowAligned = styled(Flex)`
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #1E90FF;
+  border-radius: 8px;
+  background-color: #0c0f2c;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
+const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
+  <TableRowAligned>
+    <TableRowContent>
+      <img src={logo} alt={name} style={{ width: '50px', height: '50px' }} />
+      <Heading size="xl" color="white">{name}</Heading>
+    </TableRowContent>
+    <Flex justifyContent="space-between" style={{ width: '100%' }}>
+      <Column>
+        <TableDesc>Price:</TableDesc>
+        <TableDesc2>${price}</TableDesc2>
+      </Column>
+      <Column>
+        <TableDesc>Total Stake:</TableDesc>
+        <TableDesc2>{totalStake}</TableDesc2>
+      </Column>
+      <Column>
+        <TableDesc>APR:</TableDesc>
+        <TableDesc2>{apr}</TableDesc2>
+      </Column>
+    </Flex>
+  </TableRowAligned>
+);
+
 
 const Staking: React.FC = () => {
   const theme = useContext(ThemeContext);
@@ -174,6 +227,24 @@ const Staking: React.FC = () => {
               </AnimatedText>
             </DescTextContainer>
             </div>
+
+            {/* <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
+            <StakingTable
+              logo={LogoRonin}
+              name="RON"
+              price={parseFloat(price).toFixed(2)}
+              totalStake={`${totalStaked} RON`}
+              apr={`11.11/${apr}%`}
+            />
+            <StakingTable
+              logo={RioImg}
+              name="RIO"
+              price="0.72"
+              totalStake="49,341.17 RIO"
+              apr="-"
+            />
+          </Flex> */}
+
 
             {/* RON */}
           <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
