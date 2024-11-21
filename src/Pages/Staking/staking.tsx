@@ -17,7 +17,7 @@ const TableDesc = styled.div`
   font-size: 1.2rem;
 
   @media screen and (max-width: 600px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -54,28 +54,6 @@ const InfoSection = styled(Flex)`
   }
 `;
 
-const TableRow = styled(Flex)`
-  padding: 1rem;
-  border: 1px solid #1E90FF;
-  border-radius: 8px;
-  background-color: #0c0f2c;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin-bottom: 1rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  &:hover {
-    border-color: #DAF7A6; 
-    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
-  }
-    
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.75rem; /* Adjust padding for smaller screens */
-  }
-`;
 
 const TableRowContent = styled(Flex)`
   align-items: center;
@@ -134,11 +112,11 @@ const DescTextContainer = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text within columns */
-  justify-content: center;
-  width: 100px; /* Set consistent width */
+  align-items: center; /* Align text within columns */
+  justify-content: flex-end;
+  width: 300px; /* Set consistent width */
   color: #FFD700;
-
+ 
   @media screen and (max-width: 600px) {
     width: 80px; /* Adjust for smaller screens */
     align-items: center; /* Center for mobile */
@@ -147,17 +125,37 @@ const Column = styled.div`
 
 const TableRowAligned = styled(Flex)`
   width: 100%;
-  max-width: 800px;
-  justify-content: space-between;
+  max-width: 1200px;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   border: 1px solid #1E90FF;
   border-radius: 8px;
   background-color: #0c0f2c;
   margin-bottom: 1rem;
-
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  &:hover {
+    border-color: #DAF7A6; 
+    box-shadow: 0 0 8px 2px #DAF7A6; /* Optional shadow effect for highlight */
+  }
   @media screen and (max-width: 600px) {
     flex-direction: column;
+  }
+`;
+
+const ResponsiveFlex = styled(Flex)`
+  width: 100%;
+  justify-content: flex-end;
+
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    column {
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -167,10 +165,10 @@ const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
       <img src={logo} alt={name} style={{ width: '50px', height: '50px' }} />
       <Heading size="xl" color="white">{name}</Heading>
     </TableRowContent>
-    <Flex justifyContent="space-between" style={{ width: '100%' }}>
+    <ResponsiveFlex>
       <Column>
         <TableDesc>Price:</TableDesc>
-        <TableDesc2>${price}</TableDesc2>
+        <TableDesc2>$ {price}</TableDesc2>
       </Column>
       <Column>
         <TableDesc>Total Stake:</TableDesc>
@@ -180,7 +178,7 @@ const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
         <TableDesc>APR:</TableDesc>
         <TableDesc2>{apr}</TableDesc2>
       </Column>
-    </Flex>
+    </ResponsiveFlex>
   </TableRowAligned>
 );
 
@@ -228,87 +226,23 @@ const Staking: React.FC = () => {
             </DescTextContainer>
             </div>
 
-            {/* <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
+            <Flex flexDirection="column" alignItems="center" style={{ margin: '4rem 0 3rem 0rem', gap: '3rem' }}>
             <StakingTable
               logo={LogoRonin}
               name="RON"
               price={parseFloat(price).toFixed(2)}
               totalStake={`${totalStaked} RON`}
-              apr={`11.11/${apr}%`}
+              apr={`11.10/${apr}%`}
             />
             <StakingTable
               logo={RioImg}
               name="RIO"
-              price="0.72"
+              price="0.714"
               totalStake="49,341.17 RIO"
               apr="-"
             />
-          </Flex> */}
-
-
-            {/* RON */}
-          <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
-            <TableRow>
-              <TableRowContent>
-                <img src={LogoRonin} alt="RON" style={{ width: '50px', height: '50px' }} />
-                <Heading size="xl" color="white">RON</Heading>
-              </TableRowContent>
-              <Flex
-                    style={{
-                      gap: window.innerWidth <= 768 ? '2.5rem' : '12.5rem', 
-                      color: '#FFD700',
-                      paddingRight: window.innerWidth <= 768 ? '0rem' : '8rem', 
-                      paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
-                      alignItems: 'center',
-                    }}
-                  >
-                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
-                  <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>${parseFloat(price).toFixed(2)}</TableDesc2> 
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
-                  <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>{totalStaked} RON</TableDesc2>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
-                  <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>11.12/{apr}%</TableDesc2> 
-                </div>      
-              </Flex>
-            </TableRow>
           </Flex>
 
-          {/* RIO */}
-          <Flex flexDirection="column" alignItems="center" style={{ margin: '5rem 0 3rem 0rem' }}>
-            <TableRow>
-              <TableRowContent>
-                <img src={RioImg} alt="RON" style={{ width: '50px', height: '50px' }} />
-                <Heading size="xl" color="white">RIO</Heading>
-              </TableRowContent>
-              <Flex
-                    style={{
-                      gap: window.innerWidth <= 768 ? '3rem' : '14.2rem', // Adjust gap for mobile view
-                      color: '#FFD700',
-                      paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', // Adjust paddingRight for mobile view
-                      paddingTop: window.innerWidth <= 768 ? '3rem' : '0rem', 
-                      alignItems: 'center',
-                    }}
-                  >
-                 <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}>
-                  <TableDesc color="#fdda00">Price:</TableDesc>
-                  <TableDesc2>$0.6598</TableDesc2> {/* Use the price from state */}
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
-                  <TableDesc color="#fdda00">Total Stake:</TableDesc>
-                  <TableDesc2>49,341.17 RIO</TableDesc2> {/* Use the totalStake from state */}
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', color: '#FFD700' }}> 
-                  <TableDesc color="#fdda00">APR:</TableDesc>
-                  <TableDesc2>-</TableDesc2> {/* Use the apr from state */}
-                </div>      
-              </Flex>
-            </TableRow>
-          </Flex>
 
           <Flex justifyContent="center" flexWrap="wrap" style={{ gap: '1rem' }}>
             <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
