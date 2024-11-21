@@ -25,6 +25,12 @@ const links: MenuEntry[] = [
     label: 'Bridge',
     href: "https://app.chainport.io/"
   },
+  // {
+  //   label: 'Earn',
+  //   subMenu: [
+  //     { label: 'Staking', href: "/staking" },
+  //   ]
+  // },
   {
     label: 'Earn',
     href: "/staking"
