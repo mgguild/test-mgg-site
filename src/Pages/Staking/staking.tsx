@@ -4,7 +4,7 @@ import styled, { ThemeContext } from 'styled-components';
 import { BgPage, Btn, Card, HeadingGlow, InformativeButton } from './styled';
 import useWeb3 from "../../hooks/useWeb3";
 import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/formatBalance";
-import useFetchRoninData from 'hooks/useRoninData';
+import useFetchCoinsData from 'hooks/useFetchCoinsData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import DymIcon from '../../assets/images/Logo_Dymension.png';
@@ -184,22 +184,33 @@ const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
 
 
 const Staking: React.FC = () => {
-  const theme = useContext(ThemeContext);
-  const web3 = useWeb3();
-  const [requestedMint, setRequestMint] = useState(false);
-  const [price, setPrice] = useState("TBA");
-  const [totalStaked, setTotalStaked] = useState("TBA");
-  const [apr, setApr] = useState("TBA");
-  const roninData = useFetchRoninData();
+  // const theme = useContext(ThemeContext);
+  // const web3 = useWeb3();
+  const {RONData, RIOData} = useFetchCoinsData();
+
+  const [RONprice, setRONPrice] = useState<any>("TBA");
+  const [RONTotalStaked, setRONTotalStaked] = useState("TBA");
+  const [RONApr, setRONApr] = useState("TBA");
+
+  const [RIOprice, setRIOPrice] = useState<any>("TBA");
+  const [RIOTotalStaked, setRIOTotalStaked] = useState("TBA");
+  const [RIOApr, setRIOApr] = useState("TBA");
 
   useEffect(() => {
-    if (roninData) {
-      console.log('Fetched roninData:', roninData);
-      setPrice(roninData.market["14101"].quote.USD.price ?? "TBA");  
-      setTotalStaked(roninData.totalStaked ?? "TBA");  
-      setApr(roninData.apr ?? "TBA");  
+    if (RONData) {
+      console.log('Fetched roninData:', RONData);
+      setRONPrice(RONData.market.quote.USD.price ?? "TBA");
+      setRONTotalStaked(RONData.totalStaked ?? "TBA");
+      setRONApr(RONData.apr ?? "TBA");
     }
-  }, [roninData]);
+
+    if (RIOData) {
+      console.log('Fetched RIO Data:', RIOData);
+      setRIOPrice(RIOData.market.quote.USD.price ?? "TBA");
+      setRIOTotalStaked(RIOData.totalStaked ?? "TBA");
+      setRIOApr(RIOData.apr ?? "TBA");
+    }
+  }, [RONData, RIOData]);
 
   return (
     <Page>
@@ -230,9 +241,9 @@ const Staking: React.FC = () => {
             <StakingTable
               logo={LogoRonin}
               name="RON"
-              price={parseFloat(price).toFixed(2)}
-              totalStake={`${totalStaked} RON`}
-              apr={`11.10/${apr}%`}
+              price={parseFloat(RONprice).toFixed(2)}
+              totalStake={`${RONTotalStaked} RON`}
+              apr={`11.10/${RONApr}%`}
             />
             <StakingTable
               logo={RioImg}
