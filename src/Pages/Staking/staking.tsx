@@ -248,10 +248,11 @@ const Staking: React.FC = () => {
             <StakingTable
               logo={RioImg}
               name="RIO"
-              price="0.714"
+              price={parseFloat(RIOprice).toFixed(4)}
               totalStake="49,341.17 RIO"
-              apr="-"
+              apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
+
           </Flex>
 
 
