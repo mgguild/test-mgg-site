@@ -69,7 +69,32 @@ export interface ExchangesConfig {
   link: string;
 }
 
-export interface Validator {
+interface CMCUSD {
+  price: number;
+  volume_24h: number;
+  volume_change_24h: number;
+  percent_change_1h: number;
+  percent_change_24h: number;
+  percent_change_7d: number;
+  percent_change_30d: number;
+  percent_change_60d: number;
+  percent_change_90d: number;
+  market_cap: number;
+  market_cap_dominance: number;
+  fully_diluted_market_cap: number;
+  tvl: any;
+  last_updated: string;
+}
+
+interface CMCUSDQuote {
+  USD: CMCUSD;
+}
+
+export interface CMCQuoteData {
+  quote: CMCUSDQuote;
+}
+
+export interface RONValidator {
   __typename: string;
   address: string;
   admin: string;
@@ -87,4 +112,43 @@ export interface Validator {
   totalStaked: string;
   treasury: string;
   uptime: string;
+}
+
+interface Consensus_pubkey {
+  '@type': string;
+  key: string;
+}
+
+interface RIODescription {
+  moniker: string;
+  identity: string;
+  website: string;
+  security_contact: string;
+  details: string
+}
+
+interface RIOCommission_rates {
+  rate: string;
+  max_rate: string;
+  max_change_rate: string;
+}
+
+interface RIOCommison {
+  commission: RIOCommission_rates;
+}
+
+export interface RIOValidator {
+  operator_address: string;
+  consensus_pubkey: Consensus_pubkey;
+  jailed: boolean;
+  status: string;
+  tokens: string;
+  delegator_shares: string;
+  description: RIODescription;
+  unbonding_height: string;
+  unbonding_time: string;
+  commission: RIOCommison;
+  update_time: string;
+  min_self_delegation: string;
+  bond_denom: string;
 }

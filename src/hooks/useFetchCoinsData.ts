@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react";
 import useRefresh from "./useRefresh";
-import { Validator } from "config/constants/types";
+import { RONValidator, CMCQuoteData, RIOValidator } from "config/constants/types";
 
 const url = "https://ronin-node-server.vercel.app";
 
-interface RoninData {
-    validator: Validator;
-    market: any;
+interface CoinsData {
+    validator: RONValidator|RIOValidator;
+    market: CMCQuoteData;
     price?: string;
     totalStaked?: string;
     apr?: string;
 }
 
-const useFetchRoninData = () => {
+const useFetchCoinsData = () => {
     const { fastRefresh } = useRefresh();
-    const [roninData, setRoninData] = useState<RoninData>();
+    const [RONData, setRONData] = useState<CoinsData>();
+    const [RIOData, setRIOData] = useState<CoinsData>();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                console.log("Fetching validator data...");
-                let response = await fetch(`${url}/getValidator`, {
+                //FETCH VALIDATOR DATA
+                //RON VALIDATOR
+                console.log("Fetching RON validator data...");
+                let response = await fetch(`${url}/getRoninValidator`, {
                     headers: { "content-type": "application/json" }
                 });
 
@@ -28,11 +31,26 @@ const useFetchRoninData = () => {
                     throw new Error("Failed to fetch validator data");
                 }
 
-                const validatorData = await response.json();
-                console.log("Validator data:", validatorData);
+                const RONValidatorData = await response.json();
+                console.log("RON Validator data:", RONValidatorData);
 
+                //RIO VALIDATOR
+                console.log("Fetching RIO validator data...");
+                response = await fetch(`${url}/getRioValidator`, {
+                    headers: { "content-type": "application/json" }
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch validator data");
+                }
+
+                const res = await response.json();
+                const RIOValidatorData: RIOValidator = res.data.validator;
+                console.log("RIO Validator data:", RIOValidatorData);
+
+                //FETCH MARKET DATA
                 console.log("Fetching market data...");
-                response = await fetch(`${url}/getRoninMarket`, {
+                response = await fetch(`${url}/getCoinsMarket`, {
                     headers: { "content-type": "application/json" }
                 });
 
@@ -43,7 +61,7 @@ const useFetchRoninData = () => {
                 const marketData = await response.json();
                 console.log("Market data structure:", marketData);
 
-                const rawTotalStaked = validatorData.Validator?.totalStaked ? validatorData.Validator.totalStaked.toString() : "";
+                const rawTotalStaked = RONValidatorData.Validator?.totalStaked ? RONValidatorData.Validator.totalStaked.toString() : "";
                 console.log("Raw Total Staked (before truncation):", rawTotalStaked);
 
                 const truncatedTotalStaked = rawTotalStaked.length > 18 ? rawTotalStaked.slice(0, -18) : rawTotalStaked;
@@ -53,8 +71,8 @@ const useFetchRoninData = () => {
                     ? parseFloat(truncatedTotalStaked).toLocaleString("en-US", { maximumFractionDigits: 0 })
                     : "TBA";
 
-                const formattedApr = validatorData.Validator?.apr
-                    ? parseFloat(validatorData.Validator.apr).toFixed(2)
+                const formattedApr = RONValidatorData.Validator?.apr
+                    ? parseFloat(RONValidatorData.Validator.apr).toFixed(2)
                     : "TBA";
 
                 const formattedPrice =
@@ -64,13 +82,18 @@ const useFetchRoninData = () => {
 
                 console.log("Formatted price:", formattedPrice);
 
-                setRoninData({
-                    validator: validatorData.Validator,
-                    market: marketData.data,
+                setRONData({
+                    validator: RONValidatorData.Validator,
+                    market: marketData.data["14101"],
                     price: formattedPrice,
                     totalStaked: formattedTotalStaked,
                     apr: formattedApr,
                 });
+
+                setRIOData({
+                    validator: RIOValidatorData,
+                    market: marketData.data["4166"]
+                })
             } catch (error) {
                 console.error("Error fetching Ronin data:", error);
             }
@@ -79,7 +102,7 @@ const useFetchRoninData = () => {
         fetchData();
     }, [fastRefresh]);
 
-    return roninData;
+    return {RONData: RONData, RIOData: RIOData};
 };
 
-export default useFetchRoninData;
+export default useFetchCoinsData;
