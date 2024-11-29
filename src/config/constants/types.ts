@@ -138,6 +138,7 @@ interface RIOCommison {
 }
 
 export interface RIOValidator {
+  totalStaked: any;
   operator_address: string;
   consensus_pubkey: Consensus_pubkey;
   jailed: boolean;

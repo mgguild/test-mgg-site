@@ -7,7 +7,7 @@ import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/for
 import useFetchCoinsData from 'hooks/useFetchCoinsData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
-import DymIcon from '../../assets/images/Logo_Dymension.png';
+import NearIcon from '../../assets/images/near.png';
 import StakingImg from '../../assets/images/Staking_New.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
@@ -158,6 +158,16 @@ const ResponsiveFlex = styled(Flex)`
     }
   }
 `;
+const formatTotalStaked = (value: string) => {
+  if (!value) return "TBA";
+  try {
+      const scaledValue = parseFloat(value) / 1e18;
+      return scaledValue.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " RIO";
+  } catch (error) {
+      console.error("Error formatting total staked:", error);
+      return "TBA";
+  }
+};
 
 const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
   <TableRowAligned>
@@ -207,7 +217,7 @@ const Staking: React.FC = () => {
     if (RIOData) {
       console.log('Fetched RIO Data:', RIOData);
       setRIOPrice(RIOData.market.quote.USD.price ?? "TBA");
-      setRIOTotalStaked(RIOData.totalStaked ?? "TBA");
+      setRIOTotalStaked((RIOData.validator as any).tokens ?? "TBA");
       setRIOApr(RIOData.apr ?? "TBA");
     }
   }, [RONData, RIOData]);
@@ -249,7 +259,7 @@ const Staking: React.FC = () => {
               logo={RioImg}
               name="RIO"
               price={parseFloat(RIOprice).toFixed(4)}
-              totalStake="49,341.17 RIO"
+              totalStake={formatTotalStaked(RIOTotalStaked)} 
               apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
 
