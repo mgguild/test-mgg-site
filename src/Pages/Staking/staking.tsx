@@ -259,7 +259,8 @@ const Staking: React.FC = () => {
               logo={RioImg}
               name="RIO"
               price={parseFloat(RIOprice).toFixed(4)}
-              totalStake={formatTotalStaked(RIOTotalStaked)} 
+              // totalStake={formatTotalStaked(RIOTotalStaked)} 
+              totalStake={`49,341.17 RON`}
               apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
 
@@ -298,6 +299,18 @@ const Staking: React.FC = () => {
               </a>
             </StakingCard>
           </Flex>
+          <Flex justifyContent="center" flexWrap="wrap" style={{ gap: '1rem' }}>
+            <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img src={NearIcon} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
+              <Heading size="l" color="cyan" marginTop={"1rem"}>NEAR</Heading>
+              <InfoSection color="white" style={{ textAlign: 'justify' }}>
+              NEAR's native token is also called NEAR, and is used to pay for transaction fees and storage. NEAR tokens can also be staked by token holders who participate in achieving network consensus as transaction validators. NEAR Protocol is focused on creating a developer and user friendly platform.
+              </InfoSection>
+              <a href="https://app.mynearwallet.com/staking/metagamingguild.poolv1.near" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+                <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
+              </a>
+            </StakingCard>
+            </Flex>
         </div>
       </div>
     </BgPage>
