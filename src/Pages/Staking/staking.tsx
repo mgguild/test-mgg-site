@@ -251,8 +251,7 @@ const Staking: React.FC = () => {
               logo={RioImg}
               name="RIO"
               price={parseFloat(RIOprice).toFixed(4)}
-              totalStake={getFullDisplayBalance(toBigNumber(RIOTotalStaked), 18, 2)}
-              // totalStake={`49,341.17 RON`}
+              totalStake={`${getFullDisplayBalance(toBigNumber(RIOTotalStaked), 18, 2)} RIO`}
               apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
 
