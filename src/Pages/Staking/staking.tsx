@@ -159,16 +159,6 @@ const ResponsiveFlex = styled(Flex)`
     }
   }
 `;
-const formatTotalStaked = (value: string) => {
-  if (!value) return "TBA";
-  try {
-      const scaledValue = parseFloat(value) / 1e18;
-      return scaledValue.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " RIO";
-  } catch (error) {
-      console.error("Error formatting total staked:", error);
-      return "TBA";
-  }
-};
 
 const StakingTable = ({ logo, name, price, totalStake, apr }: any) => (
   <TableRowAligned>
