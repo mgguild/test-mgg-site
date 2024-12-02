@@ -138,6 +138,7 @@ interface RIOCommison {
 }
 
 export interface RIOValidator {
+  totalStaked: any;
   operator_address: string;
   consensus_pubkey: Consensus_pubkey;
   jailed: boolean;
@@ -151,4 +152,31 @@ export interface RIOValidator {
   update_time: string;
   min_self_delegation: string;
   bond_denom: string;
+}
+
+
+interface RIODelegation {
+  delegator_address: string;
+  validator_address: string;
+  shares: string;
+}
+
+interface RIODelegationBalance {
+  denom: string;
+  amount: string;
+}
+
+interface RIODelegationPagination {
+  next_key: string;
+  total: string;
+}
+
+interface RIODelegationResponse {
+  delegation: RIODelegation;
+  balance: RIODelegationBalance;
+}
+
+export interface RIOValidatorDelegation {
+  delegation_responses: RIODelegationResponse[]
+  pagination: RIODelegationPagination;
 }

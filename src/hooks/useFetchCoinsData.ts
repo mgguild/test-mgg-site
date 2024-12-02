@@ -1,16 +1,28 @@
 import { useEffect, useState } from "react";
 import useRefresh from "./useRefresh";
-import { RONValidator, CMCQuoteData, RIOValidator } from "config/constants/types";
+import { RONValidator, CMCQuoteData, RIOValidatorDelegation } from "config/constants/types";
 
 const url = "https://ronin-node-server.vercel.app";
 
 interface CoinsData {
-    validator: RONValidator|RIOValidator;
+    validator: RONValidator | RIOValidatorDelegation;
     market: CMCQuoteData;
     price?: string;
     totalStaked?: string;
     apr?: string;
 }
+
+const formatTotalStaked = (value: string) => {
+    if (!value) return "TBA";
+    try {
+        const scaledValue = parseFloat(value) / 1e18;
+        // Format to 2 decimal places with commas
+        return scaledValue.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " RIO";
+    } catch (error) {
+        console.error("Error formatting total staked:", error);
+        return "TBA";
+    }
+};
 
 const useFetchCoinsData = () => {
     const { fastRefresh } = useRefresh();
@@ -45,7 +57,7 @@ const useFetchCoinsData = () => {
                 }
 
                 const res = await response.json();
-                const RIOValidatorData: RIOValidator = res.data.validator;
+                const RIOValidatorData: RIOValidatorDelegation = res.data;
                 console.log("RIO Validator data:", RIOValidatorData);
 
                 //FETCH MARKET DATA
@@ -57,6 +69,12 @@ const useFetchCoinsData = () => {
                 if (!response.ok) {
                     throw new Error("Failed to fetch market data");
                 }
+
+                const raw2TotalStaked = RIOValidatorData.delegation_responses.length > 0 ? RIOValidatorData.delegation_responses[0].balance.amount : "";
+                console.log("Raw Total Staked:", raw2TotalStaked);
+
+                const formatted2TotalStaked = formatTotalStaked(raw2TotalStaked);
+                console.log("Formatted Total Staked:", formatted2TotalStaked);
 
                 const marketData = await response.json();
                 console.log("Market data structure:", marketData);
@@ -92,7 +110,8 @@ const useFetchCoinsData = () => {
 
                 setRIOData({
                     validator: RIOValidatorData,
-                    market: marketData.data["4166"]
+                    market: marketData.data["4166"],
+                    totalStaked: formatted2TotalStaked,
                 })
             } catch (error) {
                 console.error("Error fetching Ronin data:", error);

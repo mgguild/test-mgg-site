@@ -3,14 +3,15 @@ import { Flex, Heading, Text } from '@metagg/mgg-uikit';
 import styled, { ThemeContext } from 'styled-components';
 import { BgPage, Btn, Card, HeadingGlow, InformativeButton } from './styled';
 import useWeb3 from "../../hooks/useWeb3";
-import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/formatBalance";
+import { getBalanceAmount, getBalanceNumber, toBigNumber, formatNumber, getFullDisplayBalance } from "../../utils/formatBalance";
 import useFetchCoinsData from 'hooks/useFetchCoinsData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
-import DymIcon from '../../assets/images/Logo_Dymension.png';
-import StakingImg from '../../assets/images/Staking_New.png';
+import NearIcon from '../../assets/images/near.png';
+import StakingImg from '../../assets/images/Staking4.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
+import { RIOValidatorDelegation } from 'config/constants/types';
 
 const TableDesc = styled.div`
   text-align: center;
@@ -193,7 +194,7 @@ const Staking: React.FC = () => {
   const [RONApr, setRONApr] = useState("TBA");
 
   const [RIOprice, setRIOPrice] = useState<any>("TBA");
-  const [RIOTotalStaked, setRIOTotalStaked] = useState("TBA");
+  const [RIOTotalStaked, setRIOTotalStaked] = useState<string>("TBA");
   const [RIOApr, setRIOApr] = useState("TBA");
 
   useEffect(() => {
@@ -207,7 +208,8 @@ const Staking: React.FC = () => {
     if (RIOData) {
       console.log('Fetched RIO Data:', RIOData);
       setRIOPrice(RIOData.market.quote.USD.price ?? "TBA");
-      setRIOTotalStaked(RIOData.totalStaked ?? "TBA");
+      setRIOTotalStaked((RIOData.validator as RIOValidatorDelegation).delegation_responses.length > 0 ?
+                        (RIOData.validator as RIOValidatorDelegation).delegation_responses[0].balance.amount : "TBA");
       setRIOApr(RIOData.apr ?? "TBA");
     }
   }, [RONData, RIOData]);
@@ -243,13 +245,13 @@ const Staking: React.FC = () => {
               name="RON"
               price={parseFloat(RONprice).toFixed(2)}
               totalStake={`${RONTotalStaked} RON`}
-              apr={`11.05/${RONApr}%`}
+              apr={`11.46/${RONApr}%`}
             />
             <StakingTable
               logo={RioImg}
               name="RIO"
               price={parseFloat(RIOprice).toFixed(4)}
-              totalStake="49,341.17 RIO"
+              totalStake={`${getFullDisplayBalance(toBigNumber(RIOTotalStaked), 18, 2)} RIO`}
               apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
 
@@ -288,6 +290,18 @@ const Staking: React.FC = () => {
               </a>
             </StakingCard>
           </Flex>
+          <Flex justifyContent="center" flexWrap="wrap" style={{ gap: '1rem' }}>
+            <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img src={NearIcon} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
+              <Heading size="l" color="cyan" marginTop={"1rem"}>NEAR</Heading>
+              <InfoSection color="white" style={{ textAlign: 'justify' }}>
+              NEAR's native token is also called NEAR, and is used to pay for transaction fees and storage. NEAR tokens can also be staked by token holders who participate in achieving network consensus as transaction validators. NEAR Protocol is focused on creating a developer and user friendly platform.
+              </InfoSection>
+              <a href="https://app.mynearwallet.com/staking/metagamingguild.poolv1.near" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
+                <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
+              </a>
+            </StakingCard>
+            </Flex>
         </div>
       </div>
     </BgPage>
