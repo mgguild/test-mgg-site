@@ -153,3 +153,30 @@ export interface RIOValidator {
   min_self_delegation: string;
   bond_denom: string;
 }
+
+
+interface RIODelegation {
+  delegator_address: string;
+  validator_address: string;
+  shares: string;
+}
+
+interface RIODelegationBalance {
+  denom: string;
+  amount: string;
+}
+
+interface RIODelegationPagination {
+  next_key: string;
+  total: string;
+}
+
+interface RIODelegationResponse {
+  delegation: RIODelegation;
+  balance: RIODelegationBalance;
+}
+
+export interface RIOValidatorDelegation {
+  delegation_responses: RIODelegationResponse[]
+  pagination: RIODelegationPagination;
+}

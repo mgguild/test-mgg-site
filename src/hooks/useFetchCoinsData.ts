@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import useRefresh from "./useRefresh";
-import { RONValidator, CMCQuoteData, RIOValidator } from "config/constants/types";
+import { RONValidator, CMCQuoteData, RIOValidatorDelegation } from "config/constants/types";
 
 const url = "https://ronin-node-server.vercel.app";
 
 interface CoinsData {
-    validator: RONValidator|RIOValidator;
+    validator: RONValidator | RIOValidatorDelegation;
     market: CMCQuoteData;
     price?: string;
     totalStaked?: string;
@@ -57,7 +57,7 @@ const useFetchCoinsData = () => {
                 }
 
                 const res = await response.json();
-                const RIOValidatorData: RIOValidator = res.data.validator;
+                const RIOValidatorData: RIOValidatorDelegation = res.data;
                 console.log("RIO Validator data:", RIOValidatorData);
 
                 //FETCH MARKET DATA
@@ -70,7 +70,7 @@ const useFetchCoinsData = () => {
                     throw new Error("Failed to fetch market data");
                 }
 
-                const raw2TotalStaked = RIOValidatorData?.totalStaked ? RIOValidatorData.totalStaked.toString() : "";
+                const raw2TotalStaked = RIOValidatorData.delegation_responses.length > 0 ? RIOValidatorData.delegation_responses[0].balance.amount : "";
                 console.log("Raw Total Staked:", raw2TotalStaked);
 
                 const formatted2TotalStaked = formatTotalStaked(raw2TotalStaked);

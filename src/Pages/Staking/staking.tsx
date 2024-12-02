@@ -3,7 +3,7 @@ import { Flex, Heading, Text } from '@metagg/mgg-uikit';
 import styled, { ThemeContext } from 'styled-components';
 import { BgPage, Btn, Card, HeadingGlow, InformativeButton } from './styled';
 import useWeb3 from "../../hooks/useWeb3";
-import { getBalanceAmount, getBalanceNumber, toBigNumber } from "../../utils/formatBalance";
+import { getBalanceAmount, getBalanceNumber, toBigNumber, formatNumber, getFullDisplayBalance } from "../../utils/formatBalance";
 import useFetchCoinsData from 'hooks/useFetchCoinsData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
@@ -11,6 +11,7 @@ import NearIcon from '../../assets/images/near.png';
 import StakingImg from '../../assets/images/Staking_New.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
+import { RIOValidatorDelegation } from 'config/constants/types';
 
 const TableDesc = styled.div`
   text-align: center;
@@ -203,7 +204,7 @@ const Staking: React.FC = () => {
   const [RONApr, setRONApr] = useState("TBA");
 
   const [RIOprice, setRIOPrice] = useState<any>("TBA");
-  const [RIOTotalStaked, setRIOTotalStaked] = useState("TBA");
+  const [RIOTotalStaked, setRIOTotalStaked] = useState<string>("TBA");
   const [RIOApr, setRIOApr] = useState("TBA");
 
   useEffect(() => {
@@ -217,7 +218,8 @@ const Staking: React.FC = () => {
     if (RIOData) {
       console.log('Fetched RIO Data:', RIOData);
       setRIOPrice(RIOData.market.quote.USD.price ?? "TBA");
-      setRIOTotalStaked((RIOData.validator as any).tokens ?? "TBA");
+      setRIOTotalStaked((RIOData.validator as RIOValidatorDelegation).delegation_responses.length > 0 ?
+                        (RIOData.validator as RIOValidatorDelegation).delegation_responses[0].balance.amount : "TBA");
       setRIOApr(RIOData.apr ?? "TBA");
     }
   }, [RONData, RIOData]);
@@ -259,8 +261,8 @@ const Staking: React.FC = () => {
               logo={RioImg}
               name="RIO"
               price={parseFloat(RIOprice).toFixed(4)}
-              // totalStake={formatTotalStaked(RIOTotalStaked)} 
-              totalStake={`49,341.17 RON`}
+              totalStake={getFullDisplayBalance(toBigNumber(RIOTotalStaked), 18, 2)}
+              // totalStake={`49,341.17 RON`}
               apr={RIOApr !== "TBA" ? `${RIOApr}%` : "-"}
             />
 
