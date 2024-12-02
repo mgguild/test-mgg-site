@@ -245,7 +245,7 @@ const Staking: React.FC = () => {
               name="RON"
               price={parseFloat(RONprice).toFixed(2)}
               totalStake={`${RONTotalStaked} RON`}
-              apr={`11.46/${RONApr}%`}
+              apr={`11.66/${RONApr}%`}
             />
             <StakingTable
               logo={RioImg}
