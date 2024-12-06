@@ -11,7 +11,7 @@ import NearIcon from '../../assets/images/near.png';
 import StakingImg from '../../assets/images/Staking4.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
-import { RIOValidatorDelegation } from 'config/constants/types';
+import { RIOValidatorDelegation, RONValidator } from 'config/constants/types';
 
 const TableDesc = styled.div`
   text-align: center;
@@ -192,6 +192,7 @@ const Staking: React.FC = () => {
   const [RONprice, setRONPrice] = useState<any>("TBA");
   const [RONTotalStaked, setRONTotalStaked] = useState("TBA");
   const [RONApr, setRONApr] = useState("TBA");
+  const [RONAprLive, setRONAprLive] = useState<string>();
 
   const [RIOprice, setRIOPrice] = useState<any>("TBA");
   const [RIOTotalStaked, setRIOTotalStaked] = useState<string>("TBA");
@@ -203,6 +204,7 @@ const Staking: React.FC = () => {
       setRONPrice(RONData.market.quote.USD.price ?? "TBA");
       setRONTotalStaked(RONData.totalStaked ?? "TBA");
       setRONApr(RONData.apr ?? "TBA");
+      setRONAprLive(RONData.aprLive ?? "TBA");
     }
 
     if (RIOData) {
@@ -245,7 +247,7 @@ const Staking: React.FC = () => {
               name="RON"
               price={parseFloat(RONprice).toFixed(2)}
               totalStake={`${RONTotalStaked} RON`}
-              apr={`11.18/${RONApr}%`}
+              apr={`${RONAprLive}%/${RONApr}%`}
             />
             <StakingTable
               logo={RioImg}
