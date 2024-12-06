@@ -99,6 +99,7 @@ export interface RONValidator {
   address: string;
   admin: string;
   apr: string;
+  aprLive: string;
   blockValidated: string;
   bridge: string;
   commission: string;
