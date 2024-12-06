@@ -10,6 +10,7 @@ interface CoinsData {
     price?: string;
     totalStaked?: string;
     apr?: string;
+    aprLive?: string;
 }
 
 const formatTotalStaked = (value: string) => {
@@ -93,6 +94,10 @@ const useFetchCoinsData = () => {
                     ? parseFloat(RONValidatorData.Validator.apr).toFixed(2)
                     : "TBA";
 
+                const formattedAprLive = RONValidatorData.Validator?.aprLive
+                    ? parseFloat(RONValidatorData.Validator.aprLive).toFixed(2)
+                    : "TBA";
+
                 const formattedPrice =
                     marketData.data?.price && !isNaN(Number(marketData.data.price))
                         ? Number(marketData.data.price).toFixed(2)
@@ -106,6 +111,7 @@ const useFetchCoinsData = () => {
                     price: formattedPrice,
                     totalStaked: formattedTotalStaked,
                     apr: formattedApr,
+                    aprLive: formattedAprLive,
                 });
 
                 setRIOData({
