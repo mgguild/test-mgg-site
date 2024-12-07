@@ -9,30 +9,28 @@ import { MenuEntry as IMenuEntry } from "./types";
 
 const LinkContainer = styled.div`
   display: flex;
+  position: relative;
+  gap: 20px; 
 `;
 
 const StyledMenuEntry = styled(MenuEntry)`
   background-color: transparent;
   padding: 0;
+  position: relative;
+
 `;
 
 const NavBarContainer = styled.div<{ scrolled: boolean }>`
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  background-color: ${({ scrolled }) => 
-    scrolled ? "rgba(9, 1, 52, 0.8)" : "transparent"}; /* Change color and transparency */
+  background-color: ${({ scrolled }) =>
+    scrolled ? "rgba(9, 1, 52, 0.8)" : "transparent"};
   transition: background-color 0.3s ease-in-out;
-  z-index: 1000; /* Stay above other content */
-  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
 
-  & > * {
-    text-align: left;
-  }
-
-  & > *:nth-child(4) {
-    border-top: 2px solid rgba(133, 133, 133, 0.1);
-    border-bottom: 2px solid rgba(133, 133, 133, 0.1);
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
@@ -44,7 +42,6 @@ const StyledLinkLabel = styled(LinkLabel)`
 &::before {
   transform: translateX(-50%);
   position: absolute;
-  background: ${theme.colors.primary};
   height: 8px;
   bottom: 43%;
   content: '';
@@ -52,6 +49,42 @@ const StyledLinkLabel = styled(LinkLabel)`
   left: 0;
 }
 `}
+`;
+
+const DropdownMenu = styled.div`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 8px 0;
+  gap: 10px; /* Adds spacing between dropdown items */
+
+  ${StyledMenuEntry}:hover & {
+    display: block;
+  }
+`;
+
+const DropdownItem = styled.div`
+  padding: 12px 16px; /* Adds padding inside each dropdown item */
+  white-space: nowrap;
+  margin-bottom: 4px; /* Adds a small gap between dropdown items */
+
+  &:hover {
+    background-color: yellow;
+  }
+
+  &:last-child {
+    margin-bottom: 0; /* Removes gap after the last dropdown item */
+  }
+`;
+
+const DisabledMenuEntry = styled(StyledMenuEntry)`
+  pointer-events: none;
+  color: #aaa;
 `;
 
 const scrollToTop = () => {
@@ -79,6 +112,7 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // New state for dropdown visibility
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,19 +131,40 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
     <NavBarContainer scrolled={scrolled}>
       <LinkContainer>
         {links.map((link) => (
-          link.href && (
-            <MenuEntry key={link.label}>
-              <MenuLink href={link.href} onClick={scrollToTop}>
-                <LinkLabel isActive={link.href === location.pathname}>
+          <StyledMenuEntry key={link.label}>
+            {link.label === "Earn" ? (
+              <>
+                <StyledLinkLabel 
+                  isActive={link.href === location.pathname} 
+                  onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click
+                >
                   {link.label}
-                </LinkLabel>
+                </StyledLinkLabel>
+                {link.subMenu && dropdownOpen && ( // Show dropdown if open
+                  <DropdownMenu>
+                    {link.subMenu.map((subLink) => (
+                      <DropdownItem key={subLink.label}>
+                        <MenuLink href={subLink.href} onClick={scrollToTop}>
+                          {subLink.label}
+                        </MenuLink>
+                      </DropdownItem>
+                    ))}
+                  </DropdownMenu>
+                )}
+              </>
+            ) : (
+              <MenuLink href={link.href || "#"} onClick={scrollToTop}>
+                <StyledLinkLabel isActive={link.href === location.pathname}>
+                  {link.label}
+                </StyledLinkLabel>
               </MenuLink>
-            </MenuEntry>
-          )
+            )}
+          </StyledMenuEntry>
         ))}
       </LinkContainer>
     </NavBarContainer>
   );
 };
+
 
 export default NavbarMenu;

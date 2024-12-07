@@ -64,6 +64,8 @@ const MenuEntry = styled.div<Props>`
     align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
+
   }
   svg {
     fill: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.textSubtle)};
@@ -80,6 +82,10 @@ const MenuEntry = styled.div<Props>`
   }
   &.rainbow svg {
     fill: white;
+  }
+    // Add media query for mobile view
+  @media (max-width: 768px) {
+    height: 50px; // Set a different height for mobile devices
   }
 `;
 MenuEntry.defaultProps = {
