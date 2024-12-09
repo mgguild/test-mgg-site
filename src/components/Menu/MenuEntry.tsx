@@ -57,13 +57,15 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "12px" : "14px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: white;
   // box-shadow: ${({ isActive, theme }) => (isActive ? `0 5px 5px ${theme.colors.primary}` : "none")};
   a {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
+
   }
   svg {
     fill: ${({ theme, isActive }) => (isActive ? theme.colors.primary : theme.colors.textSubtle)};
@@ -80,6 +82,10 @@ const MenuEntry = styled.div<Props>`
   }
   &.rainbow svg {
     fill: white;
+  }
+    // Add media query for mobile view
+  @media (max-width: 768px) {
+    height: 50px; // Set a different height for mobile devices
   }
 `;
 MenuEntry.defaultProps = {

@@ -8,7 +8,7 @@ import useFetchCoinsData from 'hooks/useFetchCoinsData';
 import LogoRonin from '../../assets/images/Logo_Ronin.png';
 import CarvIcon from '../../assets/images/Logo_Carv.png';
 import NearIcon from '../../assets/images/near.png';
-import StakingImg from '../../assets/images/Staking4.png';
+import StakingImg from '../../assets/images/Staking.png';
 import RioImg from '../../assets/images/rio_icon.png';
 import Page from 'components/layout/Page';
 import { RIOValidatorDelegation, RONValidator } from 'config/constants/types';
@@ -292,7 +292,7 @@ const Staking: React.FC = () => {
               </a>
             </StakingCard>
           </Flex>
-          <Flex justifyContent="center" flexWrap="wrap" style={{ gap: '1rem' }}>
+          {/* <Flex justifyContent="center" flexWrap="wrap" style={{ gap: '1rem' }}>
             <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img src={NearIcon} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
               <Heading size="l" color="cyan" marginTop={"1rem"}>NEAR</Heading>
@@ -303,7 +303,7 @@ const Staking: React.FC = () => {
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
-            </Flex>
+            </Flex> */}
         </div>
       </div>
     </BgPage>
