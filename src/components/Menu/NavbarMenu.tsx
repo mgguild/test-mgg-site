@@ -56,7 +56,7 @@ const DropdownMenu = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: #142966;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   z-index: 10;
@@ -74,7 +74,7 @@ const DropdownItem = styled.div`
   margin-bottom: 4px; /* Adds a small gap between dropdown items */
 
   &:hover {
-    background-color: yellow;
+    background-color: #080E4B;
   }
 
   &:last-child {

@@ -57,7 +57,7 @@ const MenuEntry = styled.div<Props>`
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "12px" : "14px")};
   background-color: ${({ secondary, theme }) => (secondary ? theme.colors.background : "transparent")};
-  color: ${({ theme }) => theme.colors.textSubtle};
+  color: white;
   // box-shadow: ${({ isActive, theme }) => (isActive ? `0 5px 5px ${theme.colors.primary}` : "none")};
   a {
     display: flex;
