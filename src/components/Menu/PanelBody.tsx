@@ -55,25 +55,26 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
     }
   };
 
+  let isPreviousDropdownOpen = false;
+
   return (
     <Container>
-      {links.map((entry) => {
-        const calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+      {links.map((entry, index) => {
+        const isDropdownOpen = activeDropdown === entry.label;
 
         if (entry.subMenu) {
+          isPreviousDropdownOpen = isDropdownOpen; // Track if current entry is an open dropdown
           return (
             <EarnMenuEntry
               key={entry.label}
-              isActive={activeDropdown === entry.label}
-              className={calloutClass}
-              isOpen={activeDropdown === entry.label}  // Pass down the open state
+              isOpen={isDropdownOpen} // Pass down the open state
             >
               <MenuLink href="#" onClick={(e) => toggleDropdown(entry.label, e)}>
-                <LinkLabel isActive={activeDropdown === entry.label} isPushed={isPushed}>
+                <LinkLabel isActive={isDropdownOpen} isPushed={isPushed}>
                   {entry.label}
                 </LinkLabel>
               </MenuLink>
-              <DropdownContainer isOpen={activeDropdown === entry.label} isMobile={isMobile}>
+              <DropdownContainer isOpen={isDropdownOpen} isMobile={isMobile}>
                 {entry.subMenu.map((item) => (
                   <MenuEntry
                     key={item.href}
@@ -91,8 +92,17 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           );
         }
 
+        const applyMargin = isPreviousDropdownOpen;
+        isPreviousDropdownOpen = false; // Reset after applying the margin
+
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry
+            key={entry.label}
+            isActive={entry.href === location.pathname}
+            style={{
+              marginTop: applyMargin ? "48px" : "0", // Add margin to next menu entry after dropdown
+            }}
+          >
             <MenuLink href={entry.href} onClick={handleClick}>
               <LinkLabel isActive={entry.href === location.pathname} isPushed={isPushed}>
                 {entry.label}
