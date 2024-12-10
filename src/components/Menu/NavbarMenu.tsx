@@ -9,30 +9,28 @@ import { MenuEntry as IMenuEntry } from "./types";
 
 const LinkContainer = styled.div`
   display: flex;
+  position: relative;
+  gap: 20px; 
 `;
 
 const StyledMenuEntry = styled(MenuEntry)`
   background-color: transparent;
   padding: 0;
+  position: relative;
+
 `;
 
 const NavBarContainer = styled.div<{ scrolled: boolean }>`
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  background-color: ${({ scrolled }) => 
-    scrolled ? "rgba(9, 1, 52, 0.8)" : "transparent"}; /* Change color and transparency */
+  background-color: ${({ scrolled }) =>
+    scrolled ? "rgba(9, 1, 52, 0.8)" : "transparent"};
   transition: background-color 0.3s ease-in-out;
-  z-index: 1000; /* Stay above other content */
-  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
 
-  & > * {
-    text-align: left;
-  }
-
-  & > *:nth-child(4) {
-    border-top: 2px solid rgba(133, 133, 133, 0.1);
-    border-bottom: 2px solid rgba(133, 133, 133, 0.1);
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
@@ -44,7 +42,6 @@ const StyledLinkLabel = styled(LinkLabel)`
 &::before {
   transform: translateX(-50%);
   position: absolute;
-  background: ${theme.colors.primary};
   height: 8px;
   bottom: 43%;
   content: '';
@@ -52,6 +49,42 @@ const StyledLinkLabel = styled(LinkLabel)`
   left: 0;
 }
 `}
+`;
+
+const DropdownMenu = styled.div`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #142966;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 8px 0;
+  gap: 10px; /* Adds spacing between dropdown items */
+
+  ${StyledMenuEntry}:hover & {
+    display: block;
+  }
+`;
+
+const DropdownItem = styled.div`
+  padding: 12px 16px; /* Adds padding inside each dropdown item */
+  white-space: nowrap;
+  margin-bottom: 4px; /* Adds a small gap between dropdown items */
+
+  &:hover {
+    background-color: #080E4B;
+  }
+
+  &:last-child {
+    margin-bottom: 0; /* Removes gap after the last dropdown item */
+  }
+`;
+
+const DisabledMenuEntry = styled(StyledMenuEntry)`
+  pointer-events: none;
+  color: #aaa;
 `;
 
 const scrollToTop = () => {
@@ -133,5 +166,6 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
     </NavBarContainer>
   );
 };
+
 
 export default NavbarMenu;
