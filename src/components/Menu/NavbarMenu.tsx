@@ -3,7 +3,7 @@ import styled, { ThemeContext } from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MoreHorizontal } from "react-feather";
 import { Dropdown, Text, Flex } from "@metagg/mgg-uikit";
-import { LinkLabel, MenuEntry } from "./MenuEntry";
+import { LinkLabel, MenuEntry, DropdownMenu, DropdownMenuItem } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { MenuEntry as IMenuEntry } from "./types";
 
@@ -79,8 +79,12 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
+  const [navItems, setNavItems] = useState<Array<IMenuEntry>>();
+  const [isOpen,setIsOpen] = useState(false);
 
   useEffect(() => {
+    console.log(links);
+    setNavItems(links);
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -91,21 +95,39 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems, links]);
 
   return (
     <NavBarContainer scrolled={scrolled}>
       <LinkContainer>
-        {links.map((link) => (
-          link.href && (
-            <MenuEntry key={link.label}>
-              <MenuLink href={link.href} onClick={scrollToTop}>
-                <LinkLabel isActive={link.href === location.pathname}>
-                  {link.label}
-                </LinkLabel>
-              </MenuLink>
-            </MenuEntry>
-          )
+        {navItems && navItems.map((link) => (
+          <>
+            {
+              link.items && link.items.length > 0 ?
+              (<MenuEntry key={link.label} style={{position: 'relative'}}>
+                  <LinkLabel onClick={() => setIsOpen(!isOpen)}>
+                    {link.label}
+                  </LinkLabel>
+                  <DropdownMenu isVisible={isOpen} onMouseLeave={() => setIsOpen(false)}>
+                    {link.items.map((subItem) => (
+                      <MenuLink key={subItem.label} href={subItem.href} onClick={() => setIsOpen(false)}>
+                        <DropdownMenuItem >
+                          {subItem.label}
+                        </DropdownMenuItem>
+                      </MenuLink>
+                    )) }
+                  </DropdownMenu>
+              </MenuEntry>)
+              :
+              (<MenuEntry key={link.label}>
+                <MenuLink href={link.href} onClick={scrollToTop}>
+                  <LinkLabel isActive={link.href === location.pathname}>
+                    {link.label}
+                  </LinkLabel>
+                </MenuLink>
+              </MenuEntry>)
+            }
+          </>
         ))}
       </LinkContainer>
     </NavBarContainer>

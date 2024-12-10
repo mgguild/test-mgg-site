@@ -33,7 +33,11 @@ const links: MenuEntry[] = [
   // },
   {
     label: 'Earn',
-    href: "/staking"
+    href: "",
+    items:[{
+      label: 'Staking',
+      href: "/staking"
+    }]
   },
   {
     label: 'Partners',
