@@ -16,7 +16,7 @@ const Menu = ({children}:{children:React.ReactNode}) => {
   return (
     <Wrapper>
       <StyledNav isMobile={isMobile} showMenu={showMenu}>
-        <Logo 
+        <Logo
         isPushed={isPushed}
         togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
         href="/"
@@ -27,7 +27,7 @@ const Menu = ({children}:{children:React.ReactNode}) => {
       </StyledNav>
       <BodyWrapper>
         { isMobile && (
-        <Panel 
+        <Panel
           isPushed={isPushed}
           isMobile={isMobile}
           showMenu={showMenu}

@@ -3,14 +3,14 @@ import styled, { ThemeContext } from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MoreHorizontal } from "react-feather";
 import { Dropdown, Text, Flex } from "@metagg/mgg-uikit";
-import { LinkLabel, MenuEntry } from "./MenuEntry";
+import { LinkLabel, MenuEntry, DropdownMenu, DropdownMenuItem } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { MenuEntry as IMenuEntry } from "./types";
 
 const LinkContainer = styled.div`
   display: flex;
   position: relative;
-  gap: 20px; 
+  gap: 20px;
 `;
 
 const StyledMenuEntry = styled(MenuEntry)`
@@ -49,23 +49,6 @@ const StyledLinkLabel = styled(LinkLabel)`
   left: 0;
 }
 `}
-`;
-
-const DropdownMenu = styled.div`
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #142966;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 10;
-  padding: 8px 0;
-  gap: 10px; /* Adds spacing between dropdown items */
-
-  ${StyledMenuEntry}:hover & {
-    display: block;
-  }
 `;
 
 const DropdownItem = styled.div`
@@ -112,7 +95,7 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
   const location = useLocation();
   const theme = useContext(ThemeContext);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false); // New state for dropdown visibility
+  const [isOpen,setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -125,41 +108,39 @@ const NavbarMenu: React.FC<{ links: Array<IMenuEntry> }> = ({ links }) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [links]);
 
   return (
     <NavBarContainer scrolled={scrolled}>
       <LinkContainer>
-        {links.map((link) => (
-          <StyledMenuEntry key={link.label}>
-            {link.label === "Earn" ? (
-              <>
-                <StyledLinkLabel 
-                  isActive={link.href === location.pathname} 
-                  onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown on click
-                >
-                  {link.label}
-                </StyledLinkLabel>
-                {link.subMenu && dropdownOpen && ( // Show dropdown if open
-                  <DropdownMenu>
-                    {link.subMenu.map((subLink) => (
-                      <DropdownItem key={subLink.label}>
-                        <MenuLink href={subLink.href} onClick={scrollToTop}>
-                          {subLink.label}
-                        </MenuLink>
-                      </DropdownItem>
-                    ))}
+        {links && links.map((link) => (
+          <>
+            {
+              link.items && link.items.length > 0 ?
+              (<MenuEntry key={link.label} style={{position: 'relative'}}>
+                  <LinkLabel onClick={() => setIsOpen(!isOpen)}>
+                    {link.label}
+                  </LinkLabel>
+                  <DropdownMenu isVisible={isOpen} onMouseLeave={() => setIsOpen(false)}>
+                    {link.items.map((subItem) => (
+                      <MenuLink key={subItem.label} href={subItem.href} onClick={() => {setIsOpen(false); scrollToTop()}}>
+                        <DropdownMenuItem >
+                          {subItem.label}
+                        </DropdownMenuItem>
+                      </MenuLink>
+                    )) }
                   </DropdownMenu>
-                )}
-              </>
-            ) : (
-              <MenuLink href={link.href || "#"} onClick={scrollToTop}>
-                <StyledLinkLabel isActive={link.href === location.pathname}>
-                  {link.label}
-                </StyledLinkLabel>
-              </MenuLink>
-            )}
-          </StyledMenuEntry>
+              </MenuEntry>)
+              :
+              (<MenuEntry key={link.label}>
+                <MenuLink href={link.href} onClick={scrollToTop}>
+                  <LinkLabel isActive={link.href === location.pathname}>
+                    {link.label}
+                  </LinkLabel>
+                </MenuLink>
+              </MenuEntry>)
+            }
+          </>
         ))}
       </LinkContainer>
     </NavBarContainer>
