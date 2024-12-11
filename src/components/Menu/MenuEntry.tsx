@@ -94,4 +94,32 @@ MenuEntry.defaultProps = {
   role: "button",
 };
 
-export { MenuEntry, LinkLabel };
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownMenu = styled.div<{ isVisible: boolean }>`
+  display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+  position: absolute;
+  top: 2.5rem;
+  background-color: #000023;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+`;
+
+const DropdownMenuItem = styled.a`
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    background-color: #0c0c48;
+  }
+`;
+
+export { MenuEntry, LinkLabel, DropdownContainer, DropdownMenu, DropdownMenuItem };
