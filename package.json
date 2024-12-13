@@ -37,7 +37,8 @@
     "styled-components": "^5.3.11",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0",
-    "web3": "^1.3.6"
+    "web3": "^1.3.6",
+    "websocket": "^1.0.35"
   },
   "scripts": {
     "predeploy": "yarn build",
