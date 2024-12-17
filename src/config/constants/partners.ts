@@ -191,6 +191,11 @@ const partners: Partners = {
       logo: NyanHeroes,
       link: 'https://nyanheroes.com/'
     },
+    ChibiClash: {
+      name: 'Chibi Clash',
+      logo: ChibiClash,
+      link: 'https://chibi.gg/'
+    },
     BlockTides: {
       name: 'Block Tides',
       logo: BlockTides,
