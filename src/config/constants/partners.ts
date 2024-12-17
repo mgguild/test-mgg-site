@@ -166,16 +166,72 @@ const partners: Partners = {
   },
 
   Partners:{
+    WildForset: {
+      name: 'Wild Forest',
+      logo: WildForest,
+      link: 'https://playwildforest.io/'
+    },
+    Sparkchain: {
+      name: 'Sparkchain',
+      logo:  Sparkchain,
+      link: 'https://sparkchain.network/'
+    },
+    Sleti:{
+      name: 'SparkLearn EdTech',
+      logo: SLETI,
+      link: 'https://sparklearn-edtech.com/'
+    },
+    SupraOracles: {
+      name: 'Supra Oracles',
+      logo: SupraOracles,
+      link: 'https://supraoracles.com/'
+    },
+    NyanHeroes: {
+      name: 'Nyan Heroes',
+      logo: NyanHeroes,
+      link: 'https://nyanheroes.com/'
+    },
+    ChibiClash: {
+      name: 'Chibi Clash',
+      logo: ChibiClash,
+      link: 'https://chibi.gg/'
+    },
+    BlockTides: {
+      name: 'Block Tides',
+      logo: BlockTides,
+      link: 'https://blocktides.com/'
+    },
+    MetaOasis: {
+      name: 'Meta Oasis',
+      logo: Metaoasis,
+      link: 'https://www.metaoasis.cc/'
+    },
+    PlanetAtmos: {
+      name: 'Planet Atmos',
+      logo:  PlanetAtmos,
+      link: 'https://planetatmos.com'
+    },
+    Chainport: {
+      name: 'Chainport',
+      logo: Chainport,
+      link: 'https://www.chainport.io/'
+    },
+    Metecene: {
+      name: 'Metacene',
+      logo: Metacene,
+      link: 'https://www.metacene.io/'
+    },
+    Ecosmo: {
+      name: 'E cosmo',
+      logo: Ecosmo,
+      link: 'https://ecosmo.xyz/'
+    },
     GameFi:{
       name: 'GameFi',
       logo: GameFi,
       link: 'https://gamefi.org/'
     },
-     Sleti:{
-      name: 'SparkLearn EdTech',
-      logo: SLETI,
-      link: 'https://sparklearn-edtech.com/'
-    },
+  
     RedKite:{
       name: 'RedKite',
       logo: RedKite,
@@ -186,11 +242,11 @@ const partners: Partners = {
     //   logo: Kudasai,
     //   link: ''
     // },
-    Placewar: {
-      name: 'Placewar',
-      logo: Placewar,
-      link: 'https://placewar.io/#/'
-    },
+    // Placewar: {
+    //   name: 'Placewar',
+    //   logo: Placewar,
+    //   link: 'https://placewar.io/#/'
+    // },
     GameStarter: {
       name: 'Game Starter',
       logo: GameStarter,
@@ -201,21 +257,21 @@ const partners: Partners = {
       logo: MetaSoccer,
       link: 'https://metasoccer.com/'
     },
-    Demole: {
-      name: 'Demole',
-      logo: Demole,
-      link: 'https://demole.io/'
-    },
-    TheKillBox: {
-      name: 'The Kill Box',
-      logo: TheKillBox,
-      link: 'https://www.thekillboxgame.com/index.html'
-    },
-    ChaosOf12Legions: {
-      name: 'Chaos Of 12 Legions',
-      logo: ChaosOf12Legions,
-      link: 'https://www.12legions.io/'
-    },
+    // Demole: {
+    //   name: 'Demole',
+    //   logo: Demole,
+    //   link: 'https://demole.io/'
+    // },
+    // TheKillBox: {
+    //   name: 'The Kill Box',
+    //   logo: TheKillBox,
+    //   link: 'https://www.thekillboxgame.com/index.html'
+    // },
+    // ChaosOf12Legions: {
+    //   name: 'Chaos Of 12 Legions',
+    //   logo: ChaosOf12Legions,
+    //   link: 'https://www.12legions.io/'
+    // },
     GoldFever: {
       name: 'Gold Fever',
       logo: GoldFever,
@@ -241,26 +297,21 @@ const partners: Partners = {
       logo: Warm,
       link: 'https://wam.app/'
     },
-    MetaGods: {
-      name: 'MetaGods',
-      logo: MetaGods,
-      link: 'https://metagods.gg/'
-    },
+    // MetaGods: {
+    //   name: 'MetaGods',
+    //   logo: MetaGods,
+    //   link: 'https://metagods.gg/'
+    // },
     DarkFrontiers: {
       name: 'Dark Frontiers',
       logo: DarkFrontiers,
       link: 'https://www.darkfrontiers.com/'
     },
-    AgeOfTanks: {
-      name: 'Age of tanks',
-      logo: AOTLogo,
-      link: 'https://ageoftanks.io/'
-    },
-    BlockTides: {
-      name: 'Block Tides',
-      logo: BlockTides,
-      link: 'https://blocktides.com/'
-    },
+    // AgeOfTanks: {
+    //   name: 'Age of tanks',
+    //   logo: AOTLogo,
+    //   link: 'https://ageoftanks.io/'
+    // },
     GunStar: {
       name: 'Gunstar',
       logo: GunStar,
@@ -271,46 +322,46 @@ const partners: Partners = {
       logo: Kitsumon,
       link: 'https://kitsumon.com/'
     },
-    TankWarsZone: {
-      name: 'TankWarsZone',
-      logo: TankWarsZone,
-      link: 'https://tankwars.zone/'
-    },
-    EnginesOfFury: {
-      name: 'Engines Of Fury',
-      logo: EnginesOfFury,
-      link: 'https://www.eof.gg/'
-    },
+    // TankWarsZone: {
+    //   name: 'TankWarsZone',
+    //   logo: TankWarsZone,
+    //   link: 'https://tankwars.zone/'
+    // },
+    // EnginesOfFury: {
+    //   name: 'Engines Of Fury',
+    //   logo: EnginesOfFury,
+    //   link: 'https://www.eof.gg/'
+    // },
     InfinityForce: {
       name: 'Infinity Force',
       logo: InfinityForce,
       link: 'https://infinityforce.com/'
     },
-    MetaFi: {
-      name: 'MetaFi',
-      logo: MetaFi,
-      link: 'https://metafi.org/'
-    },
+    // MetaFi: {
+    //   name: 'MetaFi',
+    //   logo: MetaFi,
+    //   link: 'https://metafi.org/'
+    // },
     CodyFight: {
       name: 'CodyFight',
       logo: CodyFight,
       link: 'https://codyfight.com/'
     },
-    Wastelands: {
-      name: 'Wastelands',
-      logo: Wastelands,
-      link: 'https://thewastedlands.io/'
-    },
+    // Wastelands: {
+    //   name: 'Wastelands',
+    //   logo: Wastelands,
+    //   link: 'https://thewastedlands.io/'
+    // },
     StepHero: {
       name: 'Step Hero',
       logo: StepHero,
       link: 'https://www.stephero.io/'
     },
-    FaraLand: {
-      name: 'Fara Land',
-      logo: FaraLand,
-      link: 'https://faraland.io/'
-    },
+    // FaraLand: {
+    //   name: 'Fara Land',
+    //   logo: FaraLand,
+    //   link: 'https://faraland.io/'
+    // },
     NFTb: {
       name: 'NFTb',
       logo: NFTb,
@@ -326,76 +377,61 @@ const partners: Partners = {
       logo: Monsterra,
       link: 'https://monsterra.io/'
     },
-    AngelsCreed: {
-      name: `Angels Creed`,
-      logo: AngelsCreed,
-      link: 'https://www.angelscreed.com/'
-    },
-    Dehorizon: {
-      name: 'Dehorizon',
-      logo: Dehorizon,
-      link: 'https://www.dehorizon.fun/'
-    },
-    Dinox: {
-      name: 'Dinox',
-      logo: Dinox,
-      link: 'https://dinox.io/'
-    },
-    KingdomRaids: {
-      name: 'Kingdom Raids',
-      logo: KingdomRaids,
-      link: 'https://kingdomraids.io/'
-    },
+    // AngelsCreed: {
+    //   name: `Angels Creed`,
+    //   logo: AngelsCreed,
+    //   link: 'https://www.angelscreed.com/'
+    // },
+    // Dehorizon: {
+    //   name: 'Dehorizon',
+    //   logo: Dehorizon,
+    //   link: 'https://www.dehorizon.fun/'
+    // },
+    // Dinox: {
+    //   name: 'Dinox',
+    //   logo: Dinox,
+    //   link: 'https://dinox.io/'
+    // },
+    // KingdomRaids: {
+    //   name: 'Kingdom Raids',
+    //   logo: KingdomRaids,
+    //   link: 'https://kingdomraids.io/'
+    // },
     Breach: {
       name: 'Breach',
       logo: Breach,
       link: 'https://breach.gg/'
     },
-    PirateExpirate: {
-      name: 'Pirate Expirate',
-      logo: PirateExpirate,
-      link: 'https://piratexpirate.io/'
-    },
+    // PirateExpirate: {
+    //   name: 'Pirate Expirate',
+    //   logo: PirateExpirate,
+    //   link: 'https://piratexpirate.io/'
+    // },
     Acknoledger: {
       name: 'Acknoledger',
       logo: Acknoledger,
       link: 'https://acknoledger.com/'
     },
-    LibertyGamingGuild: {
-      name: 'Liberty Gaming Guild',
-      logo: LibertyGamingGuild,
-      link: 'https://libertygaming.io/'
-    },
-    DragonWar: {
-      name: 'Dragon War',
-      logo: DragonWar,
-      link: 'https://dragonwar.io/'
-    },
-    Chainport: {
-      name: 'Chainport',
-      logo: Chainport,
-      link: 'https://www.chainport.io/'
-    },
-    ChibiClash: {
-      name: 'Chibi Clash',
-      logo: ChibiClash,
-      link: 'https://chibi.gg/'
-    },
-    NyanHeroes: {
-      name: 'Nyan Heroes',
-      logo: NyanHeroes,
-      link: 'https://nyanheroes.com/'
-    },
-    MetaDerby: {
-      name: 'MetaDerby',
-      logo: MetaDerby,
-      link: 'https://www.metaderby.com/'
-    },
-    DragonEvolution: {
-      name: 'Dragon Evolution',
-      logo: DragonEvolution,
-      link: 'https://dragonevolution.gg/'
-    },
+    // LibertyGamingGuild: {
+    //   name: 'Liberty Gaming Guild',
+    //   logo: LibertyGamingGuild,
+    //   link: 'https://libertygaming.io/'
+    //  },
+    // DragonWar: {
+    //   name: 'Dragon War',
+    //   logo: DragonWar,
+    //   link: 'https://dragonwar.io/'
+    // },
+    // MetaDerby: {
+    //   name: 'MetaDerby',
+    //   logo: MetaDerby,
+    //   link: 'https://www.metaderby.com/'
+    // },
+    // DragonEvolution: {
+    //   name: 'Dragon Evolution',
+    //   logo: DragonEvolution,
+    //   link: 'https://dragonevolution.gg/'
+    // },
     // GateIo: {
     //   name: 'GateIo',
     //   logo: GateIo,
@@ -416,36 +452,26 @@ const partners: Partners = {
       logo: WebcoinCapital,
       link: 'https://www.webcoin.capital/'
     },
-    Wizardia: {
-      name: 'Wizardia',
-      logo: Wizardia,
-      link: 'https://wizardia.io/'
-    },
-    Ookeenga: {
-      name: 'Ookeenga',
-      logo: Ookeenga,
-      link: 'https://ookeenga.com/'
-    },
-    SupraOracles: {
-      name: 'Supra Oracles',
-      logo: SupraOracles,
-      link: 'https://supraoracles.com/'
-    },
+    // Wizardia: {
+    //   name: 'Wizardia',
+    //   logo: Wizardia,
+    //   link: 'https://wizardia.io/'
+    // },
+    // Ookeenga: {
+    //   name: 'Ookeenga',
+    //   logo: Ookeenga,
+    //   link: 'https://ookeenga.com/'
+    // },
     Basketballverse: {
       name: 'Basketballverse',
       logo: Basketballverse,
       link: 'https://basketballverse.gg/'
     },
-    ArkRivals: {
-      name: 'Ark Rivals',
-      logo: ArkRivals,
-      link: 'https://arkrivals.com/',
-    },
-    MetaOasis: {
-      name: 'Meta Oasis',
-      logo: Metaoasis,
-      link: 'https://www.metaoasis.cc/'
-    },
+    // ArkRivals: {
+    //   name: 'Ark Rivals',
+    //   logo: ArkRivals,
+    //   link: 'https://arkrivals.com/',
+    // },
     PlayZap: {
       name: 'PlayZap',
       logo: PlayZap,
@@ -466,50 +492,25 @@ const partners: Partners = {
       logo: AVStarCapital,
       link: 'https://avstarcapital.co'
     },
-    Arcus: {
-      name: 'Arcus',
-      logo: Arcus,
-      link: 'https://arcusgo8.com/'
-    },
-    Mhaya: {
-      name: 'Mhaya',
-      logo: Mhaya,
-      link: 'http://www.mhaya.com/'
-    },
-    Metecene: {
-      name: 'Metacene',
-      logo: Metacene,
-      link: 'https://www.metacene.io/'
-    },
+    // Arcus: {
+    //   name: 'Arcus',
+    //   logo: Arcus,
+    //   link: 'https://arcusgo8.com/'
+    // },
+    // Mhaya: {
+    //   name: 'Mhaya',
+    //   logo: Mhaya,
+    //   link: 'http://www.mhaya.com/'
+    // },
     CryptoUnicorns: {
       name: 'Crypto Unicorns',
       logo: CryptoUnicorns,
       link: 'https://www.cryptounicorns.fun/'
     },
-    Ecosmo: {
-      name: 'E cosmo',
-      logo: Ecosmo,
-      link: 'https://ecosmo.xyz/'
-    },
     Reanima: {
       name: 'Re:Anima',
       logo: Reanima,
       link: 'https://www.reanima.io/#/home'
-    },
-    WildForset: {
-      name: 'Wild Forest',
-      logo: WildForest,
-      link: 'https://playwildforest.io/'
-    },
-    PlanetAtmos: {
-      name: 'Planet Atmos',
-      logo:  PlanetAtmos,
-      link: 'https://planetatmos.com'
-    },
-    Sparkchain: {
-      name: 'Sparkchain',
-      logo:  Sparkchain,
-      link: 'https://sparkchain.network/'
     },
     Thetan: {
       name: 'Thetan',
