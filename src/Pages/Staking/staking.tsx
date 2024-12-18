@@ -304,7 +304,7 @@ const Staking: React.FC = () => {
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
             </StakingCard>
-            {/* <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <StakingCard style={{ minHeight: '420px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img src={NearIcon} alt="CARV" style={{ width: '95px', height: '95px', marginBottom: '2rem' }} />
               <Heading size="l" color="cyan" marginTop={"1rem"}>NEAR</Heading>
               <InfoSection color="white" style={{ textAlign: 'justify' }}>
@@ -313,7 +313,7 @@ const Staking: React.FC = () => {
               <a href="https://app.mynearwallet.com/staking/metagamingguild.poolv1.near" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginTop: 'auto' }}>
                 <InformativeButton style={{ marginTop: '2rem' }}>Stake</InformativeButton>
               </a>
-            </StakingCard> */}
+            </StakingCard> 
             </Flex> 
         </div>
       </div>
