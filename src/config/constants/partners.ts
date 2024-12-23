@@ -4,7 +4,7 @@ import DaoMaker from '../../assets/logo/Investors_Backers/dao_maker.png'
 import IceteaLabs from '../../assets/logo/Investors_Backers/icetea_labs.png'
 import LdCapital from '../../assets/logo/Investors_Backers/ld_capital.png'
 import CinchBlock from '../../assets/logo/Investors_Backers/cinchblock.png'
-import SGV from '../../assets/logo/Investors_Backers/sgv.png'
+import AX from '../../assets/logo/Investors_Backers/AstraXLogo.png'
 import DoublePeak from '../../assets/logo/Investors_Backers/double_peak.png'
 import Megala from '../../assets/logo/Investors_Backers/Megala.png'
 import ACCapital from '../../assets/logo/Investors_Backers/ac_capital.png'
@@ -109,10 +109,10 @@ const partners: Partners = {
       logo: CinchBlock,
       link: 'https://www.cinchblock.com/'
     },
-    SGV: {
-      name: 'SparkPoint Global Ventures',
-      logo: SGV,
-      link: 'https://sparkpoint.global/'
+    AX: {
+      name: 'AstraX Capital',
+      logo: AX,
+      link: 'https://astraxcapital.com/'
     },
     DoublePeak: {
       name: 'Double Peak',
