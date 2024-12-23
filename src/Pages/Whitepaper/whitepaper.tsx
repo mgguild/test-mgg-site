@@ -14,7 +14,7 @@ import {
   Section,
 } from './styled'
 import bgImage from 'assets/background/revTokenBG.png'
-import PDF from 'assets/whitepaper/MGGWhitePaper-8.pdf'
+import PDF from 'assets/whitepaper/MGG White Paper-FINAL.pdf'
 import whitepaper from '../../config/constants/whitepaper'
 
 const MggToken = () => {
