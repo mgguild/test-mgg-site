@@ -91,7 +91,7 @@ const StakingCard = styled(Card)`
 
 const AnimatedText = styled(DescText)`
   display: inline-block;
-  animation: slide 15s linear infinite; // Customize timing as needed
+  animation: slide 20s linear infinite; // Customize timing as needed
 
   @keyframes slide {
     from {
