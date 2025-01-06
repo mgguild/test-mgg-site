@@ -234,10 +234,10 @@ const Staking: React.FC = () => {
               <img src={StakingImg} alt="Guild Rewards" width={300} />
             </div>
           </div>
-          <div style={{ display: 'inline-grid',  justifyContent: 'space-around', flexWrap: 'wrap', paddingRight: window.innerWidth <= 768 ? '0rem' : '10rem', paddingTop: window.innerWidth <= 768 ? '4rem' : '3rem', paddingBottom: window.innerWidth <= 768 ? '2rem' : '3rem'}}>
+          <div style={{ display: 'inline-grid',  justifyContent: 'space-around', flexWrap: 'wrap', paddingRight: window.innerWidth <= 768 ? '0rem' : '20rem', paddingLeft: window.innerWidth <= 768 ? '0rem' : '10rem', paddingTop: window.innerWidth <= 768 ? '4rem' : '3rem', paddingBottom: window.innerWidth <= 768 ? '2rem' : '3rem'}}>
             <DescTextContainer>
               <AnimatedText style={{ color: 'yellow' }}>
-                Stake your RONIN Tokens today and join the MGG Airdrop with a reward pool valued at $50,000.
+                The MGG Airdrop has ended, and rewards have been sent out. Congratulations to all participants! Keep an eye out for the upcoming MGG Token staking, coming soon!
               </AnimatedText>
             </DescTextContainer>
             </div>
