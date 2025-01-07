@@ -6,6 +6,10 @@ import BSC from "assets/logo/BSC.png";
 import ETH from "assets/logo/ETH.png";
 import FANTOM from "assets/logo/Fantom.png";
 import MGGLogo from "assets/background/MGGLogo.png";
+import Ronin from "assets/images/Logo_Ronin.png"
+import Realio from "assets/images/rio_icon.png"
+import NEAR from "assets/images/near.png"
+import Namada from "assets/images/Namadillo.png"
 import MenuLink from "components/Menu/MenuLink";
 import { Grid } from "@mui/material";
 import useMedia from 'use-media'
@@ -48,10 +52,38 @@ const StyledImg = styled.img`
   }
 `;
 
+const ValidImg = styled.img`
+  width: 150px;
+  margin: 5px auto;
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 120px;
+    margin: 0px auto;
+  }
+`;
+
 const Content = styled(Flex)`
   width: 100%;
   text-align: center;
 `;
+
+const validators = [
+  {
+    icon: Ronin,
+    link: "https://app.roninchain.com/validator/0xea94e2f3f1b24214f9d9bfb5608084476f34d48a",
+  },
+  {
+    icon: Realio,
+    link: "https://app.realio.network/staking",
+  },
+  {
+    icon: NEAR,
+    link: "https://app.mynearwallet.com",
+  },
+  {
+    icon: Namada,
+    link: "https://interface.namada.tududes.com/staking",
+  },
+];
 
 const chains = [
   {
@@ -62,10 +94,10 @@ const chains = [
     icon: ETH,
     link: "https://etherscan.io/address/0x7237c0b30b1355f1b76355582f182f6f04b08740",
   },
-  {
-    icon: FANTOM,
-    link: "https://ftmscan.com/address/0xfda8355e8ce22ac44f2d175f4acfec8fac7472d7",
-  },
+  // {
+  //   icon: FANTOM,
+  //   link: "https://ftmscan.com/address/0xfda8355e8ce22ac44f2d175f4acfec8fac7472d7",
+  // },
 ];
 
 const Section: React.FC = () => {
@@ -74,6 +106,31 @@ const Section: React.FC = () => {
   return (
     <SectionContainer>
       <Container>
+        
+      <Content
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="flex-start"
+        >
+          <PageTitle size="xl">Metagaming Guild Validator</PageTitle>
+          <Text fontSize="1.3em">
+            in 2024, MGG became a VALIDATOR on four giant etworks: Ronin, Realio, NEAR, and NAMADA — a feat no other GameFi guild has a ever done!
+          </Text>
+        </Content>
+        <Flex
+          justifyContent="space-evenly"
+          alignItems="center"
+          style={{ width: "100%" }}
+          flexWrap="wrap"
+          margin="0em 0"
+        >
+          {validators.map((src) => (
+            <MenuLink href={src.link} key={src.icon}>
+              <ValidImg src={src.icon} alt="chain-icon" style={{ margin: '0 20px' }} />
+            </MenuLink>
+          ))}
+        </Flex>
+        
         <Content
           flexDirection="column"
           alignItems="center"
