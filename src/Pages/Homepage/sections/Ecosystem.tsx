@@ -171,7 +171,7 @@ const Section: React.FC = () => {
           <PageTitle size='xl'> About MetaGaming Guild </PageTitle>
                <TextContainer>
                <Text as='p' fontSize='1.2em' >
-                        MetaGaming Guild (MGG) is a unified DAO-based ecosystem of gaming guild, strategic investments, and blockchain validation aimed at democratizing game finance.
+                        MetaGaming Guild (MGG) is a unified DAO-based ecosystem of gaming guild, strategic investment, game development, and blockchain validation aimed at democratizing game finance.
                     </Text>
                <Text fontSize='1.2em' >
                         Our vision is to become the most community-centric DAO in the GameFi metaverse, with a focus on empowering players, driving innovation, and support the future of GameFi.

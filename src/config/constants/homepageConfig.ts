@@ -82,17 +82,18 @@ export const App:IApp[] = [
 
 
 export const News:INews[] = [
+  
+  {
+    image: 'News1',
+    description: `$MGG is Now Listed on Coins.ph`,
+    name: "page1",
+    link: "https://medium.com/metagamingguild/mgg-is-now-listed-on-coins-ph-3a9ef186bd44",
+  },
   {
     image: 'News3',
     description: 'MetaGaming Guild is Now a Ronin Validator',
     name: "page3",
     link: "https://medium.com/metagamingguild/metagaming-guild-is-now-a-ronin-validator-78b4845a6203",
-  },
-  {
-    image: 'News1',
-    description: `MGG Celebrates Year 3 in Web3`,
-    name: "page1",
-    link: "https://medium.com/@support_62719/mgg-celebrates-year-3-in-web3-a2cfb5257a3d",
   },
   {
     image: 'News2',
