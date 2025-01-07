@@ -42,7 +42,7 @@ const Config: Props = {
   socials: [
     {
       name: names.socials.facebook,
-      href: "https://www.facebook.com/MetaGamingGuild/?_rdc=1&_rdr",
+      href: "https://www.facebook.com/profile.php?id=61571308996602",
     },
     {
       name: names.socials.telegram,
