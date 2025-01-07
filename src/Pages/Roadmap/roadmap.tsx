@@ -9,7 +9,7 @@ import {
   BgPage,
   HeadingGlow,
   RdmapCards,
-  // Line,
+  Line,
   RTitle,
   Card,
   CardContainer,
@@ -62,8 +62,8 @@ const Roadmap = () => {
                   <CardContainer key={quarter}>
                     {/* {quarter !== 'Q4' && <Line />} */}
                     <Card>
-                      {/* <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow> */}
-                     <RTitle size='xl' color='#00f4fd'>2024</RTitle>
+                      <RTitle size='xl' color='#00f4fd'>{quarter}</RTitle>
+                     <RTitle size='xl' color='#00f4fd'></RTitle>
                       <RdmapList>
                         {getYear[quarter].map((list:any, ind: number) => (<div key={ind}>{list.check ? <CheckList>{list.txt}</CheckList> : <List>{list.txt}</List>}</div>))}
                       </RdmapList>
@@ -81,8 +81,8 @@ const Roadmap = () => {
                         <CardContainer key={quarter}>
                           {/* {quarter !== 'Q4' && <Line />} */}
                           <Card>
-                            {/* <HeadingGlow size='xl' color='#00f4fd'>{quarter}</HeadingGlow> */}
-                            <RTitle size='xl' color='#00f4fd'>2024</RTitle>
+                            <RTitle size='xl' color='#00f4fd'>{quarter}</RTitle>
+                            <RTitle size='xl' color='#00f4fd'></RTitle>
                             <RdmapList>
                               {roadmaps[year][quarter].map((list: any, ind: number) => (<div key={ind}>{list.check ? <CheckList>{list.txt}</CheckList> : <List>{list.txt}</List>}</div>))}
                             </RdmapList>
