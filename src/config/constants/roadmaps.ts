@@ -15,17 +15,16 @@ const roadmaps: RoadmapConfig = {
       {txt: "Helltoons game early access and monetization", check: true},
       {txt: "MSW Play to Airdrop Season 2", check: true},
     ],
+  },
+  2025 : {
+    2025 : [
+      {txt: "Listing on Coins.ph", check: true},
+      {txt: "Launching of new AI-powered products within the MGG ecosystem (on-going development)", check: true},
+      {txt: "MGG Token Staking", check: true},
+      {txt: "Mole Smash Mini Game Intergration", check: true},
+      {txt: "Expand Blockchain Validation on More Networks", check: true},
+    ],
   }
-  // 2021 : {
-  //   Q3 : [
-  //     {txt: "Creation of MGG core team", check: true},
-  //     {txt: "Brainstorming, research and development", check: true},
-  //     {txt: "MGG logo and gameplay design", check: true},
-  //     {txt: "Generation of MGG funding and asset building", check: true},
-  //     {txt: "MGG content creation", check: true},
-  //     {txt: "MGG website development", check: true},
-  //     {txt: "Official launch of MGG (Website, social media accounts, email, etc)", check: true},
-  //   ],
   //   Q4 : [
   //     {txt: "TGE Launch and distribution of MGG tokens", check: true},
   //     {txt: "Launch of MGG yeild Farming/Staking", check: true},

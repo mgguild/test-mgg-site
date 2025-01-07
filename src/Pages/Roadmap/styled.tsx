@@ -106,22 +106,22 @@ export const HeadingGlow = styled(Heading)<{ glow?: string }>`
 export const RTitle = styled(Heading)`
   color: ${({ theme }) => theme.colors.primary};
   margin: 30px 0px;
-  letter-spacing: 1px;
+  letter-spacing: 1px;`
 
-// export const Line = styled.div`
-//   width: 10%;
-//   background-color: rgb(253,218,0);
-//   z-index: 0;
-//   position: absolute;
-//   top: 5rem;
-//   left: 100%;
-//   border: solid #fdda00;
-//   box-shadow: 0 0 1rem #fdda00;
+   export const Line = styled.div`
+  width: 10%;
+  background-color: rgb(253,218,0);
+  z-index: 0;
+  position: absolute;
+  top: 5rem;
+  left: 100%;
+  border: solid #fdda00;
+  box-shadow: 0 0 1rem #fdda00;
 
-//   @media (max-width: 1280px) {
-//     width: 0.1rem;
-//     left: 50%;
-//     top: 100%;
-//     height: 15%;
-//   }
-// `
+  @media (max-width: 1280px) {
+    width: 0.1rem;
+    left: 50%;
+    top: 100%;
+    height: 15%;
+  }
+`

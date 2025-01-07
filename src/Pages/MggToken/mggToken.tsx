@@ -198,13 +198,13 @@ const MggToken = () => {
                     <Text color='#00f4fd'>Binance Smart Chain (BEP-20)</Text>
                   </a>
                 </div>
-                <div>
+                {/* <div>
                   <a target="_blank" href='https://ftmscan.com/address/0xfda8355e8ce22ac44f2d175f4acfec8fac7472d7'>
                     <img src={`${FantomLogo}`} style={{maxWidth: '12rem', margin: '1rem 0'}}></img>
                     <AdaptTxt>0xfda8355e8ce22ac44f2d175f4acfec8fac7472d7</AdaptTxt>
                     <Text color='#00f4fd'>Fantom</Text>
                   </a>
-                </div>
+                </div> */}
               </Flex>
             </Section>
             <Section style={{ padding: '5rem 0 0 0' }}>
