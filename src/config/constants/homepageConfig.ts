@@ -92,13 +92,13 @@ export const News:INews[] = [
   {
     image: 'News3',
     description: 'MetaGaming Guild is Now a Ronin Validator',
-    name: "page3",
+    name: "page2",
     link: "https://medium.com/metagamingguild/metagaming-guild-is-now-a-ronin-validator-78b4845a6203",
   },
   {
     image: 'News2',
-    description: 'Deep Dive into $MGG Token: Understanding Its Utilities and Value',
-    name: "page2",
-    link: "https://medium.com/metagamingguild/deep-dive-into-mgg-token-understanding-its-utilities-and-value-95571164e817",
+    description: 'MGG Celebrates Year 3 in Web3',
+    name: "page3",
+    link: "https://medium.com/@support_62719/mgg-celebrates-year-3-in-web3-a2cfb5257a3d",
   },
 ]
