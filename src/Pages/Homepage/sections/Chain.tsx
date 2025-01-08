@@ -8,7 +8,7 @@ import FANTOM from "assets/logo/Fantom.png";
 import MGGLogo from "assets/background/MGGLogo.png";
 import Ronin from "assets/images/Logo_Ronin.png"
 import Realio from "assets/images/rio_icon.png"
-import NEAR from "assets/images/near.png"
+import NEAR from "assets/images/near_new.png"
 import Namada from "assets/images/Namadillo.png"
 import MenuLink from "components/Menu/MenuLink";
 import { Grid } from "@mui/material";
@@ -114,7 +114,7 @@ const Section: React.FC = () => {
         >
           <PageTitle size="xl">Metagaming Guild Validator</PageTitle>
           <Text fontSize="1.3em">
-            in 2024, MGG became a VALIDATOR on four giant etworks: Ronin, Realio, NEAR, and NAMADA — a feat no other GameFi guild has a ever done!
+            In 2024, MGG became a VALIDATOR on four giant etworks: Ronin, Realio, NEAR, and NAMADA — a feat no other GameFi guild has a ever done!
           </Text>
         </Content>
         <Flex

@@ -170,7 +170,7 @@ const Section: React.FC = () => {
       <DescriptionContainer flexDirection='column' alignItems='space-around' padding='80px 20px'>
           <PageTitle size='xl'> About MetaGaming Guild </PageTitle>
                <TextContainer>
-               <Text as='p' fontSize='1.2em' >
+               <Text as='p' fontSize='1.13em' >
                         MetaGaming Guild (MGG) is a unified DAO-based ecosystem of gaming guild, strategic investment, game development, and blockchain validation aimed at democratizing game finance.
                     </Text>
                <Text fontSize='1.2em' >
