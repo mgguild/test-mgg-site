@@ -1,6 +1,7 @@
 import { Partners } from "./types"
 
 import DaoMaker from '../../assets/logo/Investors_Backers/dao_maker.png'
+import Sparkpoint from '../../assets/logo/Investors_Backers/sparkpoint.png'
 import IceteaLabs from '../../assets/logo/Investors_Backers/icetea_labs.png'
 import LdCapital from '../../assets/logo/Investors_Backers/ld_capital.png'
 import CinchBlock from '../../assets/logo/Investors_Backers/cinchblock.png'
@@ -57,7 +58,7 @@ import LibertyGamingGuild from '../../assets/logo/Partners/libertygamingguild.pn
 import DragonWar from '../../assets/logo/Partners/dragonwar.png'
 import Chainport from '../../assets/logo/Partners/chainport.png'
 import ChibiClash from '../../assets/logo/Partners/chibi_clash.png'
-import NyanHeroes from '../../assets/logo/Partners/nyanheroes.png'
+import NyanHeroes from '../../assets/logo/Partners/nyan-removebg-preview.png'
 import MetaDerby from '../../assets/logo/Partners/metaderby.png'
 import DragonEvolution from '../../assets/logo/Partners/dragonevolution.png'
 import GateIo from '../../assets/logo/Partners/gateio.png'
@@ -93,6 +94,11 @@ const partners: Partners = {
       name: 'Dao Maker',
       logo: DaoMaker,
       link: 'https://daomaker.com/'
+    },
+    Sparkpoint: {
+      name: 'Sparkpoint',
+      logo: Sparkpoint,
+      link: 'https://sparkpoint.io/'
     },
     IceteaLabs: {
       name: 'Icetea Labs',
